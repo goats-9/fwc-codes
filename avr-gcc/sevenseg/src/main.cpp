@@ -32,7 +32,7 @@ void loop() {
     for (int i = 0; i < 10; i++) {
         // Go through the segment array
         for (int j = 0; j < 7; j++)
-            digitalWrite(j+2, seg[i][j]);
+            digitalWrite(j+2, seg[i][j]?HIGH:LOW);
         delay(2000);
     }
 }
