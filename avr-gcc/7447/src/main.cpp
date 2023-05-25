@@ -20,7 +20,7 @@ void setup() {
     pinMode(PIN_W, INPUT);
     pinMode(PIN_X, INPUT);
     pinMode(PIN_Y, INPUT);            
-    pinMode(PIN_Z, INPUT);            
+    pinMode(PIN_Z, INPUT);
     Serial.begin(9600);
 }
 
@@ -32,15 +32,11 @@ void disp_7447(int digit) {
     b = digit & (1<<1);
     c = digit & (1<<2);
     d = digit & (1<<3);
-    Serial.print(d);
-    Serial.print(c);
-    Serial.print(b);
-    Serial.println(a);
     // Write to 7447 input pins
-    digitalWrite(PIN_A, a?LOW:HIGH);
-    digitalWrite(PIN_B, b?LOW:HIGH);
-    digitalWrite(PIN_C, c?LOW:HIGH);
-    digitalWrite(PIN_D, d?LOW:HIGH);
+    digitalWrite(PIN_A, a?HIGH:LOW);
+    digitalWrite(PIN_B, b?HIGH:LOW);
+    digitalWrite(PIN_C, c?HIGH:LOW);
+    digitalWrite(PIN_D, d?HIGH:LOW);
 }
 
 void loop() {
@@ -52,12 +48,10 @@ void loop() {
     z = digitalRead(PIN_Z);
     // Get the input digit
     int digit = (z<<3) | (y<<2) | (x<<1) | (w<<0);
-    Serial.print(digit);
-    Serial.print(": ");
     // Increment the digit modulo 10
     digit = (digit + 1) % 10;
     // Display the resulting digit
     disp_7447(digit);
     // Persist for 1 second
-    delay(2000);
+    // delay(1000);
 }
