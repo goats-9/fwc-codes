@@ -21,7 +21,6 @@ void setup() {
     pinMode(PIN_X, INPUT);
     pinMode(PIN_Y, INPUT);            
     pinMode(PIN_Z, INPUT);
-    Serial.begin(9600);
 }
 
 // Display (digit + 1) modulo 10 using the 7447
@@ -53,5 +52,4 @@ void loop() {
     // Display the resulting digit
     disp_7447(digit);
     // Persist for 1 second
-    // delay(1000);
 }
