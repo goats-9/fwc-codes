@@ -51,5 +51,4 @@ void loop() {
     digit = (digit + 1) % 10;
     // Display the resulting digit
     disp_7447(digit);
-    // Persist for 1 second
 }
