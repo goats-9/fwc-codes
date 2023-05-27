@@ -24,39 +24,44 @@ void setup() {
     pinMode(PIN_1Q_2, INPUT);
     pinMode(PIN_2Q_2, INPUT);
     pinMode(LED_BUILTIN, OUTPUT);
-}
-
-void disp_7447(int digit) { 
-    int A, B, C, D;
-    // Get binary digits
-    A = digit & (1<<0);
-    B = digit & (1<<1);
-    C = digit & (1<<2);
-    D = digit & (1<<3);
-    // Write to 7447 and 7474
-    digitalWrite(PIN_A_1D_1, A?HIGH:LOW);
-    digitalWrite(PIN_B_2D_1, B?HIGH:LOW);
-    digitalWrite(PIN_C_1D_2, C?HIGH:LOW);
-    digitalWrite(PIN_D_2D_2, D?HIGH:LOW);
+    // Start the decade counter at 0
+    digitalWrite(LED_BUILTIN, HIGH);
+    digitalWrite(PIN_A_1D_1, LOW);
+    digitalWrite(PIN_B_2D_1, LOW);
+    digitalWrite(PIN_C_1D_2, LOW);
+    digitalWrite(PIN_D_2D_2, LOW);
+    delay(1000);
 }
 
 // Loop: code that executes forever goes here
 void loop() {
+    // Feedback inputs
+    int a, b, c, d;
+    // Outputs to 7447
     int A, B, C, D;
     // Falling CLK edge: read inputs here
     digitalWrite(LED_BUILTIN, LOW);
     // Read input pins
-    A = digitalRead(PIN_1Q_1);
-    B = digitalRead(PIN_2Q_1);
-    C = digitalRead(PIN_1Q_2);
-    D = digitalRead(PIN_2Q_2);
-    // Get the input digit
-    int digit = (D<<3) | (C<<2) | (B<<1) | (A<<0);
-    // Increment the digit modulo 10
-    digit = (digit + 1) % 10;
+    a = digitalRead(PIN_1Q_1);
+    b = digitalRead(PIN_2Q_1);
+    c = digitalRead(PIN_1Q_2);
+    d = digitalRead(PIN_2Q_2);
     // Rising CLK edge: write incremented digit here
     digitalWrite(LED_BUILTIN, HIGH);
-    // Display the digit
-    disp_7447(digit);
+    D = (d&&!b&&!a)||(c&&b&&a);
+    C = (!c&&b&&a)||(c&&!b)||(c&&!a);
+    B = (!d&&!b&&a)||(b&&!a);
+    A = !a;
+	// Optionally, do this instead of the K-map approach:
+	// int digit = (d<<3) | (c<<2) | (b<<1) | (a<<0);
+	// digit = (digit + 1) % 10;
+	// A = digit & (1<<0);
+	// B = digit & (1<<1);
+	// C = digit & (1<<2);
+	// D = digit & (1<<3);
+    digitalWrite(PIN_A_1D_1, A);
+    digitalWrite(PIN_B_2D_1, B);
+    digitalWrite(PIN_C_1D_2, C);
+    digitalWrite(PIN_D_2D_2, D);
     delay(1000);
 }

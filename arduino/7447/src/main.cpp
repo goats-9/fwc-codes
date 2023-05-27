@@ -23,32 +23,32 @@ void setup() {
     pinMode(PIN_Z, INPUT);
 }
 
-// Display (digit + 1) modulo 10 using the 7447
-void disp_7447(int digit) {
-    int a, b, c, d;
-    // Get each bit of the digit
-    a = digit & (1<<0);
-    b = digit & (1<<1);
-    c = digit & (1<<2);
-    d = digit & (1<<3);
-    // Write to 7447 input pins
-    digitalWrite(PIN_A, a?HIGH:LOW);
-    digitalWrite(PIN_B, b?HIGH:LOW);
-    digitalWrite(PIN_C, c?HIGH:LOW);
-    digitalWrite(PIN_D, d?HIGH:LOW);
-}
-
 void loop() {
-    int w, x, y, z;
+    int W, X, Y, Z, A, B, C, D;
     // Read input pins
-    w = digitalRead(PIN_W);
-    x = digitalRead(PIN_X);
-    y = digitalRead(PIN_Y);
-    z = digitalRead(PIN_Z);
-    // Get the input digit
-    int digit = (z<<3) | (y<<2) | (x<<1) | (w<<0);
-    // Increment the digit modulo 10
-    digit = (digit + 1) % 10;
-    // Display the resulting digit
-    disp_7447(digit);
+    W = digitalRead(PIN_W);
+    X = digitalRead(PIN_X);
+    Y = digitalRead(PIN_Y);
+    Z = digitalRead(PIN_Z);
+	// Get output as functions of inputs
+    D = (Z&&!X&&!W)||(Y&&X&&W);
+    C = (!Y&&X&&W)||(Y&&!X)||(Y&&!W);
+    B = (!Z&&!X&&W)||(X&&!W);
+    A = !W;
+	/* Alternatively, do this:
+	   // Get the digit
+	   int digit = (Z<<3) | (Y<<2) | (X<<1) | (W<<0);
+	   // Increment the digit
+	   digit = (digit + 1) % 10;
+	   // Get new bits of incremented digit
+	   W = digit & (1<<0);
+	   X = digit & (1<<1);
+	   Y = digit & (1<<2);
+	   Z = digit & (1<<3);
+	*/
+	// Write to 7447
+    digitalWrite(PIN_A, A);
+    digitalWrite(PIN_B, B);
+    digitalWrite(PIN_C, C);
+    digitalWrite(PIN_D, D);
 }

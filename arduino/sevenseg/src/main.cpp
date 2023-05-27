@@ -1,38 +1,37 @@
 #include <Arduino.h>
 
-// Segments for each digit
-int seg[10][7] = 
-{ 
-    {1,1,1,1,1,1,0},
-    {0,1,1,0,0,0,0},
-    {1,1,0,1,1,0,1},
-    {1,1,1,1,0,0,1},
-    {0,1,1,0,0,1,1},
-    {1,0,1,1,0,1,1},
-    {1,0,1,1,1,1,1},
-    {1,1,1,0,0,0,0},
-    {1,1,1,1,1,1,1},
-    {1,1,1,1,0,1,1},
-};
+// Digital pins used in the Arduino
+#define PIN_a 2
+#define PIN_b 3
+#define PIN_c 4
+#define PIN_d 5
+#define PIN_e 6
+#define PIN_f 7
+#define PIN_g 8
+
+void disp_sevenseg(int a, int b, int c, int d, int e, int f, int g) {
+	digitalWrite(PIN_a, a);
+	digitalWrite(PIN_b, b);
+	digitalWrite(PIN_c, c);
+	digitalWrite(PIN_d, d);
+	digitalWrite(PIN_e, e);
+	digitalWrite(PIN_f, f);
+	digitalWrite(PIN_g, g);
+}
 
 // Setup: Code to be executed once at the start here
 void setup() {
     // Set pin modes to OUTPUT
-    pinMode(2, OUTPUT);  
-    pinMode(3, OUTPUT);
-    pinMode(4, OUTPUT);
-    pinMode(5, OUTPUT);
-    pinMode(6, OUTPUT);
-    pinMode(7, OUTPUT);
-    pinMode(8, OUTPUT);            
+    pinMode(PIN_a, OUTPUT);  
+    pinMode(PIN_b, OUTPUT);
+    pinMode(PIN_c, OUTPUT);
+    pinMode(PIN_d, OUTPUT);
+    pinMode(PIN_e, OUTPUT);
+    pinMode(PIN_f, OUTPUT);
+    pinMode(PIN_g, OUTPUT);            
 }
 
 void loop() {
-    // Display each digit with a 2 second delay.
-    for (int i = 0; i < 10; i++) {
-        // Go through the segment array
-        for (int j = 0; j < 7; j++)
-            digitalWrite(j+2, seg[i][j]?HIGH:LOW);
-        delay(2000);
-    }
+	// Call the display function
+	disp(0,0,0,0,0,0,1);
 }
