@@ -38,8 +38,8 @@ void loop() {
     C = digitalRead(PIN_C);
     D = digitalRead(PIN_D);
 	// Boolean functions for each pin
-	a = (C&&!B&&!A)||(!D&&!C&&!B&&!A);
-	b = C&&A;
+	a = (C&&!B&&!A)||(!D&&!C&&!B&&A);
+	b = (C&&!B&&A)||(C&&B&&!A);
 	c = !C&&B&&!A;
 	d = (!D&&!C&&!B&&A)||(C&&!B&&!A)||(C&&B&&A);
 	e = (!B||A)&&(C||B||A);

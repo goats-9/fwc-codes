@@ -22,16 +22,19 @@ void disp_sevenseg(int a, int b, int c, int d, int e, int f, int g) {
 // Setup: Code to be executed once at the start here
 void setup() {
     // Set pin modes to OUTPUT
-    pinMode(PIN_a, OUTPUT);  
+    pinMode(PIN_a, OUTPUT);
     pinMode(PIN_b, OUTPUT);
     pinMode(PIN_c, OUTPUT);
     pinMode(PIN_d, OUTPUT);
     pinMode(PIN_e, OUTPUT);
     pinMode(PIN_f, OUTPUT);
-    pinMode(PIN_g, OUTPUT);            
+    pinMode(PIN_g, OUTPUT);
 }
 
 void loop() {
 	// Call the display function
-	disp(0,0,0,0,0,0,1);
+	// Display 4
+	// disp_sevenseg(1,0,0,1,1,0,0);
+	// Display 0
+	disp_sevenseg(0,0,0,0,0,0,1);
 }

@@ -13,13 +13,13 @@
 // Setup: Code to be executed once at the start here
 void setup() {
     // Set pin modes to INPUT and OUTPUT as appropriate
-    pinMode(PIN_A, OUTPUT);  
+    pinMode(PIN_A, OUTPUT);
     pinMode(PIN_B, OUTPUT);
     pinMode(PIN_C, OUTPUT);
     pinMode(PIN_D, OUTPUT);
     pinMode(PIN_W, INPUT);
     pinMode(PIN_X, INPUT);
-    pinMode(PIN_Y, INPUT);            
+    pinMode(PIN_Y, INPUT);
     pinMode(PIN_Z, INPUT);
 }
 
@@ -41,10 +41,10 @@ void loop() {
 	   // Increment the digit
 	   digit = (digit + 1) % 10;
 	   // Get new bits of incremented digit
-	   W = digit & (1<<0);
-	   X = digit & (1<<1);
-	   Y = digit & (1<<2);
-	   Z = digit & (1<<3);
+	   A = digit & (1<<0);
+	   B = digit & (1<<1);
+	   C = digit & (1<<2);
+	   D = digit & (1<<3);
 	*/
 	// Write to 7447
     digitalWrite(PIN_A, A);

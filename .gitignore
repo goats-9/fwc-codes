@@ -1,0 +1,4 @@
+*.cof
+*.obj
+*.hex
+*.eep.hex
