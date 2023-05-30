@@ -1,14 +1,13 @@
 .include "../m328Pdef.inc"
 
 setup:
-	
 	;Set PB5 as an output pin.
 	;This corresponds to pin 13
 	;in the Arduino.
 	sbi DDRB, 5
 	;Define the prescaler in TC0 
 	;Control Register B. Setting
-	;last 3 bits to 101 gives a
+	;bits 2 to 0 to 101 gives a
 	;prescaler of 1024
 	ldi r16, 0b00000101
 	out TCCR0B, r16
@@ -17,8 +16,11 @@ setup:
 	;Initially LED should not blink.
 	clr r18
 	;r20 will be XOR-ed with r18 to
-	;toggle the LED
+	;toggle the LED.
 	ldi r20, 0b00100000
+	;r17 is used to check OCF0A bit
+	;in TIFR0 register.
+	ldi r17, 0b00000010
 
 loop:
 	;Toggle LED
@@ -33,28 +35,19 @@ loop:
 	rcall pause
 	rjmp loop
 
-;pause routine waits till TIFR0 has 
-;bit 1 set.
+;Pause routine using timer.
 pause:
-
-;loop_pause routine returns after
-;executing pause 64 times.
-loop_pause:
-	;TIFR0 is the Timer Interrupt
-	;Flag Register. When the value
-	;in counter (TCNT0) matches
-	;Output Compare Register A (OCR0A)
-	;TIFR0 has bit 1 set.
+	;Check whether OCF0A is set in TIFR0.
+	;If so, then 256 cycles have passed.
+	;Else, go back to pause and start over.
+	;TCNT0 <- counter
+	;OCF0A = TIFR0[1] = 0, when TCNT0 = OCR0A
 	in r16, TIFR0
-	;To check if bit 1 is set in TIFR0.
-	ldi r17, 0b00000010
+	;r17 = 0b00000010
 	and r16, r17
-	;If equal, the bit 1 is set, and
-	;start over.
 	breq pause
-	;Set TIFR0 flag
+	;Clear OCR0A flag
 	out TIFR0, r17
-	;Update loop and check.
 	dec r19
-	brne loop_pause
+	brne pause
 	ret

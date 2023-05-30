@@ -20,6 +20,12 @@ loop:
 	;digit is present from bit 2
 	ldi r18, 0b00000100
 	adc r17, r18
+	;If digit is 10 or more, subtract
+	cpi r17, 0b00101000
+	brlt nosub
+	subi r17, 0b00101000
+;skip subtraction
+nosub:
 	;Write outputs to output pins
 	out PORTD, r17
 	;Loop indefinitely

@@ -4,10 +4,11 @@ setup:
 	;Set PB5 as output pin. This
 	;corresponds to pin 13 on the
 	;Arduino.
-	ldi r16, 0b00100000
-	out DDRB, r16
-	ldi r16, 0
+	;ldi r16, 0b00100000
+	;out DDRB, r16
+	sbi DDRB, 5
 	;Clear status register
+	ldi r16, 0
 	out SREG, r16
 	;RAMEND refers to the last address
 	;corresponding to RAM.
@@ -45,11 +46,11 @@ wait:
 
 w0:
 	dec r18
-	brne w0
+	brne w0 ;Loops r18 times
 	dec r17
-	brne w0
+	brne w0	;Loops r17 times
 	dec r16 
-	brne w0
+	brne w0	;Loops r16 times
 	;Pop variables in reverse order
 	pop r18
 	pop r17

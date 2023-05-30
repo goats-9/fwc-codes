@@ -3,19 +3,21 @@
 setup:
 	;Set PB5 or pin 13 on Arduino as
 	;output pin
-	sbi DDRB, 5	
+	sbi DDRB, 5
 	;Set prescaler in TC0 control
 	;register B to be 1024
 	ldi r16, 0b00000101
 	out TCCR0B, r16
 	;LED will be toggled with r21
-	ldi r21, 0
+	;ldi r21, 0
 	ldi r22, 0b00100000
-	out PORTB, r21
+	;out PORTB, r21
 	;Clear SREG
     ldi r16, 0
     out SREG, r16
 	;Store the stack pointer in r16
+	;Creating stack to be as large
+	;as available main memory
 	ldi r16, low(RAMEND)
     out SPL, r16
     ldi r16, high(RAMEND)
@@ -24,7 +26,7 @@ setup:
 	;Correspond to pins 2 to 5 on 
 	;the Arduino.
     ldi r16, 0b00111100
-    out DDRD,r16
+    out DDRD, r16
 	;Start storage from 0x0100.
 	;Store lower and higher byte 
 	;separately.
@@ -79,7 +81,6 @@ loop_decade:
 	;Update and check if loop 
 	;variable equals zero
 	dec r19
-	cp r19, r21
 	brne loop_decade
 	ret
 

@@ -12,10 +12,10 @@
 	;Writing the number 2 on the 
 	;seven segment display
 	;Set states of PD2 to PD7
-	ldi r17, 0b10010000
+	ldi r17, 0b11100000
 	out PortD, r17
 	;Set state of PB0
-	ldi r17, 0b00000000
+	ldi r17, 0b00000001
 	out PortB, r17
 
 Loop:
