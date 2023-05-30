@@ -2,3 +2,6 @@
 *.obj
 *.hex
 *.eep.hex
+*.o
+*.elf
+*.eep
