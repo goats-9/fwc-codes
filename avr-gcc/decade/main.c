@@ -4,19 +4,36 @@
 
 // Declare assembly implemented routines
 extern void LCD_Init(void);
-extern void LCD_WriteCommand(uint8_t);
-extern void LCD_WriteCharacter(uint8_t);
-extern void LCD_AdjustCursorPosition(uint8_t);
+extern void LCD_Cmd(uint8_t);
+extern void LCD_Char(uint8_t);
+extern void LCD_SetCursor(uint8_t, uint8_t);
 extern void LCD_Clear(void);
 
+void LCD_String(const char *str) {
+	while (*str) LCD_Char(*str++);
+}
+
 int main(void) {
-	// Use PortB for LCD interface
-	DDRB = 0xFF; // Set PB0-PB7 as outputs	 
 	LCD_Init(); // initialize LCD controller
+	char *digits[10] = {
+		"Zero",
+		"One",
+		"Two",
+		"Three",
+		"Four",
+		"Five",
+		"Six",
+		"Seven",
+		"Eight",
+		"Nine",
+	};
 	while(1) {
-		LCD_Clear();
-		LCD_Message("Sample Text");  // show counter 
-		LCD_Integer(8);
-		_delay_ms(600);   // set animation speed
+		for (int i = 0; i <= 9; i++) {
+			LCD_Clear();
+			LCD_String(digits[i]);
+			LCD_SetCursor(1,0);
+			LCD_Char('0'+i);
+			_delay_ms(1000);
+		}
 	}
 }
