@@ -4,7 +4,7 @@
 sed -i 's/#Par/Par/g' /etc/pacman.conf
 
 #Install required packages
-pacman -Syyu git wget imagemagick ranger atool elinks ffmpegthumbnailer highlight libcaca lynx mediainfo odt2txt perl-image-exiftool feh poppler sudo transmission-cli ueberzug w3m python3 python-pip xorg xsel python-pynvim neovim vim neomutt gnupg zathura zathura-pdf-poppler zathura-cb zathura-ps zathura-djvu texlive-most base base-devel zip unzip p7zip i3-wm rofi i3status biber yarn firefox inetutils usbutils x11vnc xorg-server-xvfb networkmanager openssh xterm alacritty
+pacman -Syyu --noconfirm git wget imagemagick ranger atool elinks ffmpegthumbnailer highlight libcaca lynx mediainfo odt2txt perl-image-exiftool feh poppler sudo transmission-cli ueberzug w3m python3 python-pip xorg xsel python-pynvim neovim vim neomutt gnupg zathura zathura-pdf-poppler zathura-cb zathura-ps zathura-djvu texlive-most base base-devel zip unzip p7zip i3-wm rofi i3status biber yarn firefox inetutils usbutils x11vnc xorg-server-xvfb networkmanager openssh xterm alacritty
 
 #Set up python virtualenv
 python3 -m venv ~/.pyvenv
