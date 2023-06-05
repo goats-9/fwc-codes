@@ -27,7 +27,7 @@ curl -fLo ~/.config/i3/config --create-dirs https://raw.githubusercontent.com/go
 #alacritty
 curl -fLo ~/.config/alacritty/alacritty.yml --create-dirs https://raw.githubusercontent.com/goats-9/fwc-codes/main/resources/dotfiles/alacritty.yml
 mkdir -p ~/.config/alacritty/themes
-git clone https://github.com/alacritty/alacritty-themes ~/.config/alacritty/themes
+git clone https://github.com/alacritty/alacritty-theme ~/.config/alacritty/themes
 
 #Messages
 echo "To run a VNC Server, type the command"
