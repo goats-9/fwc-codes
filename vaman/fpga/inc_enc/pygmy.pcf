@@ -1,0 +1,11 @@
+set_io digit(3) IO_29
+set_io digit(2) IO_28
+set_io digit(1) IO_27
+set_io digit(0) IO_26
+set_io sevenseg(6) IO_3
+set_io sevenseg(5) IO_4
+set_io sevenseg(4) IO_5
+set_io sevenseg(3) IO_6
+set_io sevenseg(2) IO_7
+set_io sevenseg(1) IO_8
+set_io sevenseg(0) IO_9

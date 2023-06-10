@@ -1,0 +1,7 @@
+set_io a IO_4
+set_io b IO_5
+set_io c IO_6
+set_io d IO_7
+set_io e IO_8
+set_io f IO_9
+set_io g IO_10
