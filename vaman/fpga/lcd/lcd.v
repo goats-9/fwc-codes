@@ -66,7 +66,7 @@ module lcd (
         nibs[32] = b0[7:4];
         nibs[33] = b0[3:0];//b0
         nibs[34] = 4'hC;
-        nibs[35] = 4'h0;
+        nibs[35] = 4'h0;//Next line
         nibs[36] = 4'h6;
         nibs[37] = 4'h3;//'c'
         nibs[38] = 4'h3;
@@ -109,7 +109,7 @@ module lcd (
         	else
              	count<=count+1;	
         end
-        if ((i>15 && i<34) || (i>35 && i <= 51)) 
+        if ((i>15 && i<34) || (i>35 && i<=51)) 
         begin 
         	rs<=1'b1;
         	data=nibs[i];
