@@ -3,34 +3,34 @@ from tensorflow.keras import layers
 import pandas as pd
 
 #Retrieve data
-url = "https://raw.githubusercontent.com/goats-9/fwc-codes/main/tiny-ml/data/"
-train_data_file = "train.csv"
-test_data_file = "test.csv"
-
-train_csv = tf.keras.utils.get_file(train_data_file, url + train_data_file)
-test_csv = tf.keras.utils.get_file(test_data_file, url + test_data_file)
-num_features = 180
-train_dataset = pd.read_csv(train_csv)
-test_dataset = pd.read_csv(test_csv)
+train_dataset = pd.read_csv("data/train.csv")
+test_dataset = pd.read_csv("data/test.csv")
 train_input = train_dataset.loc[:, train_dataset.columns != 'target']
 train_output = train_dataset.loc[:, train_dataset.columns == 'target']
 test_input = test_dataset.loc[:, test_dataset.columns != 'target']
-test_output = test_dataset.loc[:, test_dataset.columns != 'target']
+test_output = test_dataset.loc[:, test_dataset.columns == 'target']
+num_features = len(test_dataset.columns) - 1
 
 #Define the model
 model = tf.keras.Sequential([
-    layers.Dense(input_shape=(num_features,)),
-    layers.Dense(128, activation='relu'),
-    layers.Dense(2)
+    layers.Flatten(input_shape=(num_features,)),
+    layers.Dense(16, activation='relu'),
+    layers.Dense(1, activation='sigmoid')
 ])
 
 #Compile the model
 model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
 
 #Train the model
-model.fit(train_input, train_output, epochs=10, batch_size=16)
+model.fit(train_input, train_output, epochs=64)
 
 #Evaluate the model
 loss, acc = model.evaluate(test_input, test_output)
 
 print("Accuracy:", acc)
+
+converter = tf.lite.TFLiteConverter.from_keras_model(model)
+converter.optimizations = [tf.lite.Optimize.OPTIMIZE_FOR_SIZE]
+tflite_model = converter.convert()
+
+open("gesture_model.tflite", "wb").write(tflite_model)
