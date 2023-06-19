@@ -12,12 +12,13 @@
 
 WiFiClient client;
 HTTPClient gesture;
-Eloquent::TinyML::TfLite<NUM_INPUTS, NUM_OUTPUTS, TENSOR_ARENA_SIZE> ml(gesture_model_tflite);
+Eloquent::TinyML::TfLite<NUM_INPUTS, NUM_OUTPUTS, TENSOR_ARENA_SIZE> ml;
 
 int prev_id;
 
 void setup() {
     Serial.begin(115200);
+    ml.begin(gesture_model_tflite);
     /*
      * 1. Establish WiFi connection.
      */
