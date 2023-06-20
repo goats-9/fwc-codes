@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <math.h>
 
-#define NUM_SAMPLES 20
+#define NUM_SAMPLES 40
 #define NUM_GAP 10
 #define NUM_GESTURES_TRAIN 80
 #define NUM_GESTURES_TEST 20
