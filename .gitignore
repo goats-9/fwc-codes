@@ -6,3 +6,4 @@
 *.elf
 *.eep
 *.lst
+__pycache__

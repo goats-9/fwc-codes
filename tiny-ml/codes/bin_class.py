@@ -15,7 +15,6 @@ num_features = len(test_dataset.columns) - 1
 #Define the model
 model = tf.keras.Sequential([
     layers.Flatten(input_shape=(num_features,)),
-    layers.Dense(16, activation='relu'),
     layers.Dense(1, activation='sigmoid')
 ])
 

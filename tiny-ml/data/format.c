@@ -2,12 +2,12 @@
 #include <stdlib.h>
 #include <math.h>
 
-#define NUM_SAMPLES 40
-#define NUM_GAP 10
-#define NUM_GESTURES_TRAIN 80
-#define NUM_GESTURES_TEST 20
+#define NUM_SAMPLES 10
+#define NUM_GAP 5
+#define NUM_GESTURES_TRAIN 40
+#define NUM_GESTURES_TEST 10
 #define NUM_GESTURES (NUM_GESTURES_TRAIN + NUM_GESTURES_TEST)
-#define ACC_THR 30.0
+#define ACC_THR 20.0
 
 FILE *train_dst, *test_dst;
 
