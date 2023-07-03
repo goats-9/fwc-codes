@@ -1,19 +1,28 @@
 #!/bin/bash
 
+#Exit on error
+set -e
+
+#Change to home directory
+cd
+
 #Update package repos
 apt update -y && apt upgrade -y
 
 #Install new packages
 apt install openssh-server sshpass build-essential libssl-dev libffi-dev python3-dev bison flex git-all git-lfs hub tcl-dev tcl tcl-tclreadline libreadline-dev  autoconf libtool make automake texinfo pkg-config libusb-1.0-0 libusb-1.0-0-dev gcc-arm-none-eabi libnewlib-arm-none-eabi telnet python3 apt-utils libxslt-dev cmake curl python3-pip python3-venv -y
 
-#Setup git LFS
-git lfs install
-
 #Create a python3 virtual environment for installed modules
 python3 -m venv ~/.pyvenv
 
+#Install required python modules
+pip3 install gdown
+
+#Download arch.tar.gz
+gdown --fuzzy 'https://drive.google.com/uc?export=download&id=17gVGRJ1qcaWanYzyg1eMUiLlFqya3_ZD'
+
 #Create directory to install the toolchain to
-mkdir -p /root/symbiflow
+mkdir -p $HOME/symbiflow
 echo "export INSTALL_DIR=$HOME/symbiflow" >> ~/.pyvenv/bin/activate
 echo "export PATH=$INSTALL_DIR/bin:$INSTALL_DIR/quicklogic-arch-defs/bin:$INSTALL_DIR/quicklogic-arch-defs/bin/python3:$PATH" >> ~/.pyvenv/bin/activate
 cd
@@ -23,14 +32,11 @@ source ~/.pyvenv/bin/activate
 #Clone pygmy toolchain
 git clone --recursive https://github.com/optimuslogic/pygmy-dev
 
-#Download symbiflow and patches
-git clone https://github.com/goats-9/fwc-codes
-cp fwc-codes/resources/arch.tar.gz .
-cp fwc-codes/resources/quicklogic-fasm.patch pygmy-dev/tools/quicklogic-fasm
-cp fwc-codes/resources/quicklogic-yosys.patch pygmy-dev/tools/quicklogic-yosys
-cp fwc-codes/resources/vtr-verilog-to-routing.patch pygmy-dev/tools/vtr-verilog-to-routing
+#Download patches
+wget https://raw.githubusercontent.com/goats-9/fwc-codes/main/resources/quicklogic-fasm.patch -O pygmy-dev/tools/quicklogic-fasm/
+wget https://raw.githubusercontent.com/goats-9/fwc-codes/main/resources/quicklogic-yosys.patch -O pygmy-dev/tools/quicklogic-yosys/
+wget https://raw.githubusercontent.com/goats-9/fwc-codes/main/resources/vtr-verilog-to-routing.patch -O pygmy-dev/tools/vtr-verilog-to-routing/
 
-rm -rf fwc-codes
 tar -C $INSTALL_DIR -xvf arch.tar.gz
 
 #Install fasm
