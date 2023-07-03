@@ -14,9 +14,8 @@ python3 -m venv ~/.pyvenv
 
 #Create directory to install the toolchain to
 mkdir -p /root/symbiflow
-echo "export INSTALL_DIR=/root/symbiflow" >> ~/.pyvenv/bin/activate
-echo "export PATH=$INSTALL_DIR/quicklogic-arch-defs/bin:$INSTALL_DIR/quicklogic-arch-defs/bin/python3:$PATH" >> ~/.pyvenv/bin/activate
-echo "export PATH=/data/data/com.termux/files/home/symbiflow/bin:$PATH" >> ~/.pyvenv/bin/activate
+echo "export INSTALL_DIR=$HOME/symbiflow" >> ~/.pyvenv/bin/activate
+echo "export PATH=$INSTALL_DIR/bin:$INSTALL_DIR/quicklogic-arch-defs/bin:$INSTALL_DIR/quicklogic-arch-defs/bin/python3:$PATH" >> ~/.pyvenv/bin/activate
 cd
 
 source ~/.pyvenv/bin/activate
