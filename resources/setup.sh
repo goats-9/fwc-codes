@@ -3,7 +3,10 @@
 #Exit on error
 set -e
 
-#Change to home directory
+#Installation in TERMUX_HOME
+TERMUX_HOME=/data/data/com.termux/files/home/
+
+#Change to TERMUX_HOME directory
 cd
 
 #Update package repos
@@ -22,8 +25,8 @@ pip3 install gdown
 gdown --fuzzy 'https://drive.google.com/uc?export=download&id=17gVGRJ1qcaWanYzyg1eMUiLlFqya3_ZD'
 
 #Create directory to install the toolchain to
-mkdir -p $HOME/symbiflow
-echo "export INSTALL_DIR=$HOME/symbiflow" >> ~/.pyvenv/bin/activate
+mkdir -p $TERMUX_HOME/symbiflow
+echo "export INSTALL_DIR=$TERMUX_HOME/symbiflow" >> ~/.pyvenv/bin/activate
 echo "export PATH=$INSTALL_DIR/bin:$INSTALL_DIR/quicklogic-arch-defs/bin:$INSTALL_DIR/quicklogic-arch-defs/bin/python3:$PATH" >> ~/.pyvenv/bin/activate
 cd
 
