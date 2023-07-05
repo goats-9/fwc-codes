@@ -7,7 +7,7 @@ set -e
 TERMUX_HOME=/data/data/com.termux/files/home/
 
 #Change to TERMUX_HOME directory
-cd
+cd $TERMUX_HOME
 
 #Update package repos
 apt update -y && apt upgrade -y
@@ -28,7 +28,7 @@ gdown --fuzzy 'https://drive.google.com/uc?export=download&id=17gVGRJ1qcaWanYzyg
 mkdir -p $TERMUX_HOME/symbiflow
 echo "export INSTALL_DIR=$TERMUX_HOME/symbiflow" >> ~/.pyvenv/bin/activate
 echo "export PATH=$INSTALL_DIR/bin:$INSTALL_DIR/quicklogic-arch-defs/bin:$INSTALL_DIR/quicklogic-arch-defs/bin/python3:$PATH" >> ~/.pyvenv/bin/activate
-cd
+cd $TERMUX_HOME
 
 source ~/.pyvenv/bin/activate
 
@@ -49,17 +49,17 @@ pip3 install -r requirements.txt
 python3 setup.py install
 
 #Install yosys
-cd ~/pygmy-dev/tools/quicklogic-yosys
+cd $TERMUX_HOME/pygmy-dev/tools/quicklogic-yosys
 git apply quicklogic-yosys.patch
 make config-gcc
 make -j4 install PREFIX=$INSTALL_DIR
 
 #Install yosys symbiflow plugins
-cd ~/pygmy-dev/tools/yosys-symbiflow-plugins
+cd $TEMRUX_HOME/pygmy-dev/tools/yosys-symbiflow-plugins
 make -j4 install
 
 #Install vtr
-cd ~/pygmy-dev/tools/vtr-verilog-to-routing
+cd $TERMUX_HOME/pygmy-dev/tools/vtr-verilog-to-routing
 git apply vtr-verilog-to-routing.patch
 make -j4
 
