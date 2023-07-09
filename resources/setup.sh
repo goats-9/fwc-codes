@@ -28,7 +28,7 @@ cd $TERMUX_HOME
 source ~/.pyvenv/bin/activate
 
 #Install required python modules
-pip3 install gdown
+pip3 install gdown lxml antlr simplejson
 
 #Download arch.tar.gz
 gdown --fuzzy 'https://drive.google.com/uc?export=download&id=17gVGRJ1qcaWanYzyg1eMUiLlFqya3_ZD'
