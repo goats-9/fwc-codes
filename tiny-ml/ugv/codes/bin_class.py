@@ -3,23 +3,28 @@ from tensorflow.keras import layers
 import pandas as pd
 import os
 
+num_logits = 5
+
 #Get data
 train_dataset = pd.read_csv("../data/train.csv")
 test_dataset = pd.read_csv("../data/test.csv")
-train_input = train_dataset.loc[:, train_dataset.columns != 'target']
-train_output = train_dataset.loc[:, train_dataset.columns == 'target']
-test_input = test_dataset.loc[:, test_dataset.columns != 'target']
-test_output = test_dataset.loc[:, test_dataset.columns == 'target']
 num_features = len(test_dataset.columns) - 1
+train_input = train_dataset.iloc[:, :num_features]
+train_output = train_dataset.iloc[:, num_features:num_features+1]
+test_input = test_dataset.iloc[:, :num_features]
+test_output = test_dataset.iloc[:, num_features:num_features+1]
 
 #Define the model
 model = tf.keras.Sequential([
     layers.Flatten(input_shape=(num_features,)),
-    layers.Dense(1, activation='sigmoid')
+    layers.Dense(8, activation='relu'),
+    layers.Dense(num_logits)
 ])
 
 #Compile the model
-model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
+model.compile(optimizer='adam',
+              loss=tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True),
+              metrics=['accuracy'])
 
 #Train the model
 model.fit(train_input, train_output, epochs=64)
