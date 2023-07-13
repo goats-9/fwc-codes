@@ -15,7 +15,7 @@
 #define TENSOR_ARENA_SIZE 4096
 
 WiFiClient client;
-HTTPClient gesture;
+HTTPClient ugv;
 Eloquent::TinyML::TensorFlow::TensorFlow<NUM_INPUTS, NUM_OUTPUTS, TENSOR_ARENA_SIZE> ml;
 StaticJsonDocument<6144> doc;
 Motor Motor1;
@@ -41,14 +41,14 @@ void setup() {
       delay(1000);
     }
     Serial.println(WiFi.localIP());
-    ml.begin(gesture_model_tflite);
+    ml.begin(ugv_model_tflite);
     while (!ml.isOk()) { 
         Serial.print("ERROR: ");
         Serial.println(ml.getErrorMessage());
         delay(2000);
     }
-    gesture.useHTTP10(true);
-    gesture.begin(client, ugvURL);
+    ugv.useHTTP10(true);
+    ugv.begin(client, ugvURL);
 } 
 
 void lock(int del) {
@@ -109,12 +109,11 @@ void loop() {
      * 1. Get input from webserver.
      * 2. Handle input from webserver.
      */
-    gesture.addHeader("Content-Type", "application/json");
+    ugv.addHeader("Content-Type", "application/json");
     int httpResponseCode, id;
-    // Wait for new gesture
     while (1) {
-        httpResponseCode = gesture.GET();
-        deserializeJson(doc, gesture.getStream());
+        httpResponseCode = ugv.GET();
+        deserializeJson(doc, ugv.getStream());
         id = doc["id"];
         if (id > prev_id) {
             prev_id = id;
