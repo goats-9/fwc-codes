@@ -144,12 +144,9 @@ void SystemInit(void)
 
 //gpionum --> 0 --> 31 corresponding to the IO PADs
 //gpioval --> 0 or 1
-#define FGPIO_DIRECTION_REG (uint32_t *)(0x40021008)
-#define FGPIO_OUTPUT_REG (uint32_t *)(0x40021004)
-#define FGPIO_INPUT_REG (uint32_t *)(0x40021000)
-// #define FGPIO_DIRECTION_REG (uint32_t *)(0x40024008)
-// #define FGPIO_OUTPUT_REG (uint32_t *)(0x40024004)
-// #define FGPIO_INPUT_REG (uint32_t *)(0x40024000)
+#define FGPIO_DIRECTION_REG (uint32_t *)(0x40024008)
+#define FGPIO_OUTPUT_REG (uint32_t *)(0x40024004)
+#define FGPIO_INPUT_REG (uint32_t *)(0x40024000)
 //Set GPIO(=gpionum) Mode: Input(iomode = 0) or Output(iomode = 1)
 //Before Set/Get GPIO value, the direction must be correctly set
 void PyHal_GPIO_SetDir(uint8_t gpionum,uint8_t iomode)
