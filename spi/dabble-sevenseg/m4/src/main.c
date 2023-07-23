@@ -52,7 +52,7 @@ int main(void)
     
     qf_hardwareSetup();
     nvic_init();
-    
+
     dbg_str("\n\n");
     dbg_str( "##########################\n");
     dbg_str( "Quicklogic QuickFeather FPGA GPIO CONTROLLER EXAMPLE\n");
@@ -70,39 +70,9 @@ int main(void)
     sevenseg_setup();    //Sevenseg ready for display
     //Seven Segment GPIO
     while(1){
-	    digit = *(uint32_t *)SW_MB_1;
+	digit = *(uint32_t *)SW_MB_1;
     	disp(digit); //display number
     	HAL_DelayUSec(1000000);    
-      dbg_str("GPIO directions: ");
-      dbg_int(PyHal_GPIO_GetDir(4));
-      dbg_ch(' '); 
-      dbg_int(PyHal_GPIO_GetDir(5));
-      dbg_ch(' '); 
-      dbg_int(PyHal_GPIO_GetDir(6));
-      dbg_ch(' '); 
-      dbg_int(PyHal_GPIO_GetDir(7));
-      dbg_ch(' '); 
-      dbg_int(PyHal_GPIO_GetDir(8));
-      dbg_ch(' '); 
-      dbg_int(PyHal_GPIO_GetDir(10));
-      dbg_ch(' '); 
-      dbg_int(PyHal_GPIO_GetDir(11));
-      dbg_nl(); 
-      dbg_str("Output values: ");
-      dbg_int(PyHal_GPIO_Get(4));
-      dbg_ch(' '); 
-      dbg_int(PyHal_GPIO_Get(5));
-      dbg_ch(' '); 
-      dbg_int(PyHal_GPIO_Get(6));
-      dbg_ch(' '); 
-      dbg_int(PyHal_GPIO_Get(7));
-      dbg_ch(' '); 
-      dbg_int(PyHal_GPIO_Get(8));
-      dbg_ch(' '); 
-      dbg_int(PyHal_GPIO_Get(10));
-      dbg_ch(' '); 
-      dbg_int(PyHal_GPIO_Get(11));
-      dbg_nl(); 
     }
 
     /* Start the tasks and timer running. */
@@ -144,9 +114,9 @@ void SystemInit(void)
 
 //gpionum --> 0 --> 31 corresponding to the IO PADs
 //gpioval --> 0 or 1
-#define FGPIO_DIRECTION_REG (uint32_t *)(0x40024008)
-#define FGPIO_OUTPUT_REG (uint32_t *)(0x40024004)
-#define FGPIO_INPUT_REG (uint32_t *)(0x40024000)
+#define FGPIO_DIRECTION_REG (0x40024008)
+#define FGPIO_OUTPUT_REG (0x40024004)
+#define FGPIO_INPUT_REG (0x40024000)
 //Set GPIO(=gpionum) Mode: Input(iomode = 0) or Output(iomode = 1)
 //Before Set/Get GPIO value, the direction must be correctly set
 void PyHal_GPIO_SetDir(uint8_t gpionum,uint8_t iomode)
@@ -156,15 +126,11 @@ void PyHal_GPIO_SetDir(uint8_t gpionum,uint8_t iomode)
     if (gpionum > 31)
         return;
 
-    tempscratch32 = *(FGPIO_DIRECTION_REG);
+    tempscratch32 = *(uint32_t*)(FGPIO_DIRECTION_REG);
     if (iomode)
-        *(FGPIO_DIRECTION_REG) = tempscratch32 | (0x1 << gpionum);
+        *(uint32_t*)(FGPIO_DIRECTION_REG) = tempscratch32 | (0x1 << gpionum);
     else
-        *(FGPIO_DIRECTION_REG) = tempscratch32 & (~(0x1 << gpionum));
-    dbg_int(gpionum);
-    dbg_str(" -> FGPIO_DIRECTION_REG = ");
-    dbg_hex32(*(uint32_t *)FGPIO_DIRECTION_REG);
-    dbg_nl();
+        *(uint32_t*)(FGPIO_DIRECTION_REG) = tempscratch32 & (~(0x1 << gpionum));
 
 }
 
@@ -195,7 +161,7 @@ int PyHal_GPIO_Set(uint8_t gpionum, uint8_t gpioval)
     if (gpionum > 31)
         return -1;
 
-    tempscratch32 = *(FGPIO_DIRECTION_REG);
+    tempscratch32 = *(uint32_t*)(FGPIO_DIRECTION_REG);
 
     //Setting Direction moved out as separate API, we will only check
     //*(uint32_t*)(FGPIO_DIRECTION_REG) = tempscratch32 | (0x1 << gpionum);
@@ -205,20 +171,17 @@ int PyHal_GPIO_Set(uint8_t gpionum, uint8_t gpioval)
         return -1;
     }
     
-    tempscratch32 = *(FGPIO_OUTPUT_REG);
+    tempscratch32 = *(uint32_t*)(FGPIO_OUTPUT_REG);
 
     if(gpioval > 0)
     {
-        *(FGPIO_OUTPUT_REG) = tempscratch32 | (0x1 << gpionum);
+        *(uint32_t*)(FGPIO_OUTPUT_REG) = tempscratch32 | (0x1 << gpionum);
     }
     else
     {
-        *(FGPIO_OUTPUT_REG) = tempscratch32 & ~(0x1 << gpionum);
-    }
-    dbg_int(gpionum);
-    dbg_str(" -> FGPIO_OUTPUT_REG = ");
-    dbg_hex32(*(FGPIO_OUTPUT_REG));
-    dbg_nl();
+        *(uint32_t*)(FGPIO_OUTPUT_REG) = tempscratch32 & ~(0x1 << gpionum);
+    }    
+
     return 0;
 }
 //Get GPIO(=gpionum): 0 or 1 returned (or in erros -1)
