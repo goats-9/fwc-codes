@@ -17,7 +17,7 @@
 #include "s3x_clock.h"
 #include "s3x_pi.h"
 #include "dbg_uart.h"
-
+#include "hal_fpga_onion_pwmctrl.h"
 #include "cli.h"
 
 
@@ -30,7 +30,6 @@ const char *SOFTWARE_VERSION_STR;
 /*
  * Global variable definition
  */
-
 
 extern void qf_hardwareSetup();
 static void nvic_init(void);
@@ -53,15 +52,13 @@ int main(void)
     dbg_str( __DATE__ " " __TIME__ "\n" );
     dbg_str( "##########################\n\n");
 
-    dbg_str( "\n\nHello GPIO!!\n\n");	// <<<<<<<<<<<<<<<<<<<<<  Change me!
 
     CLI_start_task( my_main_menu );
 	HAL_Delay_Init();
-
-    int pwm = 0;
     while(1) {
-	    pwm = *(uint32_t *)SW_MB_1;
-        hal_fpga_onion_pwmctrl_enable(22, pwm);
+        uint8_t pwm = *(uint8_t *)SW_MB_1;
+        hal_fpga_onion_pwmctrl_enable(21, pwm);
+        HAL_DelayUSec(1000000);
     }
     /* Start the tasks and timer running. */
     vTaskStartScheduler();

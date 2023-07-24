@@ -57,14 +57,11 @@ void setup() {
   });
 
   server.on("/get", HTTP_GET, [] (AsyncWebServerRequest *request) {
-    String inputMessage;
     if (request->hasParam(PARAM_PWM)) {  
-      inputMessage = request->getParam(PARAM_PWM)->value();
-      pwm = inputMessage.toInt();
+      pwm = request->getParam(PARAM_PWM)->value().toInt();
       esp32_eoss3_spi_ahb_write(SW_MB_1, &pwm, 1);
-    } else inputMessage = "-1";
-    Serial.println(inputMessage);
-    request->send(200, "text/text", inputMessage);
+    }
+    request->send_P(200, "text/html", index_html, processor);
   });
   server.onNotFound(notFound);
   server.begin();
