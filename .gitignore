@@ -7,3 +7,8 @@
 *.eep
 *.lst
 __pycache__
+Makefile.symbiflow
+*.bin
+*.jlink
+*.openocd
+build
