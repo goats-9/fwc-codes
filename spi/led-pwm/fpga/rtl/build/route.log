@@ -1,0 +1,594 @@
+VPR FPGA Placement and Routing.
+Version: 8.1.0-dev+dadca7ecf-dirty
+Revision: v8.0.0-rc2-2909-gdadca7ecf-dirty
+Compiled: 2023-07-25T03:16:17
+Compiler: GNU 12.2.0 on Linux-6.2.1-PRoot-Distro aarch64
+Build Info: release IPO VTR_ASSERT_LEVEL=2
+
+University of Toronto
+verilogtorouting.org
+vtr-users@googlegroups.com
+This is free open source code under MIT license.
+
+VPR was run with the following command-line:
+vpr /data/data/com.termux/files/home/symbiflow/quicklogic-arch-defs/share/arch/ql-eos-s3_wlcsp/arch.timing.xml AL4S3B_FPGA_Top.eblif --device ql-eos-s3 --max_router_iterations 500 --routing_failure_predictor off --router_high_fanout_threshold -1 --constant_net_method route --route_chan_width 100 --clock_modeling route --place_delay_model delta_override --router_lookahead map --check_route quick --strict_checks off --allow_dangling_combinational_nodes on --disable_errors check_unbuffered_edges:check_route --congested_routing_iteration_threshold 0.8 --incremental_reroute_delay_ripup off --base_cost_type delay_normalized_length_bounded --bb_factor 10 --initial_pres_fac 4.0 --check_rr_graph off --suppress_warnings ,sum_pin_class:check_unbuffered_edges:load_rr_indexed_data_T_values:check_rr_node:trans_per_R:check_route:set_rr_graph_tool_comment:warn_model_missing_timing --read_rr_graph /data/data/com.termux/files/home/symbiflow/quicklogic-arch-defs/share/arch/ql-eos-s3_wlcsp/rr_graph_ql-eos-s3_wlcsp.rr_graph.real.bin --read_placement_delay_lookup /data/data/com.termux/files/home/symbiflow/quicklogic-arch-defs/share/arch/ql-eos-s3_wlcsp/rr_graph_ql-eos-s3_wlcsp.place_delay.bin --sdc_file /data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/build/AL4S3B_FPGA_Top_dummy.sdc --route
+
+
+Architecture file: /data/data/com.termux/files/home/symbiflow/quicklogic-arch-defs/share/arch/ql-eos-s3_wlcsp/arch.timing.xml
+Circuit name: AL4S3B_FPGA_Top
+
+# Loading Architecture Description
+# Loading Architecture Description took 0.49 seconds (max_rss 27.9 MiB, delta_rss +23.7 MiB)
+# Building complex block graph
+# Building complex block graph took 0.13 seconds (max_rss 34.7 MiB, delta_rss +6.8 MiB)
+# Load circuit
+# Load circuit took 0.06 seconds (max_rss 42.2 MiB, delta_rss +7.5 MiB)
+# Clean circuit
+Absorbed 3051 LUT buffers
+Inferred  106 additional primitive pins as constant generators since they have no combinationally connected inputs
+Inferred   87 additional primitive pins as constant generators due to constant inputs
+Inferred    0 additional primitive pins as constant generators since they have no combinationally connected inputs
+Inferred    0 additional primitive pins as constant generators due to constant inputs
+Inferred    0 additional primitive pins as constant generators since they have no combinationally connected inputs
+Inferred    0 additional primitive pins as constant generators due to constant inputs
+Swept input(s)      : 0
+Swept output(s)     : 0 (0 dangling, 0 constant)
+Swept net(s)        : 117
+Swept block(s)      : 1
+Constant Pins Marked: 193
+# Clean circuit took 0.05 seconds (max_rss 54.1 MiB, delta_rss +11.9 MiB)
+# Compress circuit
+# Compress circuit took 0.00 seconds (max_rss 54.1 MiB, delta_rss +0.0 MiB)
+# Verify circuit
+# Verify circuit took 0.00 seconds (max_rss 54.1 MiB, delta_rss +0.0 MiB)
+Circuit Statistics:
+  Blocks: 562
+    .input    :      32
+    .output   :      32
+    ASSP      :       1
+    BIDIR_CELL:      32
+    C_FRAG    :      17
+    F_FRAG    :      30
+    GMUX_IC   :       2
+    GND       :       1
+    Q_FRAG    :     129
+    T_FRAG    :     285
+    VCC       :       1
+  Nets  : 586
+    Avg Fanout:     6.0
+    Max Fanout:  1107.0
+    Min Fanout:     1.0
+Warning 1: Assuming clocks may propagate through u_gclkbuff_clock (GMUX_IC) from pin u_gclkbuff_clock.IC[0] to u_gclkbuff_clock.IZ[0] (assuming a non-inverting buffer).
+Warning 2: Assumed 1 netlist logic connections may be clock buffers. To override this behaviour explicitly create clocks at the appropriate netlist pins.
+  Netlist Clocks: 1
+# Build Timing Graph
+Warning 3: Assuming clocks may propagate through u_gclkbuff_clock (GMUX_IC) from pin u_gclkbuff_clock.IC[0] to u_gclkbuff_clock.IZ[0] (assuming a non-inverting buffer).
+Warning 4: Assumed 1 netlist logic connections may be clock buffers. To override this behaviour explicitly create clocks at the appropriate netlist pins.
+Adding edge from 'u_gclkbuff_clock.IC[0]' (tnode: 3897) -> 'u_gclkbuff_clock.IZ[0]' (tnode: 3898) to allow clocks to propagate
+Adding edge from 'u_gclkbuff_reset.IC[0]' (tnode: 3900) -> 'u_gclkbuff_reset.IZ[0]' (tnode: 3901) to allow clocks to propagate
+  Timing Graph Nodes: 4120
+  Timing Graph Edges: 6553
+  Timing Graph Levels: 14
+# Build Timing Graph took 0.00 seconds (max_rss 54.1 MiB, delta_rss +0.0 MiB)
+Warning 5: Assuming clocks may propagate through u_gclkbuff_clock (GMUX_IC) from pin u_gclkbuff_clock.IC[0] to u_gclkbuff_clock.IZ[0] (assuming a non-inverting buffer).
+Warning 6: Assumed 1 netlist logic connections may be clock buffers. To override this behaviour explicitly create clocks at the appropriate netlist pins.
+Netlist contains 1 clocks
+  Netlist Clock 'u_AL4S3B_FPGA_IP.CLK_IP_i' Fanout: 28 pins (0.7%), 28 blocks (5.0%)
+# Load Timing Constraints
+Warning 7: Assuming clocks may propagate through u_gclkbuff_clock (GMUX_IC) from pin u_gclkbuff_clock.IC[0] to u_gclkbuff_clock.IZ[0] (assuming a non-inverting buffer).
+Warning 8: Assumed 1 netlist logic connections may be clock buffers. To override this behaviour explicitly create clocks at the appropriate netlist pins.
+
+SDC file '/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/build/AL4S3B_FPGA_Top_dummy.sdc' contained no SDC commands
+Warning 9: Assuming clocks may propagate through u_gclkbuff_clock (GMUX_IC) from pin u_gclkbuff_clock.IC[0] to u_gclkbuff_clock.IZ[0] (assuming a non-inverting buffer).
+Warning 10: Assumed 1 netlist logic connections may be clock buffers. To override this behaviour explicitly create clocks at the appropriate netlist pins.
+Setting default timing constraints:
+   * constrain all primay inputs and primary outputs on netlist clock 'u_AL4S3B_FPGA_IP.CLK_IP_i'
+   * optimize netlist clock to run as fast as possible
+Timing constraints created 1 clocks
+  Constrained Clock 'u_AL4S3B_FPGA_IP.CLK_IP_i' Source: 'u_qlal4s3b_cell_macro.Sys_Clk0[0]'
+
+# Load Timing Constraints took 0.00 seconds (max_rss 54.1 MiB, delta_rss +0.0 MiB)
+Timing analysis: ON
+Circuit netlist file: AL4S3B_FPGA_Top.net
+Circuit placement file: AL4S3B_FPGA_Top.place
+Circuit routing file: AL4S3B_FPGA_Top.route
+Circuit SDC file: /data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/build/AL4S3B_FPGA_Top_dummy.sdc
+
+Packer: ENABLED
+Placer: ENABLED
+Router: ENABLED
+Analysis: ENABLED
+
+NetlistOpts.abosrb_buffer_luts            : true
+NetlistOpts.sweep_dangling_primary_ios    : true
+NetlistOpts.sweep_dangling_nets           : true
+NetlistOpts.sweep_dangling_blocks         : true
+NetlistOpts.sweep_constant_primary_outputs: false
+NetlistOpts.netlist_verbosity             : 1
+NetlistOpts.const_gen_inference           : COMB_SEQ
+
+PackerOpts.allow_unrelated_clustering: auto
+PackerOpts.alpha_clustering: 0.750000
+PackerOpts.beta_clustering: 0.900000
+PackerOpts.cluster_seed_type: BLEND2
+PackerOpts.connection_driven: true
+PackerOpts.global_clocks: true
+PackerOpts.hill_climbing_flag: false
+PackerOpts.inter_cluster_net_delay: 1.000000
+PackerOpts.timing_driven: true
+PackerOpts.target_external_pin_util: auto
+
+PlacerOpts.place_freq: PLACE_ONCE
+PlacerOpts.place_algorithm: CRITICALITY_TIMING_PLACE
+PlacerOpts.pad_loc_type: FREE
+PlacerOpts.constraints_file: No constraints file given
+PlacerOpts.place_cost_exp: 1.000000
+PlacerOpts.place_chan_width: 100
+PlacerOpts.inner_loop_recompute_divider: 0
+PlacerOpts.recompute_crit_iter: 1
+PlacerOpts.timing_tradeoff: 0.500000
+PlacerOpts.td_place_exp_first: 1.000000
+PlacerOpts.td_place_exp_last: 8.000000
+PlacerOpts.delay_offset: 0.000000
+PlacerOpts.delay_ramp_delta_threshold: -1
+PlacerOpts.delay_ramp_slope: 0.000000
+PlacerOpts.tsu_rel_margin: 1.000000
+PlacerOpts.tsu_abs_margin: 0.000000
+PlacerOpts.post_place_timing_report_file: 
+PlacerOpts.allowed_tiles_for_delay_model: 
+PlacerOpts.delay_model_reducer: MIN
+PlacerOpts.delay_model_type: DELTA_OVERRIDE
+PlacerOpts.rlim_escape_fraction: 0.000000
+PlacerOpts.move_stats_file: 
+PlacerOpts.placement_saves_per_temperature: 0
+PlacerOpts.effort_scaling: CIRCUIT
+PlacerOpts.place_delta_delay_matrix_calculation_method: ASTAR_ROUTE
+PlaceOpts.seed: 1
+AnnealSched.type: AUTO_SCHED
+AnnealSched.inner_num: 1.000000
+
+RouterOpts.route_type: DETAILED
+RouterOpts.router_algorithm: TIMING_DRIVEN
+RouterOpts.base_cost_type: DELAY_NORMALIZED_LENGTH_BOUNDED
+RouterOpts.fixed_channel_width: 100
+RouterOpts.check_route: QUICK
+RouterOpts.trim_empty_chan: false
+RouterOpts.trim_obs_chan: false
+RouterOpts.acc_fac: 1.000000
+RouterOpts.bb_factor: 10
+RouterOpts.bend_cost: 0.000000
+RouterOpts.first_iter_pres_fac: 0.000000
+RouterOpts.initial_pres_fac: 4.000000
+RouterOpts.pres_fac_mult: 1.300000
+RouterOpts.max_router_iterations: 500
+RouterOpts.min_incremental_reroute_fanout: 16
+RouterOpts.do_check_rr_graph: false
+RouterOpts.verify_binary_search: false
+RouterOpts.min_channel_width_hint: 0
+RouterOpts.read_rr_edge_metadata: false
+RouterOpts.exit_after_first_routing_iteration: false
+RouterOpts.astar_fac: 1.200000
+RouterOpts.criticality_exp: 1.000000
+RouterOpts.max_criticality: 0.990000
+RouterOpts.init_wirelength_abort_threshold: 0.850000
+RouterOpts.save_routing_per_iteration: false
+RouterOpts.congested_routing_iteration_threshold_frac: 0.800000
+RouterOpts.high_fanout_threshold: -1
+RouterOpts.router_debug_net: -2
+RouterOpts.router_debug_sink_rr: -2
+RouterOpts.router_debug_iteration: -2
+RouterOpts.max_convergence_count: 1
+RouterOpts.reconvergence_cpd_threshold: 0.990000
+RouterOpts.update_lower_bound_delays: true
+RouterOpts.first_iteration_timing_report_file: 
+RouterOpts.incr_reroute_delay_ripup: OFF
+RouterOpts.route_bb_update: DYNAMIC
+RouterOpts.lookahead_type: MAP
+RouterOpts.initial_timing: LOOKAHEAD
+RouterOpts.router_heap: BINARY_HEAP
+RouterOpts.routing_failure_predictor = OFF
+RouterOpts.routing_budgets_algorithm = DISABLE
+
+AnalysisOpts.gen_post_synthesis_netlist: false
+AnalysisOpts.timing_report_npaths: 100
+AnalysisOpts.timing_report_skew: false
+AnalysisOpts.echo_dot_timing_graph_node: -1
+AnalysisOpts.timing_report_detail: NETLIST
+
+RoutingArch.directionality: BI_DIRECTIONAL
+RoutingArch.switch_block_type: WILTON
+RoutingArch.Fs: 3
+
+# Load Packing
+Begin loading packed FPGA netlist file.
+Netlist generated from file 'AL4S3B_FPGA_Top.net'.
+Detected 2 constant generators (to see names run with higher pack verbosity)
+Finished loading packed FPGA netlist file (took 0.094947 seconds).
+# Load Packing took 0.10 seconds (max_rss 57.5 MiB, delta_rss +3.4 MiB)
+Warning 11: Netlist contains 0 global net to non-global architecture pin connections
+Warning 12: Logic block #195 ($false) has only 1 output pin '$false.GND0_GND[0]'. It may be a constant generator.
+Warning 13: Logic block #196 ($true) has only 1 output pin '$true.VCC0_VCC[0]'. It may be a constant generator.
+
+Netlist num_nets: 397
+Netlist num_blocks: 197
+Netlist EMPTY blocks: 0.
+Netlist PB-GMUX blocks: 2.
+Netlist PB-LOGIC blocks: 160.
+Netlist PB-CLOCK blocks: 0.
+Netlist PB-MULT blocks: 0.
+Netlist PB-SDIOMUX blocks: 0.
+Netlist PB-RAM blocks: 0.
+Netlist PB-SYN_VCC blocks: 1.
+Netlist PB-BIDIR blocks: 32.
+Netlist PB-SYN_GND blocks: 1.
+Netlist PB-ASSP blocks: 1.
+Netlist inputs pins: 0
+Netlist output pins: 96
+
+
+Pb types usage...
+  PB-GMUX           : 2
+   GMUX             : 2
+    IC              : 2
+     gmux           : 2
+  PB-LOGIC          : 160
+   LOGIC            : 160
+    FRAGS           : 160
+     c_frag_modes   : 160
+      SINGLE        : 17
+       c_frag       : 17
+      SPLIT         : 143
+       b_frag       : 143
+       t_frag       : 142
+     f_frag         : 30
+     q_frag_modes   : 129
+      INT           : 125
+       q_frag       : 125
+      EXT           : 4
+       q_frag       : 4
+  PB-SYN_VCC        : 1
+   VCC              : 1
+  PB-BIDIR          : 32
+   BIDIR            : 32
+    INOUT           : 32
+     bidir          : 32
+     inpad          : 32
+     outpad         : 32
+  PB-SYN_GND        : 1
+   GND              : 1
+  PB-ASSP           : 1
+   ASSP             : 1
+
+# Create Device
+## Build Device Grid
+FPGA sized to 39 x 35: 1365 grid tiles (ql-eos-s3)
+
+Resource usage...
+	Netlist
+		2	blocks of type: PB-GMUX
+	Architecture
+		5	blocks of type: TL-GMUX
+	Netlist
+		160	blocks of type: PB-LOGIC
+	Architecture
+		891	blocks of type: TL-LOGIC
+	Netlist
+		0	blocks of type: PB-CLOCK
+	Architecture
+		5	blocks of type: TL-CLOCK
+	Netlist
+		0	blocks of type: PB-MULT
+	Architecture
+		2	blocks of type: TL-MULT
+	Netlist
+		0	blocks of type: PB-SDIOMUX
+	Architecture
+		14	blocks of type: TL-SDIOMUX
+	Netlist
+		0	blocks of type: PB-RAM
+	Architecture
+		4	blocks of type: TL-RAM
+	Netlist
+		1	blocks of type: PB-SYN_VCC
+	Architecture
+		1	blocks of type: TL-SYN_VCC
+	Netlist
+		32	blocks of type: PB-BIDIR
+	Architecture
+		32	blocks of type: TL-BIDIR
+	Netlist
+		1	blocks of type: PB-SYN_GND
+	Architecture
+		1	blocks of type: TL-SYN_GND
+	Netlist
+		1	blocks of type: PB-ASSP
+	Architecture
+		1	blocks of type: TL-ASSP
+
+Device Utilization: 0.14 (target 1.00)
+	Physical Tile TL-LOGIC:
+	Block Utilization: 0.18 Logical Block: PB-LOGIC
+	Physical Tile TL-RAM:
+	Block Utilization: 0.00 Logical Block: PB-RAM
+	Physical Tile TL-MULT:
+	Block Utilization: 0.00 Logical Block: PB-MULT
+	Physical Tile TL-BIDIR:
+	Block Utilization: 1.00 Logical Block: PB-BIDIR
+	Physical Tile TL-CLOCK:
+	Block Utilization: 0.00 Logical Block: PB-CLOCK
+	Physical Tile TL-SDIOMUX:
+	Block Utilization: 0.00 Logical Block: PB-SDIOMUX
+	Physical Tile TL-GMUX:
+	Block Utilization: 0.40 Logical Block: PB-GMUX
+	Physical Tile TL-ASSP:
+	Block Utilization: 1.00 Logical Block: PB-ASSP
+	Physical Tile TL-SYN_VCC:
+	Block Utilization: 1.00 Logical Block: PB-SYN_VCC
+	Physical Tile TL-SYN_GND:
+	Block Utilization: 1.00 Logical Block: PB-SYN_GND
+
+## Build Device Grid took 0.01 seconds (max_rss 57.7 MiB, delta_rss +0.0 MiB)
+## Loading routing resource graph
+
+
+
+Warning 14: This architecture version is for VPR 8.1.0-dev+dadca7ecf-dirty while your current VPR version is 8.1.0-dev+dadca7ecf compatability issues may arise
+
+## Loading routing resource graph took 0.57 seconds (max_rss 356.2 MiB, delta_rss +298.5 MiB)
+  RR Graph Nodes: 1396446
+  RR Graph Edges: 2337988
+# Create Device took 1.86 seconds (max_rss 397.8 MiB, delta_rss +340.1 MiB)
+
+# Load Placement
+Reading AL4S3B_FPGA_Top.place.
+
+Successfully read AL4S3B_FPGA_Top.place.
+
+# Load Placement took 0.00 seconds (max_rss 397.8 MiB, delta_rss +0.0 MiB)
+
+# Computing router lookahead map
+## Computing wire lookahead
+Warning 15: Unable to find any sample location for segment CHANX type 'generic' (length 1)
+Warning 16: Unable to find any sample location for segment CHANY type 'generic' (length 1)
+Warning 17: Unable to find any sample location for segment CHANX type 'pad' (length 1)
+Warning 18: Unable to find any sample location for segment CHANY type 'pad' (length 1)
+## Computing wire lookahead took 37.23 seconds (max_rss 397.8 MiB, delta_rss +0.0 MiB)
+## Computing src/opin lookahead
+## Computing src/opin lookahead took 0.00 seconds (max_rss 397.8 MiB, delta_rss +0.0 MiB)
+# Computing router lookahead map took 37.23 seconds (max_rss 397.8 MiB, delta_rss +0.0 MiB)
+# Routing
+  RR Graph Nodes: 1396446
+  RR Graph Edges: 2337988
+Confirming router algorithm: TIMING_DRIVEN.
+## Initializing router criticalities
+Initial Net Connection Criticality Histogram:
+[        0:      0.1) 2482 ( 77.5%) |**********************************************
+[      0.1:      0.2)    0 (  0.0%) |
+[      0.2:      0.3)    0 (  0.0%) |
+[      0.3:      0.4)  108 (  3.4%) |**
+[      0.4:      0.5)   91 (  2.8%) |**
+[      0.5:      0.6)   89 (  2.8%) |**
+[      0.6:      0.7)  133 (  4.2%) |**
+[      0.7:      0.8)  288 (  9.0%) |*****
+[      0.8:      0.9)    9 (  0.3%) |
+[      0.9:        1)    3 (  0.1%) |
+## Initializing router criticalities took 0.01 seconds (max_rss 457.4 MiB, delta_rss +0.0 MiB)
+---- ------ ------- ---- ------- ------- ------- ----------------- --------------- -------- ---------- ---------- ---------- ---------- --------
+Iter   Time    pres  BBs    Heap  Re-Rtd  Re-Rtd Overused RR Nodes      Wirelength      CPD       sTNS       sWNS       hTNS       hWNS Est Succ
+      (sec)     fac Updt    push    Nets   Conns                                       (ns)       (ns)       (ns)       (ns)       (ns)     Iter
+---- ------ ------- ---- ------- ------- ------- ----------------- --------------- -------- ---------- ---------- ---------- ---------- --------
+   1   30.8     0.0    0 7.5e+07     397    3203    7213 ( 0.517%)   90732 ( 6.4%)   35.351     -3069.    -35.351      0.000      0.000      N/A
+   2   24.0     4.0    0 5.5e+07     326    2022    1105 ( 0.079%)   97356 ( 6.9%)   35.388     -3127.    -35.388      0.000      0.000      N/A
+   3   10.5     5.2    0 2.4e+07     150     892     470 ( 0.034%)   98472 ( 7.0%)   35.388     -3144.    -35.388      0.000      0.000      N/A
+   4    7.5     6.8    0 1.6e+07      90     521     286 ( 0.020%)   99133 ( 7.0%)   35.388     -3149.    -35.388      0.000      0.000      N/A
+   5    4.9     8.8    0 1.0e+07      62     332     229 ( 0.016%)   99287 ( 7.0%)   35.388     -3147.    -35.388      0.000      0.000      N/A
+   6    4.8    11.4    0 1.0e+07      41     210     124 ( 0.009%)   99566 ( 7.0%)   35.388     -3151.    -35.388      0.000      0.000      N/A
+   7    3.6    14.9    0 7571780      32     144      61 ( 0.004%)  100039 ( 7.1%)   35.388     -3151.    -35.388      0.000      0.000      N/A
+   8    3.2    19.3    0 6509211      18      73      33 ( 0.002%)  100571 ( 7.1%)   35.388     -3153.    -35.388      0.000      0.000      N/A
+   9    0.9    25.1    0 1928631       4      14      15 ( 0.001%)  100574 ( 7.1%)   35.388     -3153.    -35.388      0.000      0.000      N/A
+  10    0.5    32.6    0  959662       3       9       0 ( 0.000%)  100597 ( 7.1%)   35.388     -3152.    -35.388      0.000      0.000       13
+Restoring best routing
+Critical path: 35.3877 ns
+Successfully routed after 10 routing iterations.
+Final Net Connection Criticality Histogram:
+[        0:      0.1) 2482 ( 77.5%) |**********************************************
+[      0.1:      0.2)    0 (  0.0%) |
+[      0.2:      0.3)    0 (  0.0%) |
+[      0.3:      0.4)    0 (  0.0%) |
+[      0.4:      0.5)  174 (  5.4%) |***
+[      0.5:      0.6)   75 (  2.3%) |*
+[      0.6:      0.7)  157 (  4.9%) |***
+[      0.7:      0.8)  297 (  9.3%) |******
+[      0.8:      0.9)   15 (  0.5%) |
+[      0.9:        1)    3 (  0.1%) |
+Router Stats: total_nets_routed: 1123 total_connections_routed: 7420 total_heap_pushes: 207197243 total_heap_pops: 160298394
+# Routing took 92.18 seconds (max_rss 457.4 MiB, delta_rss +59.6 MiB)
+
+Checking to ensure routing is legal...
+Completed routing consistency check successfully.
+
+Serial number (magic cookie) for the routing is: -740148946
+Circuit successfully routed with a channel width factor of 100.
+
+Incr Slack updates 11 in 0.000523749 sec
+Full Max Req/Worst Slack updates 1 in 1.1511e-05 sec
+Incr Max Req/Worst Slack updates 10 in 0.000119687 sec
+Incr Criticality updates 8 in 0.000346146 sec
+Full Criticality updates 3 in 0.00020026 sec
+
+Average number of bends per net: 222.411  Maximum # of bends: 13887
+
+Number of global nets: 0
+Number of routed nets (nonglobal): 397
+Wire length results (in units of 1 clb segments)...
+	Total wirelength: 97962, average net length: 246.756
+	Maximum net length: 15954
+
+Wire length results in terms of physical segments...
+	Total wiring segments used: 90368, average wire segments per net: 227.627
+	Maximum segments used by a net: 14497
+	Total local nets with reserved CLB opins: 0
+
+Routing channel utilization histogram:
+[        1:      inf)    0 (  0.0%) |
+[      0.9:        1)   70 (  2.7%) |**
+[      0.8:      0.9)    2 (  0.1%) |
+[      0.7:      0.8)   12 (  0.5%) |
+[      0.5:      0.6)    8 (  0.3%) |
+[      0.4:      0.5)    4 (  0.2%) |
+[      0.3:      0.4)  176 (  6.8%) |****
+[      0.2:      0.3)  142 (  5.5%) |***
+[      0.1:      0.2)   64 (  2.5%) |*
+[        0:      0.1) 2106 ( 81.5%) |**********************************************
+Maximum routing channel utilization:         1 at (1,3)
+
+X - Directed channels:   j max occ ave occ capacity
+                      ---- ------- ------- --------
+                         0       2   1.641        2
+                         1     182  13.256      221
+                         2       0   0.000        0
+                         3     198  44.641      635
+                         4     115  16.077      623
+                         5     157  17.385      658
+                         6     146  23.846      623
+                         7     201  40.744      623
+                         8     269  62.615      623
+                         9     288  89.282      623
+                        10     309  82.538      665
+                        11     296  95.872      623
+                        12     337 114.359      647
+                        13     362 109.256      623
+                        14     301  86.333      623
+                        15     320 100.077      623
+                        16     317  91.462      623
+                        17     284  78.769      623
+                        18     259  48.231      725
+                        19     245  48.128      623
+                        20     219  46.667      623
+                        21     149   8.590      623
+                        22     139   6.513      623
+                        23     175   6.974      623
+                        24      17   0.436      623
+                        25      20   5.410      657
+                        26       4   0.487      634
+                        27      10   0.436      623
+                        28       7   0.179      623
+                        29       0   0.000      624
+                        30      10   0.256      625
+                        31       7   0.359      626
+                        32      36  10.769      786
+                        33       0   0.000      269
+Y - Directed channels:   i max occ ave occ capacity
+                      ---- ------- ------- --------
+                         0       0   0.000        2
+                         1     103  11.029      287
+                         2       1   0.029        4
+                         3     256  69.086      848
+                         4     159  23.371      874
+                         5     105  18.429      819
+                         6     140  24.486      760
+                         7     243  57.114      761
+                         8     267  63.629      761
+                         9     277  77.486      761
+                        10     272  78.914      757
+                        11     307  77.829      775
+                        12     309  82.971      757
+                        13     354  78.086      761
+                        14     315  84.429      761
+                        15     269  95.943      761
+                        16     285  96.171      761
+                        17     334  94.229      761
+                        18     332  93.086      761
+                        19     319  88.457      816
+                        20     292  79.886      761
+                        21     238  54.571      883
+                        22     174  35.514      761
+                        23       0   0.000      761
+                        24      25   2.257      761
+                        25       0   0.000      761
+                        26      25   3.457      757
+                        27       8   1.143      775
+                        28      25   3.143      757
+                        29       0   0.000      761
+                        30      25   3.257      761
+                        31       0   0.000      761
+                        32      25   3.143      761
+                        33       0   0.000      763
+                        34      25   3.143      762
+                        35       0   0.000      764
+                        36       0   0.000     1024
+                        37       0   0.000      164
+
+Total tracks in x-direction: 19611, in y-direction: 27046
+
+Logic area (in minimum width transistor areas, excludes I/Os and empty grid tiles)...
+	Total logic block area (Warning, need to add pitch of routing to blocks with height > 3): 1.3515e+07
+	Total used logic block area: 2.475e+06
+
+Routing area (in minimum width transistor areas)...
+	Assuming no buffer sharing (pessimistic). Total: 1.07847e+09, per logic tile: 790090.
+	Assuming buffer sharing (slightly optimistic). Total: 8.38760e+08, per logic tile: 614476.
+
+
+Segment usage by type (index):    name type utilization
+                               ------- ---- -----------
+                                  sbox    2       0.056
+                                   vcc    3       0.318
+                                   gnd    4       0.263
+                                  hop1    5      0.0881
+                                  hop2    6       0.095
+                                  hop3    7      0.0256
+                                  hop4    8       0.109
+                                 clock    9      0.0727
+                               special   10       0.117
+
+Segment usage by length: length utilization
+                         ------ -----------
+                              1       0.058
+                              2       0.095
+                              3      0.0256
+                              4       0.109
+
+
+Final hold Worst Negative Slack (hWNS): 0 ns
+Final hold Total Negative Slack (hTNS): 0 ns
+
+Final hold slack histogram:
+[    4e-09:  7.1e-09) 121 ( 76.1%) |***********************************************
+[  7.1e-09:    1e-08)   7 (  4.4%) |***
+[    1e-08:  1.3e-08)   6 (  3.8%) |**
+[  1.3e-08:  1.6e-08)  11 (  6.9%) |****
+[  1.6e-08:  1.9e-08)  11 (  6.9%) |****
+[  1.9e-08:  2.3e-08)   0 (  0.0%) |
+[  2.3e-08:  2.6e-08)   0 (  0.0%) |
+[  2.6e-08:  2.9e-08)   0 (  0.0%) |
+[  2.9e-08:  3.2e-08)   0 (  0.0%) |
+[  3.2e-08:  3.5e-08)   3 (  1.9%) |*
+
+Final critical path delay (least slack): 35.3473 ns, Fmax: 28.2907 MHz
+Final setup Worst Negative Slack (sWNS): -35.3473 ns
+Final setup Total Negative Slack (sTNS): -3152.12 ns
+
+Final setup slack histogram:
+[ -3.5e-08: -3.2e-08)  3 (  1.9%) |**
+[ -3.2e-08: -2.9e-08)  0 (  0.0%) |
+[ -2.9e-08: -2.6e-08)  0 (  0.0%) |
+[ -2.6e-08: -2.3e-08) 26 ( 16.4%) |******************
+[ -2.3e-08:   -2e-08) 71 ( 44.7%) |************************************************
+[   -2e-08: -1.7e-08) 13 (  8.2%) |*********
+[ -1.7e-08: -1.4e-08) 18 ( 11.3%) |************
+[ -1.4e-08: -1.1e-08) 12 (  7.5%) |********
+[ -1.1e-08: -8.4e-09) 12 (  7.5%) |********
+[ -8.4e-09: -5.4e-09)  4 (  2.5%) |***
+
+Final geomean non-virtual intra-domain period: 35.3473 ns (28.2907 MHz)
+Final fanout-weighted geomean non-virtual intra-domain period: 35.3473 ns (28.2907 MHz)
+
+Incr Slack updates 1 in 7.4583e-05 sec
+Full Max Req/Worst Slack updates 1 in 1.7761e-05 sec
+Incr Max Req/Worst Slack updates 0 in 0 sec
+Incr Criticality updates 0 in 0 sec
+Full Criticality updates 1 in 7.7657e-05 sec
+Flow timing analysis took 0.0347565 seconds (0.0322283 STA, 0.00252823 slack) (12 full updates: 0 setup, 0 hold, 12 combined).
+VPR succeeded
+The entire flow of VPR took 132.53 seconds (max_rss 457.4 MiB)

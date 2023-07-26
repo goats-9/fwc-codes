@@ -1,0 +1,1975 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2020  Claire Wolf <claire@symbioticeda.com>          |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.9+2406 (git sha1 ca763e6d5, gcc 12.2.0-14 -fPIC -Os)
+
+
+-- Parsing `/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_IP.v' using frontend `verilog' --
+
+1. Executing Verilog-2005 frontend: /data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_IP.v
+Parsing Verilog input from `/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_IP.v' to AST representation.
+Generating RTLIL representation for module `\AL4S3B_FPGA_IP'.
+Warning: wire '\WBs_RD_DAT' is assigned in a block at /data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_IP.v:128.65-128.106.
+Warning: wire '\WBs_RD_DAT' is assigned in a block at /data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_IP.v:129.65-129.104.
+Warning: wire '\WBs_RD_DAT' is assigned in a block at /data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_IP.v:130.65-130.101.
+Warning: wire '\io_pad' is assigned in a block at /data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_IP.v:137.5-137.28.
+Successfully finished Verilog frontend.
+
+-- Parsing `/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_ONION_PWMCTRL.v' using frontend `verilog' --
+
+2. Executing Verilog-2005 frontend: /data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_ONION_PWMCTRL.v
+Parsing Verilog input from `/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_ONION_PWMCTRL.v' to AST representation.
+Generating RTLIL representation for module `\AL4S3B_FPGA_ONION_PWMCTRL'.
+Warning: wire '\WBs_ACK_o' is assigned in a block at /data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_ONION_PWMCTRL.v:159.5-159.62.
+Warning: wire '\WBs_DAT_o' is assigned in a block at /data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_ONION_PWMCTRL.v:168.55-168.80.
+Warning: wire '\WBs_DAT_o' is assigned in a block at /data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_ONION_PWMCTRL.v:169.55-169.80.
+Warning: wire '\WBs_DAT_o' is assigned in a block at /data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_ONION_PWMCTRL.v:170.55-170.80.
+Warning: wire '\WBs_DAT_o' is assigned in a block at /data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_ONION_PWMCTRL.v:171.55-171.85.
+Successfully finished Verilog frontend.
+
+-- Parsing `/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_QL_Reserved.v' using frontend `verilog' --
+
+3. Executing Verilog-2005 frontend: /data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_QL_Reserved.v
+Parsing Verilog input from `/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_QL_Reserved.v' to AST representation.
+Generating RTLIL representation for module `\AL4S3B_FPGA_QL_Reserved'.
+Note: Assuming pure combinatorial block at /data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_QL_Reserved.v:133.1-172.4 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at /data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_QL_Reserved.v:182.1-191.4 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Successfully finished Verilog frontend.
+
+-- Parsing `/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_Top.v' using frontend `verilog' --
+
+4. Executing Verilog-2005 frontend: /data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_Top.v
+Parsing Verilog input from `/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_Top.v' to AST representation.
+Generating RTLIL representation for module `\AL4S3B_FPGA_Top'.
+Successfully finished Verilog frontend.
+
+-- Parsing `/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/ONION_PWM.v' using frontend `verilog' --
+
+5. Executing Verilog-2005 frontend: /data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/ONION_PWM.v
+Parsing Verilog input from `/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/ONION_PWM.v' to AST representation.
+Warning: Yosys has only limited support for tri-state logic at the moment. (/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/ONION_PWM.v:56)
+Generating RTLIL representation for module `\ONION_PWM'.
+Successfully finished Verilog frontend.
+
+-- Running command `tcl /data/data/com.termux/files/home/symbiflow/quicklogic-arch-defs/share/quicklogic/synth.tcl' --
+[TCL: yosys -import] Command name collision: found pre-existing command `cd' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `eval' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `exec' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `read' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `trace' -> skip.
+
+6. Executing Verilog-2005 frontend: /data/data/com.termux/files/home/symbiflow/quicklogic-arch-defs/share/techmaps/quicklogic/pp3/techmap/cells_sim.v
+Parsing Verilog input from `/data/data/com.termux/files/home/symbiflow/quicklogic-arch-defs/share/techmaps/quicklogic/pp3/techmap/cells_sim.v' to AST representation.
+Generating RTLIL representation for module `\VCC'.
+Generating RTLIL representation for module `\GND'.
+Generating RTLIL representation for module `\fpga_interconnect'.
+Generating RTLIL representation for module `\CLOCK_CELL'.
+Generating RTLIL representation for module `\BIDIR_CELL'.
+Generating RTLIL representation for module `\SDIOMUX_CELL'.
+Generating RTLIL representation for module `\T_FRAG'.
+Generating RTLIL representation for module `\B_FRAG'.
+Generating RTLIL representation for module `\Q_FRAG'.
+Generating RTLIL representation for module `\F_FRAG'.
+Generating RTLIL representation for module `\C_FRAG'.
+Generating RTLIL representation for module `\ASSP'.
+Generating RTLIL representation for module `\MULT'.
+Generating RTLIL representation for module `\GMUX_IP'.
+Generating RTLIL representation for module `\GMUX_IC'.
+Successfully finished Verilog frontend.
+
+7. Executing Verilog-2005 frontend: /data/data/com.termux/files/home/symbiflow/quicklogic-arch-defs/bin/../share/arch/ql-eos-s3_wlcsp/cells/ram_sim.v
+Parsing Verilog input from `/data/data/com.termux/files/home/symbiflow/quicklogic-arch-defs/bin/../share/arch/ql-eos-s3_wlcsp/cells/ram_sim.v' to AST representation.
+Generating RTLIL representation for module `\RAM_CE0_FE0_PR0_WSA0_WSB0_VPR'.
+Generating RTLIL representation for module `\RAM_CE0_FE0_PR0_WSA0_WSB1_VPR'.
+Generating RTLIL representation for module `\RAM_CE0_FE0_PR0_WSA1_WSB0_VPR'.
+Generating RTLIL representation for module `\RAM_CE0_FE0_PR0_WSA1_WSB1_VPR'.
+Generating RTLIL representation for module `\RAM_CE0_FE0_PR1_WSA0_WSB0_VPR'.
+Generating RTLIL representation for module `\RAM_CE0_FE0_PR1_WSA0_WSB1_VPR'.
+Generating RTLIL representation for module `\RAM_CE0_FE0_PR1_WSA1_WSB0_VPR'.
+Generating RTLIL representation for module `\RAM_CE0_FE0_PR1_WSA1_WSB1_VPR'.
+Generating RTLIL representation for module `\RAM_CE0_FE1_D0_PR0_WSA0_WSB0_VPR'.
+Generating RTLIL representation for module `\RAM_CE0_FE1_D0_PR0_WSA0_WSB1_VPR'.
+Generating RTLIL representation for module `\RAM_CE0_FE1_D0_PR0_WSA1_WSB0_VPR'.
+Generating RTLIL representation for module `\RAM_CE0_FE1_D0_PR0_WSA1_WSB1_VPR'.
+Generating RTLIL representation for module `\RAM_CE0_FE1_D0_PR1_WSA0_WSB0_VPR'.
+Generating RTLIL representation for module `\RAM_CE0_FE1_D0_PR1_WSA0_WSB1_VPR'.
+Generating RTLIL representation for module `\RAM_CE0_FE1_D0_PR1_WSA1_WSB0_VPR'.
+Generating RTLIL representation for module `\RAM_CE0_FE1_D0_PR1_WSA1_WSB1_VPR'.
+Generating RTLIL representation for module `\RAM_CE0_FE1_D1_PR0_WSA0_WSB0_VPR'.
+Generating RTLIL representation for module `\RAM_CE0_FE1_D1_PR0_WSA0_WSB1_VPR'.
+Generating RTLIL representation for module `\RAM_CE0_FE1_D1_PR0_WSA1_WSB0_VPR'.
+Generating RTLIL representation for module `\RAM_CE0_FE1_D1_PR0_WSA1_WSB1_VPR'.
+Generating RTLIL representation for module `\RAM_CE0_FE1_D1_PR1_WSA0_WSB0_VPR'.
+Generating RTLIL representation for module `\RAM_CE0_FE1_D1_PR1_WSA0_WSB1_VPR'.
+Generating RTLIL representation for module `\RAM_CE0_FE1_D1_PR1_WSA1_WSB0_VPR'.
+Generating RTLIL representation for module `\RAM_CE0_FE1_D1_PR1_WSA1_WSB1_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE0_PR0_WSA0_WSB0_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE0_PR0_WSA0_WSB1_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE0_PR0_WSA0_WSB2_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE0_PR0_WSA1_WSB0_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE0_PR0_WSA1_WSB1_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE0_PR0_WSA1_WSB2_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE0_PR0_WSA2_WSB0_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE0_PR0_WSA2_WSB1_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE0_PR0_WSA2_WSB2_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE0_PR1_WSA0_WSB0_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE0_PR1_WSA0_WSB1_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE0_PR1_WSA0_WSB2_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE0_PR1_WSA1_WSB0_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE0_PR1_WSA1_WSB1_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE0_PR1_WSA1_WSB2_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE0_PR1_WSA2_WSB0_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE0_PR1_WSA2_WSB1_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE0_PR1_WSA2_WSB2_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE1_D0_PR0_WSA0_WSB0_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE1_D0_PR0_WSA0_WSB1_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE1_D0_PR0_WSA0_WSB2_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE1_D0_PR0_WSA1_WSB0_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE1_D0_PR0_WSA1_WSB1_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE1_D0_PR0_WSA1_WSB2_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE1_D0_PR0_WSA2_WSB0_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE1_D0_PR0_WSA2_WSB1_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE1_D0_PR0_WSA2_WSB2_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE1_D0_PR1_WSA0_WSB0_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE1_D0_PR1_WSA0_WSB1_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE1_D0_PR1_WSA0_WSB2_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE1_D0_PR1_WSA1_WSB0_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE1_D0_PR1_WSA1_WSB1_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE1_D0_PR1_WSA1_WSB2_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE1_D0_PR1_WSA2_WSB0_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE1_D0_PR1_WSA2_WSB1_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE1_D0_PR1_WSA2_WSB2_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE1_D1_PR0_WSA0_WSB0_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE1_D1_PR0_WSA0_WSB1_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE1_D1_PR0_WSA0_WSB2_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE1_D1_PR0_WSA1_WSB0_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE1_D1_PR0_WSA1_WSB1_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE1_D1_PR0_WSA1_WSB2_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE1_D1_PR0_WSA2_WSB0_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE1_D1_PR0_WSA2_WSB1_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE1_D1_PR0_WSA2_WSB2_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE1_D1_PR1_WSA0_WSB0_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE1_D1_PR1_WSA0_WSB1_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE1_D1_PR1_WSA0_WSB2_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE1_D1_PR1_WSA1_WSB0_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE1_D1_PR1_WSA1_WSB1_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE1_D1_PR1_WSA1_WSB2_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE1_D1_PR1_WSA2_WSB0_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE1_D1_PR1_WSA2_WSB1_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE1_D1_PR1_WSA2_WSB2_VPR'.
+Successfully finished Verilog frontend.
+
+8. Executing SYNTH_QUICKLOGIC pass.
+
+8.1. Executing Verilog-2005 frontend: /data/data/com.termux/files/home/symbiflow/bin/../share/yosys/quicklogic/cells_sim.v
+Parsing Verilog input from `/data/data/com.termux/files/home/symbiflow/bin/../share/yosys/quicklogic/cells_sim.v' to AST representation.
+Generating RTLIL representation for module `\inv'.
+Generating RTLIL representation for module `\buff'.
+Generating RTLIL representation for module `\logic_0'.
+Generating RTLIL representation for module `\logic_1'.
+Generating RTLIL representation for module `\gclkbuff'.
+Successfully finished Verilog frontend.
+
+8.2. Executing Verilog-2005 frontend: /data/data/com.termux/files/home/symbiflow/bin/../share/yosys/quicklogic/pp3_cells_sim.v
+Parsing Verilog input from `/data/data/com.termux/files/home/symbiflow/bin/../share/yosys/quicklogic/pp3_cells_sim.v' to AST representation.
+Generating RTLIL representation for module `\LUT1'.
+Generating RTLIL representation for module `\LUT2'.
+Generating RTLIL representation for module `\LUT3'.
+Generating RTLIL representation for module `\LUT4'.
+Generating RTLIL representation for module `\inpad'.
+Generating RTLIL representation for module `\outpad'.
+Generating RTLIL representation for module `\ckpad'.
+Generating RTLIL representation for module `\bipad'.
+Generating RTLIL representation for module `\dff'.
+Generating RTLIL representation for module `\dffc'.
+Generating RTLIL representation for module `\dffp'.
+Generating RTLIL representation for module `\dffpc'.
+Generating RTLIL representation for module `\dffe'.
+Generating RTLIL representation for module `\dffec'.
+Generating RTLIL representation for module `\dffepc'.
+Generating RTLIL representation for module `\AND2I0'.
+Generating RTLIL representation for module `\mux2x0'.
+Generating RTLIL representation for module `\mux2x1'.
+Generating RTLIL representation for module `\mux4x0'.
+Generating RTLIL representation for module `\mux8x0'.
+Generating RTLIL representation for module `\logic_cell_macro'.
+Generating RTLIL representation for module `\ahb_gen_bfm'.
+Generating RTLIL representation for module `\oscillator_s1'.
+Generating RTLIL representation for module `\sdma_bfm'.
+Generating RTLIL representation for module `\ahb2fb_asynbrig_if'.
+Generating RTLIL representation for module `\fb2ahb_asynbrig_if'.
+Generating RTLIL representation for module `\ahb2fb_asynbrig'.
+Generating RTLIL representation for module `\qlal4s3b_cell_macro_bfm'.
+Generating RTLIL representation for module `\qlal4s3b_cell_macro'.
+Generating RTLIL representation for module `\fifo_controller_model'.
+Generating RTLIL representation for module `\ram'.
+Warning: Replacing memory \ram with list of registers. See /data/data/com.termux/files/home/symbiflow/bin/../share/yosys/quicklogic/pp3_cells_sim.v:3671, /data/data/com.termux/files/home/symbiflow/bin/../share/yosys/quicklogic/pp3_cells_sim.v:3585, /data/data/com.termux/files/home/symbiflow/bin/../share/yosys/quicklogic/pp3_cells_sim.v:3560
+Generating RTLIL representation for module `\x2_model'.
+Generating RTLIL representation for module `\ram_block_8K'.
+Generating RTLIL representation for module `\sw_mux'.
+Generating RTLIL representation for module `\ram8k_2x1_cell'.
+Generating RTLIL representation for module `\ram8k_2x1_cell_macro'.
+Generating RTLIL representation for module `\gpio_cell_macro'.
+Generating RTLIL representation for module `\qlal4s3_mult_32x32_cell'.
+Generating RTLIL representation for module `\qlal4s3_mult_16x16_cell'.
+Generating RTLIL representation for module `\signed_mult'.
+Generating RTLIL representation for module `\qlal4s3_mult_cell_macro'.
+Generating RTLIL representation for module `\RAM_8K_BLK'.
+Generating RTLIL representation for module `\RAM_16K_BLK'.
+Generating RTLIL representation for module `\FIFO_8K_BLK'.
+Generating RTLIL representation for module `\FIFO_16K_BLK'.
+Successfully finished Verilog frontend.
+
+8.3. Executing HIERARCHY pass (managing design hierarchy).
+
+8.3.1. Finding top of design hierarchy..
+root of   0 design levels: ONION_PWM           
+root of   3 design levels: AL4S3B_FPGA_Top     
+root of   0 design levels: AL4S3B_FPGA_QL_Reserved
+root of   1 design levels: AL4S3B_FPGA_ONION_PWMCTRL
+root of   2 design levels: AL4S3B_FPGA_IP      
+Automatically selected AL4S3B_FPGA_Top as design top module.
+
+8.3.2. Analyzing design hierarchy..
+Top module:  \AL4S3B_FPGA_Top
+Used module:     \AL4S3B_FPGA_IP
+Used module:         \AL4S3B_FPGA_QL_Reserved
+Used module:         \AL4S3B_FPGA_ONION_PWMCTRL
+Used module:             \ONION_PWM
+Parameter \ADDRWIDTH = 10
+Parameter \DATAWIDTH = 32
+Parameter \QL_RESERVED_CUST_PROD_ADR = 10'0111111000
+Parameter \QL_RESERVED_REVISIONS_ADR = 10'0111111100
+Parameter \QL_RESERVED_CUSTOMER_ID = 8'00000001
+Parameter \QL_RESERVED_PRODUCT_ID = 8'00000000
+Parameter \QL_RESERVED_MAJOR_REV = 16'0000000000000001
+Parameter \QL_RESERVED_MINOR_REV = 16'0000000000000000
+Parameter \QL_RESERVED_DEF_REG_VALUE = 32'11011110111111111010101110101100
+Parameter \DEFAULT_CNTR_WIDTH = 3
+Parameter \DEFAULT_CNTR_TIMEOUT = 7
+
+8.3.3. Executing AST frontend in derive mode using pre-parsed AST for module `\AL4S3B_FPGA_QL_Reserved'.
+Parameter \ADDRWIDTH = 10
+Parameter \DATAWIDTH = 32
+Parameter \QL_RESERVED_CUST_PROD_ADR = 10'0111111000
+Parameter \QL_RESERVED_REVISIONS_ADR = 10'0111111100
+Parameter \QL_RESERVED_CUSTOMER_ID = 8'00000001
+Parameter \QL_RESERVED_PRODUCT_ID = 8'00000000
+Parameter \QL_RESERVED_MAJOR_REV = 16'0000000000000001
+Parameter \QL_RESERVED_MINOR_REV = 16'0000000000000000
+Parameter \QL_RESERVED_DEF_REG_VALUE = 32'11011110111111111010101110101100
+Parameter \DEFAULT_CNTR_WIDTH = 3
+Parameter \DEFAULT_CNTR_TIMEOUT = 7
+Generating RTLIL representation for module `$paramod$138e619e9784fc0f0a15df64aa4958b7b7a535a0\AL4S3B_FPGA_QL_Reserved'.
+Note: Assuming pure combinatorial block at /data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_QL_Reserved.v:133.1-172.4 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Note: Assuming pure combinatorial block at /data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_QL_Reserved.v:182.1-191.4 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Parameter \PWM_RESOLUTION_BITS = 8
+
+8.3.4. Executing AST frontend in derive mode using pre-parsed AST for module `\ONION_PWM'.
+Parameter \PWM_RESOLUTION_BITS = 8
+Generating RTLIL representation for module `$paramod\ONION_PWM\PWM_RESOLUTION_BITS=8'.
+Parameter \PWM_RESOLUTION_BITS = 8
+Found cached RTLIL representation for module `$paramod\ONION_PWM\PWM_RESOLUTION_BITS=8'.
+Parameter \PWM_RESOLUTION_BITS = 8
+Found cached RTLIL representation for module `$paramod\ONION_PWM\PWM_RESOLUTION_BITS=8'.
+
+8.3.5. Analyzing design hierarchy..
+Top module:  \AL4S3B_FPGA_Top
+Used module:     \AL4S3B_FPGA_IP
+Used module:         $paramod$138e619e9784fc0f0a15df64aa4958b7b7a535a0\AL4S3B_FPGA_QL_Reserved
+Used module:         \AL4S3B_FPGA_ONION_PWMCTRL
+Used module:             $paramod\ONION_PWM\PWM_RESOLUTION_BITS=8
+
+8.3.6. Analyzing design hierarchy..
+Top module:  \AL4S3B_FPGA_Top
+Used module:     \AL4S3B_FPGA_IP
+Used module:         $paramod$138e619e9784fc0f0a15df64aa4958b7b7a535a0\AL4S3B_FPGA_QL_Reserved
+Used module:         \AL4S3B_FPGA_ONION_PWMCTRL
+Used module:             $paramod\ONION_PWM\PWM_RESOLUTION_BITS=8
+Removing unused module `\ONION_PWM'.
+Removing unused module `\AL4S3B_FPGA_QL_Reserved'.
+Removed 2 unused modules.
+
+8.4. Executing PROC pass (convert processes to netlists).
+
+8.4.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+8.4.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$/data/data/com.termux/files/home/symbiflow/quicklogic-arch-defs/share/techmaps/quicklogic/pp3/techmap/cells_sim.v:4781$81 in module MULT.
+Marked 2 switch rules as full_case in process $proc$/data/data/com.termux/files/home/symbiflow/quicklogic-arch-defs/share/techmaps/quicklogic/pp3/techmap/cells_sim.v:242$63 in module Q_FRAG.
+Marked 1 switch rules as full_case in process $proc$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/ONION_PWM.v:54$916 in module $paramod\ONION_PWM\PWM_RESOLUTION_BITS=8.
+Marked 1 switch rules as full_case in process $proc$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/ONION_PWM.v:46$913 in module $paramod\ONION_PWM\PWM_RESOLUTION_BITS=8.
+Marked 1 switch rules as full_case in process $proc$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_QL_Reserved.v:182$912 in module $paramod$138e619e9784fc0f0a15df64aa4958b7b7a535a0\AL4S3B_FPGA_QL_Reserved.
+Removed 1 dead cases from process $proc$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_QL_Reserved.v:133$906 in module $paramod$138e619e9784fc0f0a15df64aa4958b7b7a535a0\AL4S3B_FPGA_QL_Reserved.
+Marked 4 switch rules as full_case in process $proc$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_QL_Reserved.v:133$906 in module $paramod$138e619e9784fc0f0a15df64aa4958b7b7a535a0\AL4S3B_FPGA_QL_Reserved.
+Marked 1 switch rules as full_case in process $proc$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_QL_Reserved.v:110$904 in module $paramod$138e619e9784fc0f0a15df64aa4958b7b7a535a0\AL4S3B_FPGA_QL_Reserved.
+Marked 1 switch rules as full_case in process $proc$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_ONION_PWMCTRL.v:165$30 in module AL4S3B_FPGA_ONION_PWMCTRL.
+Marked 1 switch rules as full_case in process $proc$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_ONION_PWMCTRL.v:112$29 in module AL4S3B_FPGA_ONION_PWMCTRL.
+Marked 1 switch rules as full_case in process $proc$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_IP.v:125$6 in module AL4S3B_FPGA_IP.
+Removed a total of 1 dead cases.
+
+8.4.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 11 redundant assignments.
+Promoted 2 assignments to connections.
+
+8.4.4. Executing PROC_INIT pass (extract init attributes).
+Found init rule in `\Q_FRAG.$proc$/data/data/com.termux/files/home/symbiflow/quicklogic-arch-defs/share/techmaps/quicklogic/pp3/techmap/cells_sim.v:0$64'.
+  Set init value: \QZ = 1'0
+
+8.4.5. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \QST in `\Q_FRAG.$proc$/data/data/com.termux/files/home/symbiflow/quicklogic-arch-defs/share/techmaps/quicklogic/pp3/techmap/cells_sim.v:242$63'.
+Found async reset \QRT in `\Q_FRAG.$proc$/data/data/com.termux/files/home/symbiflow/quicklogic-arch-defs/share/techmaps/quicklogic/pp3/techmap/cells_sim.v:242$63'.
+Found async reset \reset in `$paramod\ONION_PWM\PWM_RESOLUTION_BITS=8.$proc$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/ONION_PWM.v:54$916'.
+Found async reset \reset in `$paramod\ONION_PWM\PWM_RESOLUTION_BITS=8.$proc$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/ONION_PWM.v:46$913'.
+Found async reset \WBs_RST_i in `$paramod$138e619e9784fc0f0a15df64aa4958b7b7a535a0\AL4S3B_FPGA_QL_Reserved.$proc$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_QL_Reserved.v:110$904'.
+Found async reset \WBs_RST_i in `\AL4S3B_FPGA_ONION_PWMCTRL.$proc$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_ONION_PWMCTRL.v:112$29'.
+
+8.4.6. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\MULT.$proc$/data/data/com.termux/files/home/symbiflow/quicklogic-arch-defs/share/techmaps/quicklogic/pp3/techmap/cells_sim.v:4781$81'.
+     1/2: $0\Cmult[63:0] [63:32]
+     2/2: $0\Cmult[63:0] [31:0]
+Creating decoders for process `\Q_FRAG.$proc$/data/data/com.termux/files/home/symbiflow/quicklogic-arch-defs/share/techmaps/quicklogic/pp3/techmap/cells_sim.v:0$64'.
+Creating decoders for process `\Q_FRAG.$proc$/data/data/com.termux/files/home/symbiflow/quicklogic-arch-defs/share/techmaps/quicklogic/pp3/techmap/cells_sim.v:242$63'.
+     1/1: $0\QZ[0:0]
+Creating decoders for process `$paramod\ONION_PWM\PWM_RESOLUTION_BITS=8.$proc$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/ONION_PWM.v:54$916'.
+     1/1: $0\PWM_o_state[0:0]
+Creating decoders for process `$paramod\ONION_PWM\PWM_RESOLUTION_BITS=8.$proc$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/ONION_PWM.v:46$913'.
+     1/1: $0\clk_counter[7:0]
+Creating decoders for process `$paramod$138e619e9784fc0f0a15df64aa4958b7b7a535a0\AL4S3B_FPGA_QL_Reserved.$proc$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_QL_Reserved.v:182$912'.
+     1/1: $0\WBs_DAT_o[31:0]
+Creating decoders for process `$paramod$138e619e9784fc0f0a15df64aa4958b7b7a535a0\AL4S3B_FPGA_QL_Reserved.$proc$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_QL_Reserved.v:133$906'.
+     1/3: $0\Default_State_nxt[0:0]
+     2/3: $0\WBs_ACK_Default_nxt[0:0]
+     3/3: $0\Default_Cntr_nxt[2:0]
+Creating decoders for process `$paramod$138e619e9784fc0f0a15df64aa4958b7b7a535a0\AL4S3B_FPGA_QL_Reserved.$proc$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_QL_Reserved.v:110$904'.
+     1/3: $0\WBs_ACK_o[0:0]
+     2/3: $0\Default_Cntr[2:0]
+     3/3: $0\Default_State[0:0]
+Creating decoders for process `\AL4S3B_FPGA_ONION_PWMCTRL.$proc$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_ONION_PWMCTRL.v:165$30'.
+     1/1: $0\WBs_DAT_o[31:0]
+Creating decoders for process `\AL4S3B_FPGA_ONION_PWMCTRL.$proc$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_ONION_PWMCTRL.v:112$29'.
+     1/13: $0\PWM_2_CONFIG[31:0] [31:24]
+     2/13: $0\PWM_2_CONFIG[31:0] [23:16]
+     3/13: $0\PWM_2_CONFIG[31:0] [15:8]
+     4/13: $0\PWM_2_CONFIG[31:0] [7:0]
+     5/13: $0\PWM_1_CONFIG[31:0] [23:16]
+     6/13: $0\PWM_1_CONFIG[31:0] [15:8]
+     7/13: $0\PWM_1_CONFIG[31:0] [7:0]
+     8/13: $0\PWM_0_CONFIG[31:0] [23:16]
+     9/13: $0\PWM_0_CONFIG[31:0] [15:8]
+    10/13: $0\PWM_0_CONFIG[31:0] [7:0]
+    11/13: $0\PWM_0_CONFIG[31:0] [31:24]
+    12/13: $0\PWM_1_CONFIG[31:0] [31:24]
+    13/13: $0\WBs_ACK_o[0:0]
+Creating decoders for process `\AL4S3B_FPGA_IP.$proc$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_IP.v:135$7'.
+Creating decoders for process `\AL4S3B_FPGA_IP.$proc$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_IP.v:125$6'.
+     1/1: $0\WBs_RD_DAT[31:0]
+
+8.4.7. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `$paramod$138e619e9784fc0f0a15df64aa4958b7b7a535a0\AL4S3B_FPGA_QL_Reserved.\WBs_DAT_o' from process `$paramod$138e619e9784fc0f0a15df64aa4958b7b7a535a0\AL4S3B_FPGA_QL_Reserved.$proc$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_QL_Reserved.v:182$912'.
+No latch inferred for signal `$paramod$138e619e9784fc0f0a15df64aa4958b7b7a535a0\AL4S3B_FPGA_QL_Reserved.\Default_State_nxt' from process `$paramod$138e619e9784fc0f0a15df64aa4958b7b7a535a0\AL4S3B_FPGA_QL_Reserved.$proc$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_QL_Reserved.v:133$906'.
+No latch inferred for signal `$paramod$138e619e9784fc0f0a15df64aa4958b7b7a535a0\AL4S3B_FPGA_QL_Reserved.\Default_Cntr_nxt' from process `$paramod$138e619e9784fc0f0a15df64aa4958b7b7a535a0\AL4S3B_FPGA_QL_Reserved.$proc$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_QL_Reserved.v:133$906'.
+No latch inferred for signal `$paramod$138e619e9784fc0f0a15df64aa4958b7b7a535a0\AL4S3B_FPGA_QL_Reserved.\WBs_ACK_Default_nxt' from process `$paramod$138e619e9784fc0f0a15df64aa4958b7b7a535a0\AL4S3B_FPGA_QL_Reserved.$proc$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_QL_Reserved.v:133$906'.
+No latch inferred for signal `\AL4S3B_FPGA_ONION_PWMCTRL.\WBs_DAT_o' from process `\AL4S3B_FPGA_ONION_PWMCTRL.$proc$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_ONION_PWMCTRL.v:165$30'.
+No latch inferred for signal `\AL4S3B_FPGA_IP.\io_pad' from process `\AL4S3B_FPGA_IP.$proc$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_IP.v:135$7'.
+No latch inferred for signal `\AL4S3B_FPGA_IP.\WBs_RD_DAT' from process `\AL4S3B_FPGA_IP.$proc$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_IP.v:125$6'.
+
+8.4.8. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\MULT.\Cmult' using process `\MULT.$proc$/data/data/com.termux/files/home/symbiflow/quicklogic-arch-defs/share/techmaps/quicklogic/pp3/techmap/cells_sim.v:4781$81'.
+  created direct connection (no actual register cell created).
+Creating register for signal `\Q_FRAG.\QZ' using process `\Q_FRAG.$proc$/data/data/com.termux/files/home/symbiflow/quicklogic-arch-defs/share/techmaps/quicklogic/pp3/techmap/cells_sim.v:242$63'.
+Warning: Complex async reset for dff `\QZ'.
+  created $dffsr cell `$procdff$1026' with positive edge clock and multiple level-sensitive resets.
+Creating register for signal `$paramod\ONION_PWM\PWM_RESOLUTION_BITS=8.\PWM_o_state' using process `$paramod\ONION_PWM\PWM_RESOLUTION_BITS=8.$proc$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/ONION_PWM.v:54$916'.
+  created $adff cell `$procdff$1027' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\ONION_PWM\PWM_RESOLUTION_BITS=8.\clk_counter' using process `$paramod\ONION_PWM\PWM_RESOLUTION_BITS=8.$proc$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/ONION_PWM.v:46$913'.
+  created $adff cell `$procdff$1028' with positive edge clock and negative level reset.
+Creating register for signal `$paramod$138e619e9784fc0f0a15df64aa4958b7b7a535a0\AL4S3B_FPGA_QL_Reserved.\WBs_ACK_o' using process `$paramod$138e619e9784fc0f0a15df64aa4958b7b7a535a0\AL4S3B_FPGA_QL_Reserved.$proc$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_QL_Reserved.v:110$904'.
+  created $adff cell `$procdff$1029' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$138e619e9784fc0f0a15df64aa4958b7b7a535a0\AL4S3B_FPGA_QL_Reserved.\Default_State' using process `$paramod$138e619e9784fc0f0a15df64aa4958b7b7a535a0\AL4S3B_FPGA_QL_Reserved.$proc$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_QL_Reserved.v:110$904'.
+  created $adff cell `$procdff$1030' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$138e619e9784fc0f0a15df64aa4958b7b7a535a0\AL4S3B_FPGA_QL_Reserved.\Default_Cntr' using process `$paramod$138e619e9784fc0f0a15df64aa4958b7b7a535a0\AL4S3B_FPGA_QL_Reserved.$proc$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_QL_Reserved.v:110$904'.
+  created $adff cell `$procdff$1031' with positive edge clock and positive level reset.
+Creating register for signal `\AL4S3B_FPGA_ONION_PWMCTRL.\WBs_ACK_o' using process `\AL4S3B_FPGA_ONION_PWMCTRL.$proc$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_ONION_PWMCTRL.v:112$29'.
+  created $dff cell `$procdff$1032' with positive edge clock.
+Creating register for signal `\AL4S3B_FPGA_ONION_PWMCTRL.\PWM_0_CONFIG' using process `\AL4S3B_FPGA_ONION_PWMCTRL.$proc$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_ONION_PWMCTRL.v:112$29'.
+  created $adff cell `$procdff$1033' with positive edge clock and positive level reset.
+Creating register for signal `\AL4S3B_FPGA_ONION_PWMCTRL.\PWM_1_CONFIG' using process `\AL4S3B_FPGA_ONION_PWMCTRL.$proc$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_ONION_PWMCTRL.v:112$29'.
+  created $adff cell `$procdff$1034' with positive edge clock and positive level reset.
+Creating register for signal `\AL4S3B_FPGA_ONION_PWMCTRL.\PWM_2_CONFIG' using process `\AL4S3B_FPGA_ONION_PWMCTRL.$proc$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_ONION_PWMCTRL.v:112$29'.
+  created $adff cell `$procdff$1035' with positive edge clock and positive level reset.
+
+8.4.9. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 4 empty switches in `\MULT.$proc$/data/data/com.termux/files/home/symbiflow/quicklogic-arch-defs/share/techmaps/quicklogic/pp3/techmap/cells_sim.v:4781$81'.
+Removing empty process `MULT.$proc$/data/data/com.termux/files/home/symbiflow/quicklogic-arch-defs/share/techmaps/quicklogic/pp3/techmap/cells_sim.v:4781$81'.
+Removing empty process `Q_FRAG.$proc$/data/data/com.termux/files/home/symbiflow/quicklogic-arch-defs/share/techmaps/quicklogic/pp3/techmap/cells_sim.v:0$64'.
+Found and cleaned up 1 empty switch in `\Q_FRAG.$proc$/data/data/com.termux/files/home/symbiflow/quicklogic-arch-defs/share/techmaps/quicklogic/pp3/techmap/cells_sim.v:242$63'.
+Removing empty process `Q_FRAG.$proc$/data/data/com.termux/files/home/symbiflow/quicklogic-arch-defs/share/techmaps/quicklogic/pp3/techmap/cells_sim.v:242$63'.
+Removing empty process `$paramod\ONION_PWM\PWM_RESOLUTION_BITS=8.$proc$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/ONION_PWM.v:54$916'.
+Removing empty process `$paramod\ONION_PWM\PWM_RESOLUTION_BITS=8.$proc$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/ONION_PWM.v:46$913'.
+Found and cleaned up 1 empty switch in `$paramod$138e619e9784fc0f0a15df64aa4958b7b7a535a0\AL4S3B_FPGA_QL_Reserved.$proc$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_QL_Reserved.v:182$912'.
+Removing empty process `$paramod$138e619e9784fc0f0a15df64aa4958b7b7a535a0\AL4S3B_FPGA_QL_Reserved.$proc$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_QL_Reserved.v:182$912'.
+Found and cleaned up 4 empty switches in `$paramod$138e619e9784fc0f0a15df64aa4958b7b7a535a0\AL4S3B_FPGA_QL_Reserved.$proc$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_QL_Reserved.v:133$906'.
+Removing empty process `$paramod$138e619e9784fc0f0a15df64aa4958b7b7a535a0\AL4S3B_FPGA_QL_Reserved.$proc$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_QL_Reserved.v:133$906'.
+Removing empty process `$paramod$138e619e9784fc0f0a15df64aa4958b7b7a535a0\AL4S3B_FPGA_QL_Reserved.$proc$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_QL_Reserved.v:110$904'.
+Found and cleaned up 1 empty switch in `\AL4S3B_FPGA_ONION_PWMCTRL.$proc$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_ONION_PWMCTRL.v:165$30'.
+Removing empty process `AL4S3B_FPGA_ONION_PWMCTRL.$proc$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_ONION_PWMCTRL.v:165$30'.
+Found and cleaned up 15 empty switches in `\AL4S3B_FPGA_ONION_PWMCTRL.$proc$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_ONION_PWMCTRL.v:112$29'.
+Removing empty process `AL4S3B_FPGA_ONION_PWMCTRL.$proc$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_ONION_PWMCTRL.v:112$29'.
+Removing empty process `AL4S3B_FPGA_IP.$proc$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_IP.v:135$7'.
+Found and cleaned up 1 empty switch in `\AL4S3B_FPGA_IP.$proc$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_IP.v:125$6'.
+Removing empty process `AL4S3B_FPGA_IP.$proc$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_IP.v:125$6'.
+Cleaned up 27 empty switches.
+
+8.5. Executing FLATTEN pass (flatten design).
+Deleting now unused module $paramod\ONION_PWM\PWM_RESOLUTION_BITS=8.
+Deleting now unused module $paramod$138e619e9784fc0f0a15df64aa4958b7b7a535a0\AL4S3B_FPGA_QL_Reserved.
+Deleting now unused module AL4S3B_FPGA_ONION_PWMCTRL.
+Deleting now unused module AL4S3B_FPGA_IP.
+<suppressed ~6 debug messages>
+
+8.6. Executing TRIBUF pass.
+
+8.7. Executing OPT_EXPR pass (perform const folding).
+Optimizing module AL4S3B_FPGA_Top.
+<suppressed ~6 debug messages>
+
+8.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \AL4S3B_FPGA_Top..
+Removed 6 unused cells and 75 unused wires.
+<suppressed ~7 debug messages>
+
+8.9. Executing DEMINOUT pass (demote inout ports to input or output).
+
+8.10. Executing OPT pass (performing simple optimizations).
+
+8.10.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module AL4S3B_FPGA_Top.
+
+8.10.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\AL4S3B_FPGA_Top'.
+<suppressed ~30 debug messages>
+Removed a total of 10 cells.
+
+8.10.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \AL4S3B_FPGA_Top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~16 debug messages>
+
+8.10.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \AL4S3B_FPGA_Top.
+Performed a total of 0 changes.
+
+8.10.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\AL4S3B_FPGA_Top'.
+Removed a total of 0 cells.
+
+8.10.6. Executing OPT_RMDFF pass (remove dff with constant values).
+
+8.10.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \AL4S3B_FPGA_Top..
+Removed 0 unused cells and 10 unused wires.
+<suppressed ~1 debug messages>
+
+8.10.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module AL4S3B_FPGA_Top.
+
+8.10.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+8.10.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \AL4S3B_FPGA_Top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~16 debug messages>
+
+8.10.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \AL4S3B_FPGA_Top.
+Performed a total of 0 changes.
+
+8.10.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\AL4S3B_FPGA_Top'.
+Removed a total of 0 cells.
+
+8.10.13. Executing OPT_RMDFF pass (remove dff with constant values).
+
+8.10.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \AL4S3B_FPGA_Top..
+
+8.10.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module AL4S3B_FPGA_Top.
+
+8.10.16. Finished OPT passes. (There is nothing left to do.)
+
+8.11. Executing OPT_EXPR pass (perform const folding).
+Optimizing module AL4S3B_FPGA_Top.
+
+8.12. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \AL4S3B_FPGA_Top..
+
+8.13. Executing CHECK pass (checking for obvious problems).
+checking module AL4S3B_FPGA_Top..
+found and reported 0 problems.
+
+8.14. Executing OPT pass (performing simple optimizations).
+
+8.14.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module AL4S3B_FPGA_Top.
+
+8.14.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\AL4S3B_FPGA_Top'.
+Removed a total of 0 cells.
+
+8.14.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \AL4S3B_FPGA_Top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~16 debug messages>
+
+8.14.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \AL4S3B_FPGA_Top.
+Performed a total of 0 changes.
+
+8.14.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\AL4S3B_FPGA_Top'.
+Removed a total of 0 cells.
+
+8.14.6. Executing OPT_RMDFF pass (remove dff with constant values).
+
+8.14.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \AL4S3B_FPGA_Top..
+
+8.14.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module AL4S3B_FPGA_Top.
+
+8.14.9. Finished OPT passes. (There is nothing left to do.)
+
+8.15. Executing WREDUCE pass (reducing word size of cells).
+Removed top 2 bits (of 3) from port B of cell AL4S3B_FPGA_Top.$flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_QL_Reserved.$eq$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_QL_Reserved.v:160$908 ($eq).
+Removed top 1 bits (of 8) from port B of cell AL4S3B_FPGA_Top.$flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_QL_Reserved.$procmux$937_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell AL4S3B_FPGA_Top.$flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_QL_Reserved.$procmux$938_CMP0 ($eq).
+Removed top 7 bits (of 8) from port B of cell AL4S3B_FPGA_Top.$flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$eq$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_ONION_PWMCTRL.v:92$14 ($eq).
+Removed top 6 bits (of 8) from port B of cell AL4S3B_FPGA_Top.$flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$eq$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_ONION_PWMCTRL.v:98$20 ($eq).
+Removed top 31 bits (of 32) from port B of cell AL4S3B_FPGA_Top.$flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.\r_ONION_PWM.$add$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/ONION_PWM.v:50$915 ($add).
+Removed top 24 bits (of 32) from port Y of cell AL4S3B_FPGA_Top.$flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.\r_ONION_PWM.$add$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/ONION_PWM.v:50$915 ($add).
+Removed top 31 bits (of 32) from port B of cell AL4S3B_FPGA_Top.$flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.\g_ONION_PWM.$add$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/ONION_PWM.v:50$915 ($add).
+Removed top 24 bits (of 32) from port Y of cell AL4S3B_FPGA_Top.$flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.\g_ONION_PWM.$add$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/ONION_PWM.v:50$915 ($add).
+Removed top 31 bits (of 32) from port B of cell AL4S3B_FPGA_Top.$flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.\b_ONION_PWM.$add$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/ONION_PWM.v:50$915 ($add).
+Removed top 24 bits (of 32) from port Y of cell AL4S3B_FPGA_Top.$flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.\b_ONION_PWM.$add$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/ONION_PWM.v:50$915 ($add).
+Removed top 3 bits (of 7) from port B of cell AL4S3B_FPGA_Top.$flatten\u_AL4S3B_FPGA_IP.$eq$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_IP.v:115$3 ($eq).
+Removed top 2 bits (of 7) from port B of cell AL4S3B_FPGA_Top.$flatten\u_AL4S3B_FPGA_IP.$eq$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_IP.v:112$1 ($eq).
+
+8.16. Executing PEEPOPT pass (run peephole optimizers).
+
+8.17. Executing PMUXTREE pass.
+
+8.18. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \AL4S3B_FPGA_Top..
+Removed 8 unused cells and 18 unused wires.
+<suppressed ~9 debug messages>
+
+8.19. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module AL4S3B_FPGA_Top:
+  creating $macc model for $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.\b_ONION_PWM.$add$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/ONION_PWM.v:50$915 ($add).
+  creating $macc model for $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.\g_ONION_PWM.$add$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/ONION_PWM.v:50$915 ($add).
+  creating $macc model for $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.\r_ONION_PWM.$add$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/ONION_PWM.v:50$915 ($add).
+  creating $macc model for $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_QL_Reserved.$sub$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_QL_Reserved.v:153$907 ($sub).
+  creating $alu model for $macc $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_QL_Reserved.$sub$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_QL_Reserved.v:153$907.
+  creating $alu model for $macc $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.\r_ONION_PWM.$add$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/ONION_PWM.v:50$915.
+  creating $alu model for $macc $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.\g_ONION_PWM.$add$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/ONION_PWM.v:50$915.
+  creating $alu model for $macc $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.\b_ONION_PWM.$add$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/ONION_PWM.v:50$915.
+  creating $alu model for $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.\b_ONION_PWM.$le$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/ONION_PWM.v:58$918 ($le): new $alu
+  creating $alu model for $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.\g_ONION_PWM.$le$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/ONION_PWM.v:58$918 ($le): new $alu
+  creating $alu model for $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.\r_ONION_PWM.$le$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/ONION_PWM.v:58$918 ($le): new $alu
+  creating $alu cell for $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.\r_ONION_PWM.$le$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/ONION_PWM.v:58$918: $auto$alumacc.cc:485:replace_alu$1075
+  creating $alu cell for $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.\g_ONION_PWM.$le$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/ONION_PWM.v:58$918: $auto$alumacc.cc:485:replace_alu$1088
+  creating $alu cell for $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.\b_ONION_PWM.$le$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/ONION_PWM.v:58$918: $auto$alumacc.cc:485:replace_alu$1101
+  creating $alu cell for $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.\b_ONION_PWM.$add$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/ONION_PWM.v:50$915: $auto$alumacc.cc:485:replace_alu$1114
+  creating $alu cell for $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.\g_ONION_PWM.$add$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/ONION_PWM.v:50$915: $auto$alumacc.cc:485:replace_alu$1117
+  creating $alu cell for $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.\r_ONION_PWM.$add$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/ONION_PWM.v:50$915: $auto$alumacc.cc:485:replace_alu$1120
+  creating $alu cell for $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_QL_Reserved.$sub$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_QL_Reserved.v:153$907: $auto$alumacc.cc:485:replace_alu$1123
+  created 7 $alu and 0 $macc cells.
+
+8.20. Executing OPT pass (performing simple optimizations).
+
+8.20.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module AL4S3B_FPGA_Top.
+
+8.20.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\AL4S3B_FPGA_Top'.
+Removed a total of 0 cells.
+
+8.20.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \AL4S3B_FPGA_Top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~16 debug messages>
+
+8.20.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \AL4S3B_FPGA_Top.
+Performed a total of 0 changes.
+
+8.20.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\AL4S3B_FPGA_Top'.
+Removed a total of 0 cells.
+
+8.20.6. Executing OPT_RMDFF pass (remove dff with constant values).
+
+8.20.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \AL4S3B_FPGA_Top..
+Removed 0 unused cells and 3 unused wires.
+<suppressed ~1 debug messages>
+
+8.20.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module AL4S3B_FPGA_Top.
+
+8.20.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+8.20.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \AL4S3B_FPGA_Top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~16 debug messages>
+
+8.20.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \AL4S3B_FPGA_Top.
+Performed a total of 0 changes.
+
+8.20.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\AL4S3B_FPGA_Top'.
+Removed a total of 0 cells.
+
+8.20.13. Executing OPT_RMDFF pass (remove dff with constant values).
+
+8.20.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \AL4S3B_FPGA_Top..
+
+8.20.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module AL4S3B_FPGA_Top.
+
+8.20.16. Finished OPT passes. (There is nothing left to do.)
+
+8.21. Executing FSM pass (extract and optimize FSM).
+
+8.21.1. Executing FSM_DETECT pass (finding FSMs in design).
+
+8.21.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+8.21.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+8.21.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \AL4S3B_FPGA_Top..
+
+8.21.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+8.21.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+8.21.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+8.21.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+8.22. Executing OPT pass (performing simple optimizations).
+
+8.22.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module AL4S3B_FPGA_Top.
+
+8.22.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\AL4S3B_FPGA_Top'.
+Removed a total of 0 cells.
+
+8.22.3. Executing OPT_RMDFF pass (remove dff with constant values).
+
+8.22.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \AL4S3B_FPGA_Top..
+
+8.22.5. Finished fast OPT passes.
+
+8.23. Executing MEMORY pass.
+
+8.23.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+8.23.2. Executing MEMORY_DFF pass (merging $dff cells to $memrd and $memwr).
+
+8.23.3. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \AL4S3B_FPGA_Top..
+
+8.23.4. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+8.23.5. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \AL4S3B_FPGA_Top..
+
+8.23.6. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+8.24. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \AL4S3B_FPGA_Top..
+
+8.25. Executing MEMORY_BRAM pass (mapping $mem cells to block memories).
+
+8.26. Executing PP3_BRAMINIT pass.
+cell type $auto$alumacc.cc:485:replace_alu$1075
+cell type $auto$alumacc.cc:485:replace_alu$1088
+cell type $auto$alumacc.cc:485:replace_alu$1101
+cell type $auto$alumacc.cc:485:replace_alu$1114
+cell type $auto$alumacc.cc:485:replace_alu$1117
+cell type $auto$alumacc.cc:485:replace_alu$1120
+cell type $auto$alumacc.cc:485:replace_alu$1123
+cell type $auto$alumacc.cc:520:replace_alu$1086
+cell type $auto$alumacc.cc:520:replace_alu$1099
+cell type $auto$alumacc.cc:520:replace_alu$1112
+cell type $auto$alumacc.cc:67:get_gt$1082
+cell type $auto$alumacc.cc:67:get_gt$1095
+cell type $auto$alumacc.cc:67:get_gt$1108
+cell type $auto$alumacc.cc:68:get_gt$1084
+cell type $auto$alumacc.cc:68:get_gt$1097
+cell type $auto$alumacc.cc:68:get_gt$1110
+cell type $auto$alumacc.cc:75:get_eq$1080
+cell type $auto$alumacc.cc:75:get_eq$1093
+cell type $auto$alumacc.cc:75:get_eq$1106
+cell type $auto$alumacc.cc:89:get_cf$1078
+cell type $auto$alumacc.cc:89:get_cf$1091
+cell type $auto$alumacc.cc:89:get_cf$1104
+cell type $auto$pmuxtree.cc:35:or_generator$1052
+cell type $auto$pmuxtree.cc:65:recursive_mux_generator$1040
+cell type $auto$pmuxtree.cc:65:recursive_mux_generator$1042
+cell type $auto$pmuxtree.cc:65:recursive_mux_generator$1048
+cell type $auto$pmuxtree.cc:65:recursive_mux_generator$1050
+cell type $auto$pmuxtree.cc:65:recursive_mux_generator$1054
+cell type $auto$pmuxtree.cc:65:recursive_mux_generator$1060
+cell type $auto$pmuxtree.cc:65:recursive_mux_generator$1062
+cell type $auto$pmuxtree.cc:65:recursive_mux_generator$1064
+cell type $auto$pmuxtree.cc:65:recursive_mux_generator$1066
+cell type $auto$pmuxtree.cc:65:recursive_mux_generator$1068
+cell type $auto$pmuxtree.cc:65:recursive_mux_generator$1070
+cell type $flatten\u_AL4S3B_FPGA_IP.$and$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_IP.v:112$2
+cell type $flatten\u_AL4S3B_FPGA_IP.$and$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_IP.v:115$4
+cell type $flatten\u_AL4S3B_FPGA_IP.$eq$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_IP.v:112$1
+cell type $flatten\u_AL4S3B_FPGA_IP.$eq$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_IP.v:115$3
+cell type $flatten\u_AL4S3B_FPGA_IP.$or$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_IP.v:120$5
+cell type $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$eq$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_ONION_PWMCTRL.v:86$8
+cell type $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$eq$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_ONION_PWMCTRL.v:92$14
+cell type $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$eq$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_ONION_PWMCTRL.v:98$20
+cell type $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$logic_and$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_ONION_PWMCTRL.v:106$26
+cell type $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$logic_and$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_ONION_PWMCTRL.v:106$28
+cell type $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$logic_and$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_ONION_PWMCTRL.v:86$10
+cell type $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$logic_and$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_ONION_PWMCTRL.v:86$11
+cell type $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$logic_and$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_ONION_PWMCTRL.v:86$13
+cell type $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$logic_and$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_ONION_PWMCTRL.v:86$9
+cell type $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$logic_and$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_ONION_PWMCTRL.v:92$15
+cell type $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$logic_and$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_ONION_PWMCTRL.v:92$16
+cell type $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$logic_and$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_ONION_PWMCTRL.v:92$17
+cell type $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$logic_and$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_ONION_PWMCTRL.v:92$19
+cell type $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$logic_and$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_ONION_PWMCTRL.v:98$21
+cell type $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$logic_and$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_ONION_PWMCTRL.v:98$22
+cell type $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$logic_and$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_ONION_PWMCTRL.v:98$23
+cell type $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$logic_and$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_ONION_PWMCTRL.v:98$25
+cell type $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$not$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_ONION_PWMCTRL.v:102$24
+cell type $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$procdff$1032
+cell type $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$procdff$1033
+cell type $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$procdff$1034
+cell type $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$procdff$1035
+cell type $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$procmux$1000
+cell type $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$procmux$1002
+cell type $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$procmux$1004
+cell type $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$procmux$1006
+cell type $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$procmux$1008
+cell type $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$procmux$962
+cell type $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$procmux$964
+cell type $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$procmux$966
+cell type $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$procmux$968
+cell type $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$procmux$970
+cell type $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$procmux$972
+cell type $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$procmux$974
+cell type $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$procmux$976
+cell type $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$procmux$978
+cell type $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$procmux$980
+cell type $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$procmux$982
+cell type $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$procmux$984
+cell type $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$procmux$986
+cell type $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$procmux$988
+cell type $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$procmux$990
+cell type $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$procmux$992
+cell type $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$procmux$994
+cell type $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$procmux$996
+cell type $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$procmux$998
+cell type $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.\b_ONION_PWM.$procdff$1027
+cell type $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.\b_ONION_PWM.$procdff$1028
+cell type $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.\g_ONION_PWM.$procdff$1027
+cell type $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.\g_ONION_PWM.$procdff$1028
+cell type $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.\r_ONION_PWM.$procdff$1027
+cell type $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.\r_ONION_PWM.$procdff$1028
+cell type $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_QL_Reserved.$and$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_QL_Reserved.v:177$909
+cell type $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_QL_Reserved.$and$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_QL_Reserved.v:177$911
+cell type $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_QL_Reserved.$eq$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_QL_Reserved.v:160$908
+cell type $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_QL_Reserved.$not$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_QL_Reserved.v:177$910
+cell type $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_QL_Reserved.$or$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_QL_Reserved.v:122$905
+cell type $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_QL_Reserved.$procdff$1029
+cell type $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_QL_Reserved.$procdff$1030
+cell type $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_QL_Reserved.$procdff$1031
+cell type $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_QL_Reserved.$procmux$937_CMP0
+cell type $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_QL_Reserved.$procmux$938_CMP0
+cell type $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_QL_Reserved.$procmux$945
+cell type $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_QL_Reserved.$procmux$946_CMP0
+cell type $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_QL_Reserved.$procmux$949
+cell type $or$/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/AL4S3B_FPGA_Top.v:62$40
+cell type u_gclkbuff_clock
+cell type u_gclkbuff_reset
+cell type u_qlal4s3b_cell_macro
+
+8.27. Executing TECHMAP pass (map to technology primitives).
+
+8.27.1. Executing Verilog-2005 frontend: /data/data/com.termux/files/home/symbiflow/bin/../share/yosys/quicklogic/pp3_brams_map.v
+Parsing Verilog input from `/data/data/com.termux/files/home/symbiflow/bin/../share/yosys/quicklogic/pp3_brams_map.v' to AST representation.
+Generating RTLIL representation for module `\$__QUICKLOGIC_RAMB16K'.
+/data/data/com.termux/files/home/symbiflow/bin/../share/yosys/quicklogic/pp3_brams_map.v:21: Warning: Identifier `\VCC' is implicitly declared.
+/data/data/com.termux/files/home/symbiflow/bin/../share/yosys/quicklogic/pp3_brams_map.v:22: Warning: Identifier `\GND' is implicitly declared.
+Generating RTLIL representation for module `\$__QUICKLOGIC_RAMB8K'.
+/data/data/com.termux/files/home/symbiflow/bin/../share/yosys/quicklogic/pp3_brams_map.v:235: Warning: Identifier `\GND' is implicitly declared.
+/data/data/com.termux/files/home/symbiflow/bin/../share/yosys/quicklogic/pp3_brams_map.v:236: Warning: Identifier `\VCC' is implicitly declared.
+Generating RTLIL representation for module `\RAM_8K_BLK'.
+/data/data/com.termux/files/home/symbiflow/bin/../share/yosys/quicklogic/pp3_brams_map.v:538: Warning: Range [17:0] select out of bounds on signal `\out_reg0': Setting 2 MSB bits to undef.
+Generating RTLIL representation for module `\RAM_16K_BLK'.
+/data/data/com.termux/files/home/symbiflow/bin/../share/yosys/quicklogic/pp3_brams_map.v:824: Warning: Range [35:0] select out of bounds on signal `\out_reg0': Setting 4 MSB bits to undef.
+Generating RTLIL representation for module `\FIFO_8K_BLK'.
+/data/data/com.termux/files/home/symbiflow/bin/../share/yosys/quicklogic/pp3_brams_map.v:998: Warning: Range [35:0] select out of bounds on signal `\out_reg0': Setting 20 MSB bits to undef.
+Generating RTLIL representation for module `\FIFO_16K_BLK'.
+/data/data/com.termux/files/home/symbiflow/bin/../share/yosys/quicklogic/pp3_brams_map.v:1249: Warning: Range [35:0] select out of bounds on signal `\out_reg0': Setting 4 MSB bits to undef.
+Successfully finished Verilog frontend.
+
+8.27.2. Continuing TECHMAP pass.
+No more expansions possible.
+
+8.28. Executing OPT pass (performing simple optimizations).
+
+8.28.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module AL4S3B_FPGA_Top.
+<suppressed ~2 debug messages>
+
+8.28.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\AL4S3B_FPGA_Top'.
+Removed a total of 0 cells.
+
+8.28.3. Executing OPT_RMDFF pass (remove dff with constant values).
+
+8.28.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \AL4S3B_FPGA_Top..
+Removed 0 unused cells and 2 unused wires.
+<suppressed ~1 debug messages>
+
+8.28.5. Finished fast OPT passes.
+
+8.29. Executing MEMORY_MAP pass (converting $mem cells to logic and flip-flops).
+
+8.30. Executing OPT pass (performing simple optimizations).
+
+8.30.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module AL4S3B_FPGA_Top.
+
+8.30.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\AL4S3B_FPGA_Top'.
+Removed a total of 0 cells.
+
+8.30.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \AL4S3B_FPGA_Top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~16 debug messages>
+
+8.30.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \AL4S3B_FPGA_Top.
+    Consolidated identical input bits for $mux cell $auto$pmuxtree.cc:65:recursive_mux_generator$1060:
+      Old ports: A=32'11011110111111111010101110101100, B=256, Y=$auto$rtlil.cc:2037:Mux$1061
+      New ports: A=1'1, B=1'0, Y=$auto$rtlil.cc:2037:Mux$1061 [2]
+      New connections: { $auto$rtlil.cc:2037:Mux$1061 [31:3] $auto$rtlil.cc:2037:Mux$1061 [1:0] } = { $auto$rtlil.cc:2037:Mux$1061 [2] $auto$rtlil.cc:2037:Mux$1061 [2] 1'0 $auto$rtlil.cc:2037:Mux$1061 [2] $auto$rtlil.cc:2037:Mux$1061 [2] $auto$rtlil.cc:2037:Mux$1061 [2] $auto$rtlil.cc:2037:Mux$1061 [2] 1'0 $auto$rtlil.cc:2037:Mux$1061 [2] $auto$rtlil.cc:2037:Mux$1061 [2] $auto$rtlil.cc:2037:Mux$1061 [2] $auto$rtlil.cc:2037:Mux$1061 [2] $auto$rtlil.cc:2037:Mux$1061 [2] $auto$rtlil.cc:2037:Mux$1061 [2] $auto$rtlil.cc:2037:Mux$1061 [2] $auto$rtlil.cc:2037:Mux$1061 [2] $auto$rtlil.cc:2037:Mux$1061 [2] 1'0 $auto$rtlil.cc:2037:Mux$1061 [2] 1'0 $auto$rtlil.cc:2037:Mux$1061 [2] 1'0 $auto$rtlil.cc:2037:Mux$1061 [2] 1'1 $auto$rtlil.cc:2037:Mux$1061 [2] 1'0 $auto$rtlil.cc:2037:Mux$1061 [2] 1'0 $auto$rtlil.cc:2037:Mux$1061 [2] 2'00 }
+  Optimizing cells in module \AL4S3B_FPGA_Top.
+    Consolidated identical input bits for $mux cell $auto$pmuxtree.cc:65:recursive_mux_generator$1062:
+      Old ports: A=$auto$rtlil.cc:2037:Mux$1061, B=65536, Y=\u_AL4S3B_FPGA_IP.WBs_DAT_o_QL_Reserved
+      New ports: A={ $auto$rtlil.cc:2037:Mux$1061 [2] 1'1 $auto$rtlil.cc:2037:Mux$1061 [2] }, B=3'100, Y={ \u_AL4S3B_FPGA_IP.WBs_DAT_o_QL_Reserved [16] \u_AL4S3B_FPGA_IP.WBs_DAT_o_QL_Reserved [8] \u_AL4S3B_FPGA_IP.WBs_DAT_o_QL_Reserved [2] }
+      New connections: { \u_AL4S3B_FPGA_IP.WBs_DAT_o_QL_Reserved [31:17] \u_AL4S3B_FPGA_IP.WBs_DAT_o_QL_Reserved [15:9] \u_AL4S3B_FPGA_IP.WBs_DAT_o_QL_Reserved [7:3] \u_AL4S3B_FPGA_IP.WBs_DAT_o_QL_Reserved [1:0] } = { \u_AL4S3B_FPGA_IP.WBs_DAT_o_QL_Reserved [2] \u_AL4S3B_FPGA_IP.WBs_DAT_o_QL_Reserved [2] 1'0 \u_AL4S3B_FPGA_IP.WBs_DAT_o_QL_Reserved [2] \u_AL4S3B_FPGA_IP.WBs_DAT_o_QL_Reserved [2] \u_AL4S3B_FPGA_IP.WBs_DAT_o_QL_Reserved [2] \u_AL4S3B_FPGA_IP.WBs_DAT_o_QL_Reserved [2] 1'0 \u_AL4S3B_FPGA_IP.WBs_DAT_o_QL_Reserved [2] \u_AL4S3B_FPGA_IP.WBs_DAT_o_QL_Reserved [2] \u_AL4S3B_FPGA_IP.WBs_DAT_o_QL_Reserved [2] \u_AL4S3B_FPGA_IP.WBs_DAT_o_QL_Reserved [2] \u_AL4S3B_FPGA_IP.WBs_DAT_o_QL_Reserved [2] \u_AL4S3B_FPGA_IP.WBs_DAT_o_QL_Reserved [2] \u_AL4S3B_FPGA_IP.WBs_DAT_o_QL_Reserved [2] \u_AL4S3B_FPGA_IP.WBs_DAT_o_QL_Reserved [2] 1'0 \u_AL4S3B_FPGA_IP.WBs_DAT_o_QL_Reserved [2] 1'0 \u_AL4S3B_FPGA_IP.WBs_DAT_o_QL_Reserved [2] 1'0 \u_AL4S3B_FPGA_IP.WBs_DAT_o_QL_Reserved [2] \u_AL4S3B_FPGA_IP.WBs_DAT_o_QL_Reserved [2] 1'0 \u_AL4S3B_FPGA_IP.WBs_DAT_o_QL_Reserved [2] 1'0 \u_AL4S3B_FPGA_IP.WBs_DAT_o_QL_Reserved [2] 2'00 }
+  Optimizing cells in module \AL4S3B_FPGA_Top.
+Performed a total of 2 changes.
+
+8.30.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\AL4S3B_FPGA_Top'.
+Removed a total of 0 cells.
+
+8.30.6. Executing OPT_RMDFF pass (remove dff with constant values).
+
+8.30.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \AL4S3B_FPGA_Top..
+
+8.30.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module AL4S3B_FPGA_Top.
+
+8.30.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+8.30.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \AL4S3B_FPGA_Top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~16 debug messages>
+
+8.30.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \AL4S3B_FPGA_Top.
+Performed a total of 0 changes.
+
+8.30.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\AL4S3B_FPGA_Top'.
+Removed a total of 0 cells.
+
+8.30.13. Executing OPT_RMDFF pass (remove dff with constant values).
+
+8.30.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \AL4S3B_FPGA_Top..
+
+8.30.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module AL4S3B_FPGA_Top.
+
+8.30.16. Finished OPT passes. (There is nothing left to do.)
+
+8.31. Executing TECHMAP pass (map to technology primitives).
+
+8.31.1. Executing Verilog-2005 frontend: /data/data/com.termux/files/home/symbiflow/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/data/data/com.termux/files/home/symbiflow/bin/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_lut'.
+Successfully finished Verilog frontend.
+
+8.31.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $or.
+Using extmapper simplemap for cells of type $reduce_and.
+Using extmapper simplemap for cells of type $mux.
+Using extmapper simplemap for cells of type $not.
+Using extmapper simplemap for cells of type $reduce_or.
+Using template $paramod\_90_alu\A_SIGNED=0\B_SIGNED=0\A_WIDTH=8\B_WIDTH=8\Y_WIDTH=8 for cells of type $alu.
+Using extmapper simplemap for cells of type $eq.
+Using extmapper simplemap for cells of type $and.
+Using extmapper simplemap for cells of type $adff.
+Using extmapper simplemap for cells of type $logic_and.
+Using extmapper simplemap for cells of type $dff.
+Using template $paramod\_90_alu\A_SIGNED=0\B_SIGNED=0\A_WIDTH=3\B_WIDTH=1\Y_WIDTH=3 for cells of type $alu.
+Using template $paramod\_90_alu\A_SIGNED=0\B_SIGNED=0\A_WIDTH=1\B_WIDTH=8\Y_WIDTH=8 for cells of type $alu.
+Using extmapper simplemap for cells of type $logic_not.
+Using extmapper simplemap for cells of type $pos.
+Using template $paramod\_90_lcu\WIDTH=8 for cells of type $lcu.
+Using extmapper simplemap for cells of type $xor.
+Using template $paramod\_90_lcu\WIDTH=3 for cells of type $lcu.
+No more expansions possible.
+<suppressed ~583 debug messages>
+
+8.32. Executing OPT pass (performing simple optimizations).
+
+8.32.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module AL4S3B_FPGA_Top.
+<suppressed ~363 debug messages>
+
+8.32.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\AL4S3B_FPGA_Top'.
+<suppressed ~186 debug messages>
+Removed a total of 62 cells.
+
+8.32.3. Executing OPT_RMDFF pass (remove dff with constant values).
+
+8.32.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \AL4S3B_FPGA_Top..
+Removed 61 unused cells and 303 unused wires.
+<suppressed ~62 debug messages>
+
+8.32.5. Finished fast OPT passes.
+
+8.33. Executing MUXCOVER pass (mapping to wider MUXes).
+Covering MUX trees in module AL4S3B_FPGA_Top..
+  Treeifying 359 MUXes:
+    Found tree with 5 MUXes at root \WBs_RD_DAT [0].
+    Found tree with 5 MUXes at root \WBs_RD_DAT [1].
+    Found tree with 5 MUXes at root \WBs_RD_DAT [2].
+    Found tree with 5 MUXes at root \WBs_RD_DAT [3].
+    Found tree with 5 MUXes at root \WBs_RD_DAT [4].
+    Found tree with 5 MUXes at root \WBs_RD_DAT [5].
+    Found tree with 5 MUXes at root \WBs_RD_DAT [6].
+    Found tree with 5 MUXes at root \WBs_RD_DAT [7].
+    Found tree with 5 MUXes at root \WBs_RD_DAT [8].
+    Found tree with 5 MUXes at root \WBs_RD_DAT [9].
+    Found tree with 5 MUXes at root \WBs_RD_DAT [10].
+    Found tree with 5 MUXes at root \WBs_RD_DAT [11].
+    Found tree with 5 MUXes at root \WBs_RD_DAT [12].
+    Found tree with 5 MUXes at root \WBs_RD_DAT [13].
+    Found tree with 5 MUXes at root \WBs_RD_DAT [14].
+    Found tree with 5 MUXes at root \WBs_RD_DAT [15].
+    Found tree with 6 MUXes at root \WBs_RD_DAT [16].
+    Found tree with 5 MUXes at root \WBs_RD_DAT [17].
+    Found tree with 5 MUXes at root \WBs_RD_DAT [18].
+    Found tree with 5 MUXes at root \WBs_RD_DAT [19].
+    Found tree with 5 MUXes at root \WBs_RD_DAT [20].
+    Found tree with 5 MUXes at root \WBs_RD_DAT [21].
+    Found tree with 5 MUXes at root \WBs_RD_DAT [22].
+    Found tree with 5 MUXes at root \WBs_RD_DAT [23].
+    Found tree with 5 MUXes at root \WBs_RD_DAT [24].
+    Found tree with 5 MUXes at root \WBs_RD_DAT [25].
+    Found tree with 5 MUXes at root \WBs_RD_DAT [26].
+    Found tree with 5 MUXes at root \WBs_RD_DAT [27].
+    Found tree with 5 MUXes at root \WBs_RD_DAT [28].
+    Found tree with 5 MUXes at root \WBs_RD_DAT [29].
+    Found tree with 5 MUXes at root \WBs_RD_DAT [30].
+    Found tree with 5 MUXes at root \WBs_RD_DAT [31].
+    Found tree with 1 MUXes at root \u_AL4S3B_FPGA_IP.u_AL4S3B_FPGA_QL_Reserved.Default_State_nxt.
+    Found tree with 1 MUXes at root \u_AL4S3B_FPGA_IP.u_AL4S3B_FPGA_QL_Reserved.Default_Cntr_nxt [0].
+    Found tree with 1 MUXes at root \u_AL4S3B_FPGA_IP.u_AL4S3B_FPGA_QL_Reserved.Default_Cntr_nxt [1].
+    Found tree with 1 MUXes at root \u_AL4S3B_FPGA_IP.u_AL4S3B_FPGA_QL_Reserved.Default_Cntr_nxt [2].
+    Found tree with 1 MUXes at root \u_AL4S3B_FPGA_IP.u_AL4S3B_FPGA_QL_Reserved.WBs_ACK_Default_nxt.
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_0_CONFIG[31:0] [0].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_0_CONFIG[31:0] [1].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_0_CONFIG[31:0] [2].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_0_CONFIG[31:0] [3].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_0_CONFIG[31:0] [4].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_0_CONFIG[31:0] [5].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_0_CONFIG[31:0] [6].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_0_CONFIG[31:0] [7].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_0_CONFIG[31:0] [8].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_0_CONFIG[31:0] [9].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_0_CONFIG[31:0] [10].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_0_CONFIG[31:0] [11].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_0_CONFIG[31:0] [12].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_0_CONFIG[31:0] [13].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_0_CONFIG[31:0] [14].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_0_CONFIG[31:0] [15].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_0_CONFIG[31:0] [16].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_0_CONFIG[31:0] [17].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_0_CONFIG[31:0] [18].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_0_CONFIG[31:0] [19].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_0_CONFIG[31:0] [20].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_0_CONFIG[31:0] [21].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_0_CONFIG[31:0] [22].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_0_CONFIG[31:0] [23].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_0_CONFIG[31:0] [24].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_0_CONFIG[31:0] [25].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_0_CONFIG[31:0] [26].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_0_CONFIG[31:0] [27].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_0_CONFIG[31:0] [28].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_0_CONFIG[31:0] [29].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_0_CONFIG[31:0] [30].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_0_CONFIG[31:0] [31].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_1_CONFIG[31:0] [0].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_1_CONFIG[31:0] [1].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_1_CONFIG[31:0] [2].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_1_CONFIG[31:0] [3].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_1_CONFIG[31:0] [4].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_1_CONFIG[31:0] [5].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_1_CONFIG[31:0] [6].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_1_CONFIG[31:0] [7].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_1_CONFIG[31:0] [8].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_1_CONFIG[31:0] [9].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_1_CONFIG[31:0] [10].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_1_CONFIG[31:0] [11].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_1_CONFIG[31:0] [12].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_1_CONFIG[31:0] [13].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_1_CONFIG[31:0] [14].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_1_CONFIG[31:0] [15].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_1_CONFIG[31:0] [16].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_1_CONFIG[31:0] [17].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_1_CONFIG[31:0] [18].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_1_CONFIG[31:0] [19].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_1_CONFIG[31:0] [20].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_1_CONFIG[31:0] [21].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_1_CONFIG[31:0] [22].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_1_CONFIG[31:0] [23].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_1_CONFIG[31:0] [24].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_1_CONFIG[31:0] [25].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_1_CONFIG[31:0] [26].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_1_CONFIG[31:0] [27].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_1_CONFIG[31:0] [28].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_1_CONFIG[31:0] [29].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_1_CONFIG[31:0] [30].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_1_CONFIG[31:0] [31].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_2_CONFIG[31:0] [0].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_2_CONFIG[31:0] [1].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_2_CONFIG[31:0] [2].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_2_CONFIG[31:0] [3].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_2_CONFIG[31:0] [4].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_2_CONFIG[31:0] [5].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_2_CONFIG[31:0] [6].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_2_CONFIG[31:0] [7].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_2_CONFIG[31:0] [8].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_2_CONFIG[31:0] [9].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_2_CONFIG[31:0] [10].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_2_CONFIG[31:0] [11].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_2_CONFIG[31:0] [12].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_2_CONFIG[31:0] [13].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_2_CONFIG[31:0] [14].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_2_CONFIG[31:0] [15].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_2_CONFIG[31:0] [16].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_2_CONFIG[31:0] [17].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_2_CONFIG[31:0] [18].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_2_CONFIG[31:0] [19].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_2_CONFIG[31:0] [20].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_2_CONFIG[31:0] [21].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_2_CONFIG[31:0] [22].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_2_CONFIG[31:0] [23].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_2_CONFIG[31:0] [24].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_2_CONFIG[31:0] [25].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_2_CONFIG[31:0] [26].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_2_CONFIG[31:0] [27].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_2_CONFIG[31:0] [28].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_2_CONFIG[31:0] [29].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_2_CONFIG[31:0] [30].
+    Found tree with 2 MUXes at root $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_2_CONFIG[31:0] [31].
+    Found tree with 1 MUXes at root \u_AL4S3B_FPGA_IP.WBs_DAT_o_QL_Reserved [2].
+    Finished treeification: Found 134 trees.
+  Covering trees:
+    Replaced tree at \WBs_RD_DAT [0]: 2 MUX2, 1 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at \WBs_RD_DAT [1]: 2 MUX2, 1 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at \WBs_RD_DAT [2]: 2 MUX2, 1 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at \WBs_RD_DAT [3]: 2 MUX2, 1 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at \WBs_RD_DAT [4]: 2 MUX2, 1 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at \WBs_RD_DAT [5]: 2 MUX2, 1 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at \WBs_RD_DAT [6]: 2 MUX2, 1 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at \WBs_RD_DAT [7]: 2 MUX2, 1 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at \WBs_RD_DAT [8]: 2 MUX2, 1 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at \WBs_RD_DAT [9]: 2 MUX2, 1 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at \WBs_RD_DAT [10]: 2 MUX2, 1 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at \WBs_RD_DAT [11]: 2 MUX2, 1 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at \WBs_RD_DAT [12]: 2 MUX2, 1 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at \WBs_RD_DAT [13]: 2 MUX2, 1 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at \WBs_RD_DAT [14]: 2 MUX2, 1 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at \WBs_RD_DAT [15]: 2 MUX2, 1 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at \WBs_RD_DAT [16]: 3 MUX2, 1 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at \WBs_RD_DAT [17]: 2 MUX2, 1 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at \WBs_RD_DAT [18]: 2 MUX2, 1 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at \WBs_RD_DAT [19]: 2 MUX2, 1 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at \WBs_RD_DAT [20]: 2 MUX2, 1 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at \WBs_RD_DAT [21]: 2 MUX2, 1 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at \WBs_RD_DAT [22]: 2 MUX2, 1 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at \WBs_RD_DAT [23]: 2 MUX2, 1 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at \WBs_RD_DAT [24]: 2 MUX2, 1 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at \WBs_RD_DAT [25]: 2 MUX2, 1 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at \WBs_RD_DAT [26]: 2 MUX2, 1 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at \WBs_RD_DAT [27]: 2 MUX2, 1 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at \WBs_RD_DAT [28]: 2 MUX2, 1 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at \WBs_RD_DAT [29]: 2 MUX2, 1 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at \WBs_RD_DAT [30]: 2 MUX2, 1 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at \WBs_RD_DAT [31]: 2 MUX2, 1 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at \u_AL4S3B_FPGA_IP.u_AL4S3B_FPGA_QL_Reserved.Default_State_nxt: 1 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at \u_AL4S3B_FPGA_IP.u_AL4S3B_FPGA_QL_Reserved.Default_Cntr_nxt [0]: 1 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at \u_AL4S3B_FPGA_IP.u_AL4S3B_FPGA_QL_Reserved.Default_Cntr_nxt [1]: 1 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at \u_AL4S3B_FPGA_IP.u_AL4S3B_FPGA_QL_Reserved.Default_Cntr_nxt [2]: 1 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at \u_AL4S3B_FPGA_IP.u_AL4S3B_FPGA_QL_Reserved.WBs_ACK_Default_nxt: 1 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_0_CONFIG[31:0] [0]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_0_CONFIG[31:0] [1]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_0_CONFIG[31:0] [2]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_0_CONFIG[31:0] [3]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_0_CONFIG[31:0] [4]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_0_CONFIG[31:0] [5]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_0_CONFIG[31:0] [6]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_0_CONFIG[31:0] [7]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_0_CONFIG[31:0] [8]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_0_CONFIG[31:0] [9]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_0_CONFIG[31:0] [10]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_0_CONFIG[31:0] [11]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_0_CONFIG[31:0] [12]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_0_CONFIG[31:0] [13]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_0_CONFIG[31:0] [14]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_0_CONFIG[31:0] [15]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_0_CONFIG[31:0] [16]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_0_CONFIG[31:0] [17]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_0_CONFIG[31:0] [18]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_0_CONFIG[31:0] [19]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_0_CONFIG[31:0] [20]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_0_CONFIG[31:0] [21]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_0_CONFIG[31:0] [22]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_0_CONFIG[31:0] [23]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_0_CONFIG[31:0] [24]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_0_CONFIG[31:0] [25]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_0_CONFIG[31:0] [26]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_0_CONFIG[31:0] [27]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_0_CONFIG[31:0] [28]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_0_CONFIG[31:0] [29]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_0_CONFIG[31:0] [30]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_0_CONFIG[31:0] [31]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_1_CONFIG[31:0] [0]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_1_CONFIG[31:0] [1]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_1_CONFIG[31:0] [2]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_1_CONFIG[31:0] [3]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_1_CONFIG[31:0] [4]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_1_CONFIG[31:0] [5]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_1_CONFIG[31:0] [6]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_1_CONFIG[31:0] [7]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_1_CONFIG[31:0] [8]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_1_CONFIG[31:0] [9]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_1_CONFIG[31:0] [10]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_1_CONFIG[31:0] [11]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_1_CONFIG[31:0] [12]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_1_CONFIG[31:0] [13]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_1_CONFIG[31:0] [14]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_1_CONFIG[31:0] [15]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_1_CONFIG[31:0] [16]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_1_CONFIG[31:0] [17]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_1_CONFIG[31:0] [18]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_1_CONFIG[31:0] [19]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_1_CONFIG[31:0] [20]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_1_CONFIG[31:0] [21]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_1_CONFIG[31:0] [22]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_1_CONFIG[31:0] [23]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_1_CONFIG[31:0] [24]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_1_CONFIG[31:0] [25]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_1_CONFIG[31:0] [26]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_1_CONFIG[31:0] [27]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_1_CONFIG[31:0] [28]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_1_CONFIG[31:0] [29]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_1_CONFIG[31:0] [30]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_1_CONFIG[31:0] [31]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_2_CONFIG[31:0] [0]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_2_CONFIG[31:0] [1]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_2_CONFIG[31:0] [2]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_2_CONFIG[31:0] [3]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_2_CONFIG[31:0] [4]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_2_CONFIG[31:0] [5]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_2_CONFIG[31:0] [6]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_2_CONFIG[31:0] [7]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_2_CONFIG[31:0] [8]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_2_CONFIG[31:0] [9]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_2_CONFIG[31:0] [10]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_2_CONFIG[31:0] [11]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_2_CONFIG[31:0] [12]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_2_CONFIG[31:0] [13]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_2_CONFIG[31:0] [14]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_2_CONFIG[31:0] [15]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_2_CONFIG[31:0] [16]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_2_CONFIG[31:0] [17]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_2_CONFIG[31:0] [18]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_2_CONFIG[31:0] [19]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_2_CONFIG[31:0] [20]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_2_CONFIG[31:0] [21]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_2_CONFIG[31:0] [22]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_2_CONFIG[31:0] [23]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_2_CONFIG[31:0] [24]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_2_CONFIG[31:0] [25]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_2_CONFIG[31:0] [26]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_2_CONFIG[31:0] [27]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_2_CONFIG[31:0] [28]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_2_CONFIG[31:0] [29]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_2_CONFIG[31:0] [30]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $flatten\u_AL4S3B_FPGA_IP.\u_AL4S3B_FPGA_ONION_PWMCTRL.$0\PWM_2_CONFIG[31:0] [31]: 2 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at \u_AL4S3B_FPGA_IP.WBs_DAT_o_QL_Reserved [2]: 1 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+  Added a total of 1 decoder MUXes.
+<suppressed ~9367 debug messages>
+
+8.34. Executing OPT_EXPR pass (perform const folding).
+Optimizing module AL4S3B_FPGA_Top.
+
+8.35. Executing OPT pass (performing simple optimizations).
+
+8.35.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module AL4S3B_FPGA_Top.
+
+8.35.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\AL4S3B_FPGA_Top'.
+Removed a total of 0 cells.
+
+8.35.3. Executing OPT_RMDFF pass (remove dff with constant values).
+
+8.35.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \AL4S3B_FPGA_Top..
+Removed 0 unused cells and 19 unused wires.
+<suppressed ~1 debug messages>
+
+8.35.5. Finished fast OPT passes.
+
+8.36. Executing OPT_EXPR pass (perform const folding).
+Optimizing module AL4S3B_FPGA_Top.
+
+8.37. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\AL4S3B_FPGA_Top'.
+Removed a total of 0 cells.
+
+8.38. Executing OPT_RMDFF pass (remove dff with constant values).
+
+8.39. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \AL4S3B_FPGA_Top..
+
+8.40. Executing OPT pass (performing simple optimizations).
+
+8.40.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module AL4S3B_FPGA_Top.
+
+8.40.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\AL4S3B_FPGA_Top'.
+Removed a total of 0 cells.
+
+8.40.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \AL4S3B_FPGA_Top..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+8.40.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \AL4S3B_FPGA_Top.
+Performed a total of 0 changes.
+
+8.40.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\AL4S3B_FPGA_Top'.
+Removed a total of 0 cells.
+
+8.40.6. Executing OPT_RMDFF pass (remove dff with constant values).
+
+8.40.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \AL4S3B_FPGA_Top..
+
+8.40.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module AL4S3B_FPGA_Top.
+
+8.40.9. Finished OPT passes. (There is nothing left to do.)
+
+8.41. Executing OPT_EXPR pass (perform const folding).
+Optimizing module AL4S3B_FPGA_Top.
+
+8.42. Executing DFF2DFFE pass (transform $dff to $dffe where applicable).
+Transforming FF to FF+Enable cells in module AL4S3B_FPGA_Top:
+
+8.43. Executing TECHMAP pass (map to technology primitives).
+
+8.43.1. Executing Verilog-2005 frontend: /data/data/com.termux/files/home/symbiflow/bin/../share/yosys/quicklogic/pp3_ffs_map.v
+Parsing Verilog input from `/data/data/com.termux/files/home/symbiflow/bin/../share/yosys/quicklogic/pp3_ffs_map.v' to AST representation.
+Generating RTLIL representation for module `\$_DFF_N_'.
+Generating RTLIL representation for module `\$_DFF_P_'.
+Generating RTLIL representation for module `\$_DFF_NN0_'.
+Generating RTLIL representation for module `\$_DFF_NN1_'.
+Generating RTLIL representation for module `\$_DFF_NP0_'.
+Generating RTLIL representation for module `\$_DFF_NP1_'.
+Generating RTLIL representation for module `\$_DFF_PN0_'.
+Generating RTLIL representation for module `\$_DFF_PN1_'.
+Generating RTLIL representation for module `\$_DFF_PP0_'.
+Generating RTLIL representation for module `\$_DFF_PP1_'.
+Generating RTLIL representation for module `\$_DFFSR_NPP_'.
+Generating RTLIL representation for module `\$_DFFSR_PPP_'.
+Generating RTLIL representation for module `\$_DFFE_NN_'.
+Generating RTLIL representation for module `\$_DFFE_NP_'.
+Generating RTLIL representation for module `\$_DFFE_PN_'.
+Generating RTLIL representation for module `\$_DFFE_PP_'.
+Successfully finished Verilog frontend.
+
+8.43.2. Continuing TECHMAP pass.
+Using template \$_DFF_PP1_ for cells of type $_DFF_PP1_.
+Using template \$_DFF_PP0_ for cells of type $_DFF_PP0_.
+Using template \$_DFF_P_ for cells of type $_DFF_P_.
+Using template \$_DFF_PN0_ for cells of type $_DFF_PN0_.
+No more expansions possible.
+<suppressed ~129 debug messages>
+
+8.44. Executing OPT_EXPR pass (perform const folding).
+Optimizing module AL4S3B_FPGA_Top.
+
+8.45. Executing SIMPLEMAP pass (map simple cells to gate primitives).
+
+8.46. Executing OPT_EXPR pass (perform const folding).
+Optimizing module AL4S3B_FPGA_Top.
+
+8.47. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\AL4S3B_FPGA_Top'.
+Removed a total of 0 cells.
+
+8.48. Executing OPT_RMDFF pass (remove dff with constant values).
+
+8.49. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \AL4S3B_FPGA_Top..
+Removed 0 unused cells and 515 unused wires.
+<suppressed ~1 debug messages>
+
+8.50. Executing OPT pass (performing simple optimizations).
+
+8.50.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module AL4S3B_FPGA_Top.
+
+8.50.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\AL4S3B_FPGA_Top'.
+Removed a total of 0 cells.
+
+8.50.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \AL4S3B_FPGA_Top..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+8.50.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \AL4S3B_FPGA_Top.
+Performed a total of 0 changes.
+
+8.50.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\AL4S3B_FPGA_Top'.
+Removed a total of 0 cells.
+
+8.50.6. Executing OPT_RMDFF pass (remove dff with constant values).
+
+8.50.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \AL4S3B_FPGA_Top..
+
+8.50.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module AL4S3B_FPGA_Top.
+
+8.50.9. Finished OPT passes. (There is nothing left to do.)
+
+8.51. Executing TECHMAP pass (map to technology primitives).
+
+8.51.1. Executing Verilog-2005 frontend: /data/data/com.termux/files/home/symbiflow/bin/../share/yosys/quicklogic/pp3_latches_map.v
+Parsing Verilog input from `/data/data/com.termux/files/home/symbiflow/bin/../share/yosys/quicklogic/pp3_latches_map.v' to AST representation.
+Generating RTLIL representation for module `\$_DLATCH_P_'.
+Generating RTLIL representation for module `\$_DLATCH_N_'.
+Generating RTLIL representation for module `\$_DLATCHSR_NNN_'.
+Generating RTLIL representation for module `\$_DLATCHSR_NNP_'.
+Generating RTLIL representation for module `\$_DLATCHSR_NPN_'.
+Generating RTLIL representation for module `\$_DLATCHSR_NPP_'.
+Generating RTLIL representation for module `\$_DLATCHSR_PNN_'.
+Generating RTLIL representation for module `\$_DLATCHSR_PNP_'.
+Generating RTLIL representation for module `\$_DLATCHSR_PPN_'.
+Generating RTLIL representation for module `\$_DLATCHSR_PPP_'.
+Successfully finished Verilog frontend.
+
+8.51.2. Continuing TECHMAP pass.
+No more expansions possible.
+
+8.52. Executing ABC pass (technology mapping using ABC).
+
+8.52.1. Extracting gate netlist of module `\AL4S3B_FPGA_Top' to `<abc-temp-dir>/input.blif'..
+Extracted 546 gates and 762 wires to a netlist network with 214 inputs and 165 outputs.
+
+8.52.1.1. Executing ABC.
+Running ABC command: <yosys-exe-dir>/yosys-abc -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_lut <abc-temp-dir>/lutdefs.txt 
+ABC: + strash 
+ABC: + ifraig 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + dch -f 
+ABC: + if 
+ABC: + mfs2 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+8.52.1.2. Re-integrating ABC results.
+ABC RESULTS:              $lut cells:      273
+ABC RESULTS:        internal signals:      383
+ABC RESULTS:           input signals:      214
+ABC RESULTS:          output signals:      165
+Removing temp directory.
+
+8.53. Executing TECHMAP pass (map to technology primitives).
+
+8.53.1. Executing Verilog-2005 frontend: /data/data/com.termux/files/home/symbiflow/bin/../share/yosys/quicklogic/pp3_ffs_map.v
+Parsing Verilog input from `/data/data/com.termux/files/home/symbiflow/bin/../share/yosys/quicklogic/pp3_ffs_map.v' to AST representation.
+Generating RTLIL representation for module `\$_DFF_N_'.
+Generating RTLIL representation for module `\$_DFF_P_'.
+Generating RTLIL representation for module `\$_DFF_NN0_'.
+Generating RTLIL representation for module `\$_DFF_NN1_'.
+Generating RTLIL representation for module `\$_DFF_NP0_'.
+Generating RTLIL representation for module `\$_DFF_NP1_'.
+Generating RTLIL representation for module `\$_DFF_PN0_'.
+Generating RTLIL representation for module `\$_DFF_PN1_'.
+Generating RTLIL representation for module `\$_DFF_PP0_'.
+Generating RTLIL representation for module `\$_DFF_PP1_'.
+Generating RTLIL representation for module `\$_DFFSR_NPP_'.
+Generating RTLIL representation for module `\$_DFFSR_PPP_'.
+Generating RTLIL representation for module `\$_DFFE_NN_'.
+Generating RTLIL representation for module `\$_DFFE_NP_'.
+Generating RTLIL representation for module `\$_DFFE_PN_'.
+Generating RTLIL representation for module `\$_DFFE_PP_'.
+Successfully finished Verilog frontend.
+
+8.53.2. Continuing TECHMAP pass.
+No more expansions possible.
+Removed 0 unused cells and 436 unused wires.
+
+8.54. Executing TECHMAP pass (map to technology primitives).
+
+8.54.1. Executing Verilog-2005 frontend: /data/data/com.termux/files/home/symbiflow/bin/../share/yosys/quicklogic/pp3_cells_map.v
+Parsing Verilog input from `/data/data/com.termux/files/home/symbiflow/bin/../share/yosys/quicklogic/pp3_cells_map.v' to AST representation.
+Generating RTLIL representation for module `\$_MUX8_'.
+Generating RTLIL representation for module `\$_MUX4_'.
+Generating RTLIL representation for module `\$_MUX_'.
+Generating RTLIL representation for module `\$_NOT_'.
+Generating RTLIL representation for module `\qlal4s3_mult_16x16_cell'.
+/data/data/com.termux/files/home/symbiflow/bin/../share/yosys/quicklogic/pp3_cells_map.v:44: Warning: Identifier `\Valid_mult_w' is implicitly declared.
+Successfully finished Verilog frontend.
+
+8.54.2. Executing Verilog-2005 frontend: /data/data/com.termux/files/home/symbiflow/bin/../share/yosys/quicklogic/pp3_lut_map.v
+Parsing Verilog input from `/data/data/com.termux/files/home/symbiflow/bin/../share/yosys/quicklogic/pp3_lut_map.v' to AST representation.
+Generating RTLIL representation for module `\$lut'.
+Successfully finished Verilog frontend.
+
+8.54.3. Continuing TECHMAP pass.
+Using template $paramod\$lut\WIDTH=3\LUT=8'00000001 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=4\LUT=16'0000000000000001 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=2\LUT=4'0111 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=3\LUT=8'10000000 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=2\LUT=4'1110 for cells of type $lut.
+Using template \$_MUX4_ for cells of type $_MUX4_.
+Using template $paramod\$lut\WIDTH=2\LUT=4'0110 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=2\LUT=4'0100 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=3\LUT=8'00001011 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=4\LUT=16'0000000011110100 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=3\LUT=8'01000000 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=4\LUT=16'1011000000001011 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=3\LUT=8'00010000 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=4\LUT=16'1101010011011101 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=3\LUT=8'10110000 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=3\LUT=8'00001101 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=4\LUT=16'0000000001001111 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=4\LUT=16'1000111010101111 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=4\LUT=16'0000000010110010 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=3\LUT=8'11010000 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=4\LUT=16'0000000100000000 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=2\LUT=4'1000 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=2\LUT=4'0001 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=3\LUT=8'11111000 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=3\LUT=8'01111000 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=1\LUT=2'01 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=4\LUT=16'1000000000000000 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=3\LUT=8'11001010 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=4\LUT=16'1111111110110000 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=3\LUT=8'11100001 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=2\LUT=4'1011 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=3\LUT=8'10011111 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=3\LUT=8'01011100 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=3\LUT=8'00110101 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=3\LUT=8'11110100 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=3\LUT=8'00000111 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=4\LUT=16'0111011100001111 for cells of type $lut.
+No more expansions possible.
+<suppressed ~773 debug messages>
+Removed 0 unused cells and 802 unused wires.
+
+8.55. Executing Quicklogic_EQN pass (calculate equations for luts).
+
+8.56. Updated 273 of LUT* elements with equation.
+
+8.57. Executing AUTONAME pass.
+Renamed 2818 objects in module AL4S3B_FPGA_Top (25 iterations).
+<suppressed ~705 debug messages>
+
+8.58. Executing HIERARCHY pass (managing design hierarchy).
+
+8.58.1. Analyzing design hierarchy..
+Top module:  \AL4S3B_FPGA_Top
+
+8.58.2. Analyzing design hierarchy..
+Top module:  \AL4S3B_FPGA_Top
+Removed 0 unused modules.
+
+8.59. Printing statistics.
+
+=== AL4S3B_FPGA_Top ===
+
+   Number of wires:                328
+   Number of wire bits:            993
+   Number of public wires:         328
+   Number of public wire bits:     993
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                464
+     LUT1                            3
+     LUT2                           71
+     LUT3                          182
+     LUT4                           17
+     dff                             1
+     dffc                          125
+     dffp                            3
+     gclkbuff                        2
+     inv                            27
+     mux4x0                         32
+     qlal4s3b_cell_macro             1
+
+8.60. Executing CHECK pass (checking for obvious problems).
+checking module AL4S3B_FPGA_Top..
+found and reported 0 problems.
+
+8.61. Executing CLKBUFMAP pass (inserting global clock buffers).
+Inserting $_BUF_ on AL4S3B_FPGA_Top.u_AL4S3B_FPGA_IP.u_AL4S3B_FPGA_ONION_PWMCTRL.g_ONION_PWM.clk_counter_dffc_Q_6_CLR[0].
+Inserting $_BUF_ on AL4S3B_FPGA_Top.u_AL4S3B_FPGA_IP.u_AL4S3B_FPGA_ONION_PWMCTRL.b_ONION_PWM.clk_counter_dffc_Q_6_CLR[0].
+Inserting $_BUF_ on AL4S3B_FPGA_Top.u_AL4S3B_FPGA_IP.u_AL4S3B_FPGA_ONION_PWMCTRL.r_ONION_PWM.clk_counter_dffc_Q_7_CLR[0].
+Inserting $_BUF_ on AL4S3B_FPGA_Top.io_pad_dffc_Q_2_CLR[0].
+Inserting $_BUF_ on AL4S3B_FPGA_Top.u_AL4S3B_FPGA_IP.u_AL4S3B_FPGA_ONION_PWMCTRL.r_ONION_PWM.clk_counter_dffc_Q_6_CLR[0].
+Inserting $_BUF_ on AL4S3B_FPGA_Top.io_pad_dffc_Q_1_CLR[0].
+Inserting $_BUF_ on AL4S3B_FPGA_Top.io_pad_dffc_Q_CLR[0].
+Inserting $_BUF_ on AL4S3B_FPGA_Top.u_AL4S3B_FPGA_IP.u_AL4S3B_FPGA_ONION_PWMCTRL.r_ONION_PWM.clk_counter_dffc_Q_5_CLR[0].
+Inserting $_BUF_ on AL4S3B_FPGA_Top.u_AL4S3B_FPGA_IP.u_AL4S3B_FPGA_ONION_PWMCTRL.r_ONION_PWM.clk_counter_dffc_Q_4_CLR[0].
+Inserting $_BUF_ on AL4S3B_FPGA_Top.u_AL4S3B_FPGA_IP.u_AL4S3B_FPGA_ONION_PWMCTRL.r_ONION_PWM.clk_counter_dffc_Q_3_CLR[0].
+Inserting $_BUF_ on AL4S3B_FPGA_Top.u_AL4S3B_FPGA_IP.u_AL4S3B_FPGA_ONION_PWMCTRL.r_ONION_PWM.clk_counter_dffc_Q_2_CLR[0].
+Inserting $_BUF_ on AL4S3B_FPGA_Top.u_AL4S3B_FPGA_IP.u_AL4S3B_FPGA_ONION_PWMCTRL.r_ONION_PWM.clk_counter_dffc_Q_1_CLR[0].
+Inserting $_BUF_ on AL4S3B_FPGA_Top.u_AL4S3B_FPGA_IP.u_AL4S3B_FPGA_ONION_PWMCTRL.r_ONION_PWM.clk_counter_dffc_Q_CLR[0].
+Inserting $_BUF_ on AL4S3B_FPGA_Top.u_AL4S3B_FPGA_IP.u_AL4S3B_FPGA_ONION_PWMCTRL.g_ONION_PWM.clk_counter_dffc_Q_7_CLR[0].
+Inserting $_BUF_ on AL4S3B_FPGA_Top.u_AL4S3B_FPGA_IP.u_AL4S3B_FPGA_ONION_PWMCTRL.g_ONION_PWM.clk_counter_dffc_Q_5_CLR[0].
+Inserting $_BUF_ on AL4S3B_FPGA_Top.u_AL4S3B_FPGA_IP.u_AL4S3B_FPGA_ONION_PWMCTRL.g_ONION_PWM.clk_counter_dffc_Q_4_CLR[0].
+Inserting $_BUF_ on AL4S3B_FPGA_Top.u_AL4S3B_FPGA_IP.u_AL4S3B_FPGA_ONION_PWMCTRL.g_ONION_PWM.clk_counter_dffc_Q_3_CLR[0].
+Inserting $_BUF_ on AL4S3B_FPGA_Top.u_AL4S3B_FPGA_IP.u_AL4S3B_FPGA_ONION_PWMCTRL.g_ONION_PWM.clk_counter_dffc_Q_2_CLR[0].
+Inserting $_BUF_ on AL4S3B_FPGA_Top.u_AL4S3B_FPGA_IP.u_AL4S3B_FPGA_ONION_PWMCTRL.g_ONION_PWM.clk_counter_dffc_Q_1_CLR[0].
+Inserting $_BUF_ on AL4S3B_FPGA_Top.u_AL4S3B_FPGA_IP.u_AL4S3B_FPGA_ONION_PWMCTRL.g_ONION_PWM.clk_counter_dffc_Q_CLR[0].
+Inserting $_BUF_ on AL4S3B_FPGA_Top.u_AL4S3B_FPGA_IP.u_AL4S3B_FPGA_ONION_PWMCTRL.b_ONION_PWM.clk_counter_dffc_Q_7_CLR[0].
+Inserting $_BUF_ on AL4S3B_FPGA_Top.u_AL4S3B_FPGA_IP.u_AL4S3B_FPGA_ONION_PWMCTRL.b_ONION_PWM.clk_counter_dffc_Q_5_CLR[0].
+Inserting $_BUF_ on AL4S3B_FPGA_Top.u_AL4S3B_FPGA_IP.u_AL4S3B_FPGA_ONION_PWMCTRL.b_ONION_PWM.clk_counter_dffc_Q_4_CLR[0].
+Inserting $_BUF_ on AL4S3B_FPGA_Top.u_AL4S3B_FPGA_IP.u_AL4S3B_FPGA_ONION_PWMCTRL.b_ONION_PWM.clk_counter_dffc_Q_3_CLR[0].
+Inserting $_BUF_ on AL4S3B_FPGA_Top.u_AL4S3B_FPGA_IP.u_AL4S3B_FPGA_ONION_PWMCTRL.b_ONION_PWM.clk_counter_dffc_Q_2_CLR[0].
+Inserting $_BUF_ on AL4S3B_FPGA_Top.u_AL4S3B_FPGA_IP.u_AL4S3B_FPGA_ONION_PWMCTRL.b_ONION_PWM.clk_counter_dffc_Q_1_CLR[0].
+Inserting $_BUF_ on AL4S3B_FPGA_Top.u_AL4S3B_FPGA_IP.u_AL4S3B_FPGA_ONION_PWMCTRL.b_ONION_PWM.clk_counter_dffc_Q_CLR[0].
+Inserting $_BUF_ on AL4S3B_FPGA_Top.u_AL4S3B_FPGA_IP.u_AL4S3B_FPGA_ONION_PWMCTRL.WBs_CLK_i[0].
+Inserting $_BUF_ on AL4S3B_FPGA_Top.u_AL4S3B_FPGA_IP.u_AL4S3B_FPGA_ONION_PWMCTRL.WBs_RST_i[0].
+Inserting $_BUF_ on AL4S3B_FPGA_Top.u_AL4S3B_FPGA_IP.u_AL4S3B_FPGA_ONION_PWMCTRL.b_ONION_PWM.clk[0].
+
+8.62. Executing IOPADMAP pass (mapping inputs/outputs to IO-PAD cells).
+Mapping port AL4S3B_FPGA_Top.io_pad[0] using bipad.
+Mapping port AL4S3B_FPGA_Top.io_pad[1] using bipad.
+Mapping port AL4S3B_FPGA_Top.io_pad[2] using bipad.
+Mapping port AL4S3B_FPGA_Top.io_pad[3] using bipad.
+Mapping port AL4S3B_FPGA_Top.io_pad[4] using bipad.
+Mapping port AL4S3B_FPGA_Top.io_pad[5] using bipad.
+Mapping port AL4S3B_FPGA_Top.io_pad[6] using bipad.
+Mapping port AL4S3B_FPGA_Top.io_pad[7] using bipad.
+Mapping port AL4S3B_FPGA_Top.io_pad[8] using bipad.
+Mapping port AL4S3B_FPGA_Top.io_pad[9] using bipad.
+Mapping port AL4S3B_FPGA_Top.io_pad[10] using bipad.
+Mapping port AL4S3B_FPGA_Top.io_pad[11] using bipad.
+Mapping port AL4S3B_FPGA_Top.io_pad[12] using bipad.
+Mapping port AL4S3B_FPGA_Top.io_pad[13] using bipad.
+Mapping port AL4S3B_FPGA_Top.io_pad[14] using bipad.
+Mapping port AL4S3B_FPGA_Top.io_pad[15] using bipad.
+Mapping port AL4S3B_FPGA_Top.io_pad[16] using bipad.
+Mapping port AL4S3B_FPGA_Top.io_pad[17] using bipad.
+Mapping port AL4S3B_FPGA_Top.io_pad[18] using bipad.
+Mapping port AL4S3B_FPGA_Top.io_pad[19] using bipad.
+Mapping port AL4S3B_FPGA_Top.io_pad[20] using bipad.
+Mapping port AL4S3B_FPGA_Top.io_pad[21] using bipad.
+Mapping port AL4S3B_FPGA_Top.io_pad[22] using bipad.
+Mapping port AL4S3B_FPGA_Top.io_pad[23] using bipad.
+Mapping port AL4S3B_FPGA_Top.io_pad[24] using bipad.
+Mapping port AL4S3B_FPGA_Top.io_pad[25] using bipad.
+Mapping port AL4S3B_FPGA_Top.io_pad[26] using bipad.
+Mapping port AL4S3B_FPGA_Top.io_pad[27] using bipad.
+Mapping port AL4S3B_FPGA_Top.io_pad[28] using bipad.
+Mapping port AL4S3B_FPGA_Top.io_pad[29] using bipad.
+Mapping port AL4S3B_FPGA_Top.io_pad[30] using bipad.
+Mapping port AL4S3B_FPGA_Top.io_pad[31] using bipad.
+
+8.63. Executing SPLITNETS pass (splitting up multi-bit signals).
+
+8.64. Executing SETUNDEF pass (replace undef values with defined constants).
+
+8.65. Executing HILOMAP pass (mapping to constant drivers).
+
+8.66. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \AL4S3B_FPGA_Top..
+Removed 0 unused cells and 469 unused wires.
+<suppressed ~436 debug messages>
+
+8.67. Executing CHECK pass (checking for obvious problems).
+checking module AL4S3B_FPGA_Top..
+found and reported 0 problems.
+
+9. Printing statistics.
+
+=== AL4S3B_FPGA_Top ===
+
+   Number of wires:                588
+   Number of wire bits:            588
+   Number of public wires:         588
+   Number of public wire bits:     588
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                498
+     LUT1                            3
+     LUT2                           71
+     LUT3                          182
+     LUT4                           17
+     bipad                          32
+     dff                             1
+     dffc                          125
+     dffp                            3
+     gclkbuff                        2
+     inv                            27
+     logic_0                         1
+     logic_1                         1
+     mux4x0                         32
+     qlal4s3b_cell_macro             1
+
+Loading PCF from '/data/data/com.termux/files/home/Documents/repos/fwc-codes/spi/led-pwm/fpga/rtl/quickfeather.pcf'...
+Loading pinmap CSV from '/data/data/com.termux/files/home/symbiflow/quicklogic-arch-defs/share/arch/ql-eos-s3_wlcsp/pinmap_PU64.csv'...
+Processing cells...
+  type       | net        | pad        | loc      | type     | instance
+ ------------+------------+------------+----------+----------+-----------
+  bipad      | io_pad(0)  |            |          |          | $iopadmap$AL4S3B_FPGA_Top.io_pad[0]
+  bipad      | io_pad(10) |            |          |          | $iopadmap$AL4S3B_FPGA_Top.io_pad[10]
+  bipad      | io_pad(11) |            |          |          | $iopadmap$AL4S3B_FPGA_Top.io_pad[11]
+  bipad      | io_pad(12) |            |          |          | $iopadmap$AL4S3B_FPGA_Top.io_pad[12]
+  bipad      | io_pad(13) |            |          |          | $iopadmap$AL4S3B_FPGA_Top.io_pad[13]
+  bipad      | io_pad(14) |            |          |          | $iopadmap$AL4S3B_FPGA_Top.io_pad[14]
+  bipad      | io_pad(15) |            |          |          | $iopadmap$AL4S3B_FPGA_Top.io_pad[15]
+  bipad      | io_pad(16) |            |          |          | $iopadmap$AL4S3B_FPGA_Top.io_pad[16]
+  bipad      | io_pad(17) |            |          |          | $iopadmap$AL4S3B_FPGA_Top.io_pad[17]
+  bipad      | io_pad(18) |            |          |          | $iopadmap$AL4S3B_FPGA_Top.io_pad[18]
+  bipad      | io_pad(19) |            |          |          | $iopadmap$AL4S3B_FPGA_Top.io_pad[19]
+  bipad      | io_pad(1)  |            |          |          | $iopadmap$AL4S3B_FPGA_Top.io_pad[1]
+  bipad      | io_pad(20) |            |          |          | $iopadmap$AL4S3B_FPGA_Top.io_pad[20]
+  bipad      | io_pad(21) |            |          |          | $iopadmap$AL4S3B_FPGA_Top.io_pad[21]
+  bipad      | io_pad(22) |            |          |          | $iopadmap$AL4S3B_FPGA_Top.io_pad[22]
+  bipad      | io_pad(23) |            |          |          | $iopadmap$AL4S3B_FPGA_Top.io_pad[23]
+  bipad      | io_pad(24) |            |          |          | $iopadmap$AL4S3B_FPGA_Top.io_pad[24]
+  bipad      | io_pad(25) |            |          |          | $iopadmap$AL4S3B_FPGA_Top.io_pad[25]
+  bipad      | io_pad(26) |            |          |          | $iopadmap$AL4S3B_FPGA_Top.io_pad[26]
+  bipad      | io_pad(27) |            |          |          | $iopadmap$AL4S3B_FPGA_Top.io_pad[27]
+  bipad      | io_pad(28) |            |          |          | $iopadmap$AL4S3B_FPGA_Top.io_pad[28]
+  bipad      | io_pad(29) |            |          |          | $iopadmap$AL4S3B_FPGA_Top.io_pad[29]
+  bipad      | io_pad(2)  |            |          |          | $iopadmap$AL4S3B_FPGA_Top.io_pad[2]
+  bipad      | io_pad(30) |            |          |          | $iopadmap$AL4S3B_FPGA_Top.io_pad[30]
+  bipad      | io_pad(31) |            |          |          | $iopadmap$AL4S3B_FPGA_Top.io_pad[31]
+  bipad      | io_pad(3)  |            |          |          | $iopadmap$AL4S3B_FPGA_Top.io_pad[3]
+  bipad      | io_pad(4)  |            |          |          | $iopadmap$AL4S3B_FPGA_Top.io_pad[4]
+  bipad      | io_pad(5)  |            |          |          | $iopadmap$AL4S3B_FPGA_Top.io_pad[5]
+  bipad      | io_pad(6)  |            |          |          | $iopadmap$AL4S3B_FPGA_Top.io_pad[6]
+  bipad      | io_pad(7)  |            |          |          | $iopadmap$AL4S3B_FPGA_Top.io_pad[7]
+  bipad      | io_pad(8)  |            |          |          | $iopadmap$AL4S3B_FPGA_Top.io_pad[8]
+  bipad      | io_pad(9)  |            |          |          | $iopadmap$AL4S3B_FPGA_Top.io_pad[9]
+
+10. Executing Verilog backend.
+Dumping module `\AL4S3B_FPGA_Top'.
+
+11. Executing TECHMAP pass (map to technology primitives).
+
+11.1. Executing Verilog-2005 frontend: /data/data/com.termux/files/home/symbiflow/quicklogic-arch-defs/share/techmaps/quicklogic/pp3/techmap/cells_map.v
+Parsing Verilog input from `/data/data/com.termux/files/home/symbiflow/quicklogic-arch-defs/share/techmaps/quicklogic/pp3/techmap/cells_map.v' to AST representation.
+Generating RTLIL representation for module `\logic_0'.
+Generating RTLIL representation for module `\logic_1'.
+Generating RTLIL representation for module `\inpad'.
+Generating RTLIL representation for module `\outpad'.
+Generating RTLIL representation for module `\bipad'.
+Generating RTLIL representation for module `\ckpad'.
+Generating RTLIL representation for module `\qhsckibuff'.
+Generating RTLIL representation for module `\qhsckbuff'.
+Generating RTLIL representation for module `\gclkbuff'.
+Generating RTLIL representation for module `\logic_cell_macro'.
+Generating RTLIL representation for module `\inv'.
+Generating RTLIL representation for module `\mux2x0'.
+Generating RTLIL representation for module `\mux4x0'.
+Generating RTLIL representation for module `\mux8x0'.
+Generating RTLIL representation for module `\LUT1'.
+Generating RTLIL representation for module `\LUT2'.
+Generating RTLIL representation for module `\LUT3'.
+Generating RTLIL representation for module `\LUT4'.
+Generating RTLIL representation for module `\dff'.
+Generating RTLIL representation for module `\dffc'.
+Generating RTLIL representation for module `\dffp'.
+Generating RTLIL representation for module `\dffpc'.
+Generating RTLIL representation for module `\dffe'.
+Generating RTLIL representation for module `\dffec'.
+Generating RTLIL representation for module `\dffepc'.
+Generating RTLIL representation for module `\dffsc'.
+Generating RTLIL representation for module `\qlal4s3b_cell_macro'.
+Generating RTLIL representation for module `\qlal4s3_mult_32x32_cell'.
+Generating RTLIL representation for module `\qlal4s3_mult_16x16_cell'.
+Generating RTLIL representation for module `\qlal4s3_mult_cell_macro'.
+Successfully finished Verilog frontend.
+
+11.2. Continuing TECHMAP pass.
+Using template logic_0 for cells of type logic_0.
+Using template logic_1 for cells of type logic_1.
+No more expansions possible.
+<suppressed ~2 debug messages>
+
+12. Executing TECHMAP pass (map to technology primitives).
+
+12.1. Executing Verilog-2005 frontend: /data/data/com.termux/files/home/symbiflow/quicklogic-arch-defs/share/techmaps/quicklogic/pp3/techmap/cells_map.v
+Parsing Verilog input from `/data/data/com.termux/files/home/symbiflow/quicklogic-arch-defs/share/techmaps/quicklogic/pp3/techmap/cells_map.v' to AST representation.
+Generating RTLIL representation for module `\logic_0'.
+Generating RTLIL representation for module `\logic_1'.
+Generating RTLIL representation for module `\inpad'.
+Generating RTLIL representation for module `\outpad'.
+Generating RTLIL representation for module `\bipad'.
+Generating RTLIL representation for module `\ckpad'.
+Generating RTLIL representation for module `\qhsckibuff'.
+Generating RTLIL representation for module `\qhsckbuff'.
+Generating RTLIL representation for module `\gclkbuff'.
+Generating RTLIL representation for module `\logic_cell_macro'.
+Generating RTLIL representation for module `\inv'.
+Generating RTLIL representation for module `\mux2x0'.
+Generating RTLIL representation for module `\mux4x0'.
+Generating RTLIL representation for module `\mux8x0'.
+Generating RTLIL representation for module `\LUT1'.
+Generating RTLIL representation for module `\LUT2'.
+Generating RTLIL representation for module `\LUT3'.
+Generating RTLIL representation for module `\LUT4'.
+Generating RTLIL representation for module `\dff'.
+Generating RTLIL representation for module `\dffc'.
+Generating RTLIL representation for module `\dffp'.
+Generating RTLIL representation for module `\dffpc'.
+Generating RTLIL representation for module `\dffe'.
+Generating RTLIL representation for module `\dffec'.
+Generating RTLIL representation for module `\dffepc'.
+Generating RTLIL representation for module `\dffsc'.
+Generating RTLIL representation for module `\qlal4s3b_cell_macro'.
+Generating RTLIL representation for module `\qlal4s3_mult_32x32_cell'.
+Generating RTLIL representation for module `\qlal4s3_mult_16x16_cell'.
+Generating RTLIL representation for module `\qlal4s3_mult_cell_macro'.
+Successfully finished Verilog frontend.
+
+12.2. Continuing TECHMAP pass.
+Using template gclkbuff for cells of type gclkbuff.
+Using template $paramod$08b61d33fc5053edb3ff48cc7932a6bed21127f8\LUT3 for cells of type LUT3.
+Using template $paramod$0dee8c45763e54f30353b4988d9129c450b64183\LUT3 for cells of type LUT3.
+Using template $paramod$03eed137224500a5a8c1bb8d02f1b39dd96a7b82\LUT2 for cells of type LUT2.
+Using template $paramod$5e72dc4e5623af7d91f16d2f3df3af922e71a50e\LUT4 for cells of type LUT4.
+Using template $paramod\LUT3\INIT=9'000000001\EQN=8'00110000 for cells of type LUT3.
+Using template $paramod$5439f95b730483be4c800922bcebe9a105e90f4d\LUT4 for cells of type LUT4.
+Using template $paramod$bf21fee4b6975de7353dd955d4b3a8eef751c7c5\LUT2 for cells of type LUT2.
+Using template dff for cells of type dff.
+Using template $paramod$0bac8de66bcfb448c202f31a4c603d45054ce4da\LUT4 for cells of type LUT4.
+Using template $paramod$73295daa79cd8f21300ad173a8fb0822f56672dc\LUT3 for cells of type LUT3.
+Using template dffc for cells of type dffc.
+Using template $paramod$730adfb485ed6cef87eb6b434905db0ddfa9b600\LUT2 for cells of type LUT2.
+Using template mux4x0 for cells of type mux4x0.
+Using template $paramod$a3585111a807d9eb68f35b3cdf72c072f00fd2ee\LUT2 for cells of type LUT2.
+Using template $paramod$ef89328d7363dd7125c1eba8428f7d9cbe4f3212\LUT2 for cells of type LUT2.
+Using template $paramod$86fc6f3441a6779c63af6935d48b3ebd1c0460a9\LUT3 for cells of type LUT3.
+Using template $paramod$83ada7f46a0f26debc431c9e2d1ec0d9e0b7a4aa\LUT3 for cells of type LUT3.
+Using template $paramod$8a2b710cf07fc1a26795eace150f0e78d8dba185\LUT3 for cells of type LUT3.
+Using template $paramod$e64d32d20d7efced7d6e79c229f687bbe4091c0f\LUT3 for cells of type LUT3.
+Using template $paramod$5312816914ac0257eca33ac3be87fd42e64349ca\LUT3 for cells of type LUT3.
+Using template $paramod$02607b82793e91b0263b969f41023647c9b4f131\LUT3 for cells of type LUT3.
+Using template dffp for cells of type dffp.
+Using template $paramod$8daedccb3d21aa07897a5e78282e1f15fb3db8e6\LUT3 for cells of type LUT3.
+Using template $paramod$b7420168b4c7f5b0c647cfee87c3adf66c456bf4\LUT3 for cells of type LUT3.
+Using template $paramod$88388c6c6a4eecfc7de7604fe66ccab36e5a053a\LUT2 for cells of type LUT2.
+Using template $paramod$d6994d0c267e294db2ae8ab4933a797e47cb57af\LUT3 for cells of type LUT3.
+Using template $paramod$06411f75a99e41c25270ab262131ad889dff754a\LUT4 for cells of type LUT4.
+Using template qlal4s3b_cell_macro for cells of type qlal4s3b_cell_macro.
+Using template inv for cells of type inv.
+Using template $paramod\LUT1\INIT=1'1\EQN=675885097 for cells of type LUT1.
+Using template $paramod$e7e37961662412d7dd1961919c60cc96c5b16f01\LUT2 for cells of type LUT2.
+Using template $paramod$8ec3083c78151c28b65d6aa206d62ef0216666fd\LUT3 for cells of type LUT3.
+Using template $paramod\bipad\IO_PAD=0'\IO_LOC=0'\IO_TYPE=0' for cells of type bipad.
+Using template $paramod$599d262041b1d3a38da932c48ee6b03f5bd83570\LUT3 for cells of type LUT3.
+Using template $paramod$41662f40ea8b4e378c7213e9ced5a2ff6330ac86\LUT4 for cells of type LUT4.
+Using template $paramod$4e9ed8880b4a0828b51ac3ef73d55f7533d6c5d5\LUT4 for cells of type LUT4.
+Using template $paramod$a8e9735f5eddd7154bc7c9b001e04afe11dfb7ad\LUT4 for cells of type LUT4.
+Using template $paramod$5fff4eed3dfe46da722c8abfad4e43b106987cbf\LUT3 for cells of type LUT3.
+Using template $paramod$7aa23c7ddff975c77e13b2562382ff5ba7506ebe\LUT4 for cells of type LUT4.
+Using template $paramod$f369a56246d88c98da345df322beb2b6f0836397\LUT4 for cells of type LUT4.
+Using template $paramod$7330dd65b2ddb0bb71138871068f326836dad2e8\LUT4 for cells of type LUT4.
+Using template $paramod$0d57a20297f7d814347a60e796eb37c1dbe1a686\LUT3 for cells of type LUT3.
+Using template $paramod$63952e77f45dea8ddfa52b732897c1d36cc8f138\LUT4 for cells of type LUT4.
+No more expansions possible.
+<suppressed ~979 debug messages>
+
+13. Executing TECHMAP pass (map to technology primitives).
+
+13.1. Executing Verilog-2005 frontend: /data/data/com.termux/files/home/symbiflow/quicklogic-arch-defs/bin/../share/arch/ql-eos-s3_wlcsp/cells/ram_map.v
+Parsing Verilog input from `/data/data/com.termux/files/home/symbiflow/quicklogic-arch-defs/bin/../share/arch/ql-eos-s3_wlcsp/cells/ram_map.v' to AST representation.
+Generating RTLIL representation for module `\ram8k_2x1_cell_macro'.
+Successfully finished Verilog frontend.
+
+13.2. Continuing TECHMAP pass.
+No more expansions possible.
+
+14. Executing OPT_EXPR pass (perform const folding).
+Optimizing module AL4S3B_FPGA_Top.
+<suppressed ~1310 debug messages>
+
+15. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \AL4S3B_FPGA_Top..
+Removed 0 unused cells and 700 unused wires.
+<suppressed ~1 debug messages>
+
+16. Executing SETUNDEF pass (replace undef values with defined constants).
+
+17. Printing statistics.
+
+=== AL4S3B_FPGA_Top ===
+
+   Number of wires:               3652
+   Number of wire bits:           3719
+   Number of public wires:        3637
+   Number of public wire bits:    3637
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                496
+     ASSP                            1
+     BIDIR_CELL                     32
+     C_FRAG                         17
+     F_FRAG                         30
+     GMUX_IC                         2
+     Q_FRAG                        129
+     T_FRAG                        285
+
+18. Executing JSON backend.
+
+19. Executing Verilog backend.
+Dumping module `\AL4S3B_FPGA_Top'.
+
+Warnings: 18 unique messages, 21 total
+End of script. Logfile hash: cd3a977afd, CPU: user 4.49s system 0.19s, MEM: 262.84 MB peak
+Yosys 0.9+2406 (git sha1 ca763e6d5, gcc 12.2.0-14 -fPIC -Os)
+Time spent: 42% 22x read_verilog (1 sec), 15% 4x write_verilog (0 sec), ...

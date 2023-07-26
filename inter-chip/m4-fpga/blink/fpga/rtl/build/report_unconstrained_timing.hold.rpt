@@ -1,0 +1,38 @@
+#Unconstrained hold timing startpoint/endpoint
+
+timing_node_id node_type node_name
+-------------- --------- ---------
+0 .input io_pad(0)_$inp.inpad[0]
+1 .input io_pad(1)_$inp.inpad[0]
+2 .input io_pad(10)_$inp.inpad[0]
+3 .input io_pad(11)_$inp.inpad[0]
+4 .input io_pad(12)_$inp.inpad[0]
+5 .input io_pad(13)_$inp.inpad[0]
+6 .input io_pad(14)_$inp.inpad[0]
+7 .input io_pad(15)_$inp.inpad[0]
+8 .input io_pad(16)_$inp.inpad[0]
+9 .input io_pad(17)_$inp.inpad[0]
+10 .input io_pad(18)_$inp.inpad[0]
+11 .input io_pad(19)_$inp.inpad[0]
+12 .input io_pad(2)_$inp.inpad[0]
+13 .input io_pad(20)_$inp.inpad[0]
+14 .input io_pad(21)_$inp.inpad[0]
+15 .input io_pad(22)_$inp.inpad[0]
+16 .input io_pad(23)_$inp.inpad[0]
+17 .input io_pad(24)_$inp.inpad[0]
+18 .input io_pad(25)_$inp.inpad[0]
+19 .input io_pad(26)_$inp.inpad[0]
+20 .input io_pad(27)_$inp.inpad[0]
+21 .input io_pad(28)_$inp.inpad[0]
+22 .input io_pad(29)_$inp.inpad[0]
+23 .input io_pad(3)_$inp.inpad[0]
+24 .input io_pad(30)_$inp.inpad[0]
+25 .input io_pad(31)_$inp.inpad[0]
+26 .input io_pad(4)_$inp.inpad[0]
+27 .input io_pad(5)_$inp.inpad[0]
+28 .input io_pad(6)_$inp.inpad[0]
+29 .input io_pad(7)_$inp.inpad[0]
+30 .input io_pad(8)_$inp.inpad[0]
+31 .input io_pad(9)_$inp.inpad[0]
+
+#End of unconstrained hold startpoint/endpoint report

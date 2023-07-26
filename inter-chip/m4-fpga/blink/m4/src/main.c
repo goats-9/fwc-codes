@@ -17,7 +17,7 @@
 #include "s3x_clock.h"
 #include "s3x_pi.h"
 #include "dbg_uart.h"
-#include "hal_fpga_onion_pwmctrl.h"
+#include "hal_fpga_onion_gpioctrl.h"
 #include "cli.h"
 
 
@@ -55,9 +55,13 @@ int main(void)
     CLI_start_task( my_main_menu );
 	HAL_Delay_Init();
     while(1) {
-        hal_fpga_onion_pwmctrl_enable(21, pwm);
+        hal_fpga_onion_gpioctrl_set_output(18, 1);
+        hal_fpga_onion_gpioctrl_set_output(21, 1);
+        hal_fpga_onion_gpioctrl_set_output(22, 1);
         HAL_DelayUSec(1000000);
-        hal_fpga_onion_pwmctrl_disable(21);
+        hal_fpga_onion_gpioctrl_set_output(18, 0);
+        hal_fpga_onion_gpioctrl_set_output(21, 0);
+        hal_fpga_onion_gpioctrl_set_output(22, 0);
         HAL_DelayUSec(1000000);
     }
     /* Start the tasks and timer running. */

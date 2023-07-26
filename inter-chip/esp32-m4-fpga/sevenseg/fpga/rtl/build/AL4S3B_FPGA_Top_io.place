@@ -1,0 +1,32 @@
+#Block Name          x   y   z    pcf_line
+#------------------- --  --  -    ----
+$iopadmap$AL4S3B_FPGA_Top.io_pad[0]   4   3  0  # set_io      io_pad(0)           IO_0
+$iopadmap$AL4S3B_FPGA_Top.io_pad[1]   6   3  0  # set_io      io_pad(1)           IO_1
+$iopadmap$AL4S3B_FPGA_Top.io_pad[2]   8   3  0  # set_io      io_pad(2)           IO_2
+$iopadmap$AL4S3B_FPGA_Top.io_pad[3]  10   3  0  # set_io      io_pad(3)           IO_3
+$iopadmap$AL4S3B_FPGA_Top.io_pad[4]  12   3  0  # set_io      io_pad(4)           IO_4
+$iopadmap$AL4S3B_FPGA_Top.io_pad[5]  14   3  0  # set_io      io_pad(5)           IO_5
+$iopadmap$AL4S3B_FPGA_Top.io_pad[6]  16   3  0  # set_io      io_pad(6)           IO_6
+$iopadmap$AL4S3B_FPGA_Top.io_pad[7]  18   3  0  # set_io      io_pad(7)           IO_7
+$iopadmap$AL4S3B_FPGA_Top.io_pad[8]  20   3  0  # set_io      io_pad(8)           IO_8
+$iopadmap$AL4S3B_FPGA_Top.io_pad[9]  22   3  0  # set_io      io_pad(9)           IO_9
+$iopadmap$AL4S3B_FPGA_Top.io_pad[10]  24   3  0  # set_io      io_pad(10)          IO_10
+$iopadmap$AL4S3B_FPGA_Top.io_pad[11]  26   3  0  # set_io      io_pad(11)          IO_11
+$iopadmap$AL4S3B_FPGA_Top.io_pad[12]  28   3  0  # set_io      io_pad(12)          IO_12
+$iopadmap$AL4S3B_FPGA_Top.io_pad[13]  30   3  0  # set_io      io_pad(13)          IO_13
+$iopadmap$AL4S3B_FPGA_Top.io_pad[16]  34  32  0  # set_io      io_pad(16)          IO_16
+$iopadmap$AL4S3B_FPGA_Top.io_pad[17]  32  32  0  # set_io      io_pad(17)          IO_17
+$iopadmap$AL4S3B_FPGA_Top.io_pad[18]  30  32  0  # set_io      io_pad(18)          IO_18
+$iopadmap$AL4S3B_FPGA_Top.io_pad[19]  28  32  0  # set_io      io_pad(19)          IO_19
+$iopadmap$AL4S3B_FPGA_Top.io_pad[20]  26  32  0  # set_io      io_pad(20)          IO_20
+$iopadmap$AL4S3B_FPGA_Top.io_pad[21]  24  32  0  # set_io      io_pad(21)          IO_21
+$iopadmap$AL4S3B_FPGA_Top.io_pad[22]  22  32  0  # set_io      io_pad(22)          IO_22
+$iopadmap$AL4S3B_FPGA_Top.io_pad[23]  20  32  0  # set_io      io_pad(23)          IO_23
+$iopadmap$AL4S3B_FPGA_Top.io_pad[24]  18  32  0  # set_io      io_pad(24)          IO_24
+$iopadmap$AL4S3B_FPGA_Top.io_pad[25]  16  32  0  # set_io      io_pad(25)          IO_25
+$iopadmap$AL4S3B_FPGA_Top.io_pad[26]  14  32  0  # set_io      io_pad(26)          IO_26
+$iopadmap$AL4S3B_FPGA_Top.io_pad[27]  12  32  0  # set_io      io_pad(27)          IO_27
+$iopadmap$AL4S3B_FPGA_Top.io_pad[28]  10  32  0  # set_io      io_pad(28)          IO_28
+$iopadmap$AL4S3B_FPGA_Top.io_pad[29]   8  32  0  # set_io      io_pad(29)          IO_29
+$iopadmap$AL4S3B_FPGA_Top.io_pad[30]   6  32  0  # set_io      io_pad(30)          IO_30
+$iopadmap$AL4S3B_FPGA_Top.io_pad[31]   4  32  0  # set_io      io_pad(31)          IO_31
